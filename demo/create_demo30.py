@@ -42,7 +42,7 @@ title='软件架构进阶演示（30个知识点）'
 existing=next((c for c in call('GET','/courses') if c['title']==title),None)
 course=existing or call('POST','/courses',{'title':title});cid=course['uid']
 assert not existing, '演示课程已存在，请先查看现有课程，避免覆盖修改'
-points=[{'uid':f'{cid}:manual:demo30-{i:02d}','label':label,'chapter':chapter,'chapters':[chapter],'kind':kind,'definition':definition,'example':example,'resource':'人工编写的展示样例；非教材原文','x':50,'y':50} for i,(label,chapter,kind,definition,example) in enumerate(rows)]
+points=[{'uid':f'{cid}:manual:demo30-{i:02d}','label':label,'chapter':chapter,'chapters':[chapter],'kind':kind,'definition':definition,'example':example,'resource':'人工编写的展示样例；非教材原文','x':8+84*(i%6)/5,'y':8+84*(i//6)/4} for i,(label,chapter,kind,definition,example) in enumerate(rows)]
 edges=[{'source':points[a]['uid'],'target':points[b]['uid'],'kind':kind} for kind,pairs in [('PREREQUISITE_OF',prereqs),('RELATED_TO',related)] for a,b in pairs]
 payload={'revision':course['revision'],'points':points,'edges':edges}
 graph=call('PUT',f'/courses/{cid}/graph',payload)

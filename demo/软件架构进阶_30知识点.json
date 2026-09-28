@@ -3,7 +3,7 @@
     "uid": "50807252-1b2c-4c78-b356-7cff63635785",
     "title": "软件架构进阶演示（30个知识点）",
     "documents": [],
-    "revision": 1,
+    "revision": 2,
     "deleted_origins": [],
     "deleted_edges": [],
     "teacher_graph_edited": true
@@ -23,8 +23,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "POST 提交新的课程，GET 获取课程信息。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 8.0,
+      "x": 8.0
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-18",
@@ -40,8 +40,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "用 GET /courses 获取课程资源集合。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 8.0,
+      "x": 24.8
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-08",
@@ -57,8 +57,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "通过 SELECT 查询某个学生的学习记录。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 8.0,
+      "x": 41.6
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-23",
@@ -74,8 +74,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "修改节点与关系在同一事务中提交，失败时回滚。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 8.0,
+      "x": 58.4
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-16",
@@ -91,8 +91,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "前端通过公开 API 获取路线，而不直接读取数据库。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 8.0,
+      "x": 75.2
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-20",
@@ -108,8 +108,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "为推荐服务注入可替换的知识图谱仓库。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 8.0,
+      "x": 92.0
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
@@ -125,8 +125,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "将先修条件检查封装成独立函数。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 29.0,
+      "x": 8.0
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
@@ -142,8 +142,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "页面展示、推荐算法和数据库查询分别放在对应层。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 29.0,
+      "x": 24.8
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-06",
@@ -159,8 +159,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "教师可以创建、修改和删除知识点。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 29.0,
+      "x": 41.6
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-25",
@@ -176,8 +176,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "验证存在多个先修时必须全部掌握才能推荐目标。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 29.0,
+      "x": 58.4
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-28",
@@ -193,8 +193,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "分别启动前端、后端与数据库容器并配置健康检查。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 29.0,
+      "x": 75.2
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-12",
@@ -210,8 +210,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "记录路径接口的耗时和处理知识点数量。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 29.0,
+      "x": 92.0
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
@@ -228,7 +228,7 @@
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "路径接口返回有序步骤、缺少先修和当前可学状态。",
       "y": 50.0,
-      "x": 50.0
+      "x": 8.0
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-02",
@@ -245,7 +245,7 @@
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "将课程、知识点和学习记录保存到数据库。",
       "y": 50.0,
-      "x": 50.0
+      "x": 24.8
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
@@ -262,7 +262,7 @@
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "定义课程与知识点的一对多关系及先修边。",
       "y": 50.0,
-      "x": 50.0
+      "x": 41.6
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-05",
@@ -279,7 +279,7 @@
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "使用邻接表存储知识点之间的先修关系。",
       "y": 50.0,
-      "x": 50.0
+      "x": 58.4
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-27",
@@ -296,7 +296,7 @@
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "记录课程解析失败的任务标识和错误信息。",
       "y": 50.0,
-      "x": 50.0
+      "x": 75.2
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
@@ -313,7 +313,7 @@
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "将图谱、问答和学习路径拆为独立模块。",
       "y": 50.0,
-      "x": 50.0
+      "x": 92.0
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-11",
@@ -329,8 +329,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "学生选择课程、计算路线并标记掌握。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 71.0,
+      "x": 8.0
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-29",
@@ -346,8 +346,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "通过职责分离、自动测试和运行日志降低修改成本。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 71.0,
+      "x": 24.8
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-19",
@@ -363,8 +363,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "为经常查询的课程标识建立索引。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 71.0,
+      "x": 41.6
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-21",
@@ -380,8 +380,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "图谱组件接收节点与关系，并输出知识点选择事件。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 71.0,
+      "x": 58.4
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-22",
@@ -397,8 +397,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "按课程修订号缓存图谱，修改后使旧缓存失效。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 71.0,
+      "x": 75.2
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-00",
@@ -414,8 +414,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "用条件判断验证输入是否为空。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 71.0,
+      "x": 92.0
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-03",
@@ -431,8 +431,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "浏览器通过本机端口访问后台服务。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 92.0,
+      "x": 8.0
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-24",
@@ -448,8 +448,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "教师登录后才可进入教师编辑入口。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 92.0,
+      "x": 24.8
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-26",
@@ -465,8 +465,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "保存掌握状态后检查推荐接口与页面同步更新。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 92.0,
+      "x": 41.6
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-01",
@@ -482,8 +482,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "明确课程系统需要支持知识图谱查询和学习进度保存。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 92.0,
+      "x": 58.4
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-07",
@@ -499,8 +499,8 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "学习路径查询在规定规模下及时返回。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 92.0,
+      "x": 75.2
     },
     {
       "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-15",
@@ -516,21 +516,21 @@
       "teacher_edited": true,
       "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
       "example": "学习路径模块只负责依赖计算与推荐。",
-      "y": 50.0,
-      "x": 50.0
+      "y": 92.0,
+      "x": 92.0
     }
   ],
   "edges": [
     {
-      "uid": "2d594911-8bf5-4c51-b0c7-21d6a5af1688",
-      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-00",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-05",
-      "kind": "PREREQUISITE_OF"
-    },
-    {
       "uid": "0292c68e-d811-4684-b02e-ddbfe2d4eb89",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-00",
       "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "2d594911-8bf5-4c51-b0c7-21d6a5af1688",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-00",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-05",
       "kind": "PREREQUISITE_OF"
     },
     {
@@ -570,12 +570,6 @@
       "kind": "PREREQUISITE_OF"
     },
     {
-      "uid": "2db1d546-5c7f-4f47-a437-472a5eec5519",
-      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-25",
-      "kind": "PREREQUISITE_OF"
-    },
-    {
       "uid": "4f431855-0438-437f-af16-ce303ca7a33a",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
       "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
@@ -585,6 +579,12 @@
       "uid": "5168959f-1e43-4fea-a275-d3449d79e958",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
       "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "2db1d546-5c7f-4f47-a437-472a5eec5519",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-25",
       "kind": "PREREQUISITE_OF"
     },
     {
@@ -606,6 +606,12 @@
       "kind": "PREREQUISITE_OF"
     },
     {
+      "uid": "d3d77486-1b28-4c63-a2b0-d3aa09ee7a34",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-08",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-23",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
       "uid": "60882d2a-55da-4a5c-94c9-16af055c8eef",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-08",
       "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
@@ -618,9 +624,9 @@
       "kind": "PREREQUISITE_OF"
     },
     {
-      "uid": "d3d77486-1b28-4c63-a2b0-d3aa09ee7a34",
-      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-08",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-23",
+      "uid": "cf6e7da9-1a62-460d-9fff-7b0f863b0669",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-09",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-24",
       "kind": "PREREQUISITE_OF"
     },
     {
@@ -636,15 +642,9 @@
       "kind": "PREREQUISITE_OF"
     },
     {
-      "uid": "cf6e7da9-1a62-460d-9fff-7b0f863b0669",
-      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-09",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-24",
-      "kind": "PREREQUISITE_OF"
-    },
-    {
-      "uid": "88aa2890-d90b-4ec3-9df6-105b55c514c4",
+      "uid": "fe14873a-3eb8-441f-8eca-e8dbca1b9bfc",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-15",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-25",
       "kind": "PREREQUISITE_OF"
     },
     {
@@ -654,9 +654,9 @@
       "kind": "PREREQUISITE_OF"
     },
     {
-      "uid": "fe14873a-3eb8-441f-8eca-e8dbca1b9bfc",
+      "uid": "88aa2890-d90b-4ec3-9df6-105b55c514c4",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-25",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-15",
       "kind": "PREREQUISITE_OF"
     },
     {
@@ -684,6 +684,12 @@
       "kind": "PREREQUISITE_OF"
     },
     {
+      "uid": "5d8ef27a-defa-4576-8df5-8e1b7379d53e",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-18",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
       "uid": "126b73a3-e687-40c7-873b-361af0040e14",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
       "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-24",
@@ -696,9 +702,9 @@
       "kind": "PREREQUISITE_OF"
     },
     {
-      "uid": "5d8ef27a-defa-4576-8df5-8e1b7379d53e",
-      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-18",
+      "uid": "837ac162-9496-4b13-bf40-f7fd861bd2bb",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-22",
       "kind": "PREREQUISITE_OF"
     },
     {
@@ -711,12 +717,6 @@
       "uid": "d4de1665-7e6f-4b4f-aedc-4a6a2cebca6b",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
       "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-23",
-      "kind": "PREREQUISITE_OF"
-    },
-    {
-      "uid": "837ac162-9496-4b13-bf40-f7fd861bd2bb",
-      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-22",
       "kind": "PREREQUISITE_OF"
     },
     {
@@ -738,9 +738,9 @@
       "kind": "PREREQUISITE_OF"
     },
     {
-      "uid": "8692f4e3-a8cc-48f8-9ed6-e040e0fde880",
+      "uid": "03254f98-012c-4910-b836-fd09c1adb172",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-16",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-21",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-20",
       "kind": "PREREQUISITE_OF"
     },
     {
@@ -756,21 +756,21 @@
       "kind": "PREREQUISITE_OF"
     },
     {
-      "uid": "03254f98-012c-4910-b836-fd09c1adb172",
+      "uid": "8692f4e3-a8cc-48f8-9ed6-e040e0fde880",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-16",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-20",
-      "kind": "PREREQUISITE_OF"
-    },
-    {
-      "uid": "115120aa-1348-4c33-9a4e-ec2a60d3e745",
-      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
-      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-27",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-21",
       "kind": "PREREQUISITE_OF"
     },
     {
       "uid": "91cc3338-dc65-4155-9f0d-1013aa3646b4",
       "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
       "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-28",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "115120aa-1348-4c33-9a4e-ec2a60d3e745",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-27",
       "kind": "PREREQUISITE_OF"
     },
     {
