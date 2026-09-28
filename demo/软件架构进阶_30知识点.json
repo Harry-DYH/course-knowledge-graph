@@ -1,0 +1,844 @@
+{
+  "course": {
+    "uid": "50807252-1b2c-4c78-b356-7cff63635785",
+    "title": "软件架构进阶演示（30个知识点）",
+    "documents": [],
+    "revision": 1,
+    "deleted_origins": [],
+    "deleted_edges": [],
+    "teacher_graph_edited": true
+  },
+  "points": [
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-09",
+      "definition": "HTTP 规定客户端与服务端请求、响应及状态码的语义。",
+      "chapters": [
+        "需求与程序结构"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "HTTP",
+      "kind": "协议",
+      "sources": [],
+      "chapter": "需求与程序结构",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "POST 提交新的课程，GET 获取课程信息。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-18",
+      "definition": "REST 接口以资源和统一操作语义组织服务访问。",
+      "chapters": [
+        "架构与数据优化"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "REST接口",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "架构与数据优化",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "用 GET /courses 获取课程资源集合。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-08",
+      "definition": "SQL 是用于关系数据库查询和数据操作的语言。",
+      "chapters": [
+        "需求与程序结构"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "SQL",
+      "kind": "工具",
+      "sources": [],
+      "chapter": "需求与程序结构",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "通过 SELECT 查询某个学生的学习记录。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-23",
+      "definition": "事务管理保证关联的数据操作满足一致性要求。",
+      "chapters": [
+        "工程实现"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "事务管理",
+      "kind": "机制",
+      "sources": [],
+      "chapter": "工程实现",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "修改节点与关系在同一事务中提交，失败时回滚。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-16",
+      "definition": "低耦合通过稳定接口减少模块对彼此内部实现的依赖。",
+      "chapters": [
+        "架构与数据优化"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "低耦合",
+      "kind": "原则",
+      "sources": [],
+      "chapter": "架构与数据优化",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "前端通过公开 API 获取路线，而不直接读取数据库。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-20",
+      "definition": "依赖注入由外部提供组件所需依赖，减少内部固定绑定。",
+      "chapters": [
+        "工程实现"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "依赖注入",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "工程实现",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "为推荐服务注入可替换的知识图谱仓库。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
+      "definition": "函数将一段可复用的操作封装为具有输入和输出的单元。",
+      "chapters": [
+        "需求与程序结构"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "函数",
+      "kind": "概念",
+      "sources": [],
+      "chapter": "需求与程序结构",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "将先修条件检查封装成独立函数。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
+      "definition": "分层架构将系统职责划分为表现、业务和数据访问等层。",
+      "chapters": [
+        "架构与数据优化"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "分层架构",
+      "kind": "架构",
+      "sources": [],
+      "chapter": "架构与数据优化",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "页面展示、推荐算法和数据库查询分别放在对应层。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-06",
+      "definition": "功能需求描述系统必须提供的具体行为和服务。",
+      "chapters": [
+        "需求与程序结构"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "功能需求",
+      "kind": "概念",
+      "sources": [],
+      "chapter": "需求与程序结构",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "教师可以创建、修改和删除知识点。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-25",
+      "definition": "单元测试独立验证函数或模块的行为与边界情况。",
+      "chapters": [
+        "测试与交付"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "单元测试",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "测试与交付",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "验证存在多个先修时必须全部掌握才能推荐目标。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-28",
+      "definition": "容器部署将运行环境及应用打包，并通过配置启动服务。",
+      "chapters": [
+        "测试与交付"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "容器部署",
+      "kind": "工具",
+      "sources": [],
+      "chapter": "测试与交付",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "分别启动前端、后端与数据库容器并配置健康检查。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-12",
+      "definition": "性能指标以响应时间、吞吐量和资源使用等量化系统表现。",
+      "chapters": [
+        "系统设计"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "性能指标",
+      "kind": "指标",
+      "sources": [],
+      "chapter": "系统设计",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "记录路径接口的耗时和处理知识点数量。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
+      "definition": "接口设计明确调用者和被调用者之间的数据、行为及错误约定。",
+      "chapters": [
+        "系统设计"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "接口设计",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "系统设计",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "路径接口返回有序步骤、缺少先修和当前可学状态。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-02",
+      "definition": "数据库以结构化方式持久化数据，并支持查询与更新。",
+      "chapters": [
+        "基础准备"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "数据库基础",
+      "kind": "概念",
+      "sources": [],
+      "chapter": "基础准备",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "将课程、知识点和学习记录保存到数据库。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
+      "definition": "数据建模定义实体、属性、关系及一致性约束。",
+      "chapters": [
+        "系统设计"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "数据建模",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "系统设计",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "定义课程与知识点的一对多关系及先修边。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-05",
+      "definition": "数据结构规定数据的组织方式及访问操作。",
+      "chapters": [
+        "需求与程序结构"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "数据结构",
+      "kind": "概念",
+      "sources": [],
+      "chapter": "需求与程序结构",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "使用邻接表存储知识点之间的先修关系。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-27",
+      "definition": "日志监控收集运行事件和指标，用于发现故障与定位原因。",
+      "chapters": [
+        "测试与交付"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "日志监控",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "测试与交付",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "记录课程解析失败的任务标识和错误信息。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
+      "definition": "模块化按职责划分程序，并通过明确接口协作。",
+      "chapters": [
+        "系统设计"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "模块化",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "系统设计",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "将图谱、问答和学习路径拆为独立模块。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-11",
+      "definition": "用例以参与者与系统交互描述完成目标的过程。",
+      "chapters": [
+        "系统设计"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "用例建模",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "系统设计",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "学生选择课程、计算路线并标记掌握。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-29",
+      "definition": "可维护性衡量系统理解、修改、验证和持续演进的便利程度。",
+      "chapters": [
+        "测试与交付"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "系统可维护性",
+      "kind": "质量属性",
+      "sources": [],
+      "chapter": "测试与交付",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "通过职责分离、自动测试和运行日志降低修改成本。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-19",
+      "definition": "索引优化根据查询条件建立合适的索引以减少扫描成本。",
+      "chapters": [
+        "架构与数据优化"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "索引优化",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "架构与数据优化",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "为经常查询的课程标识建立索引。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-21",
+      "definition": "组件设计把职责明确、接口稳定的模块组合成可协作单元。",
+      "chapters": [
+        "工程实现"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "组件设计",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "工程实现",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "图谱组件接收节点与关系，并输出知识点选择事件。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-22",
+      "definition": "缓存保存可复用结果，并规定失效策略以平衡速度和一致性。",
+      "chapters": [
+        "工程实现"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "缓存设计",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "工程实现",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "按课程修订号缓存图谱，修改后使旧缓存失效。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-00",
+      "definition": "程序通过变量、控制流程与表达式描述计算过程。",
+      "chapters": [
+        "基础准备"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "编程基础",
+      "kind": "概念",
+      "sources": [],
+      "chapter": "基础准备",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "用条件判断验证输入是否为空。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-03",
+      "definition": "理解客户端与服务端通过网络地址、端口和协议交换数据。",
+      "chapters": [
+        "基础准备"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "网络基础",
+      "kind": "概念",
+      "sources": [],
+      "chapter": "基础准备",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "浏览器通过本机端口访问后台服务。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-24",
+      "definition": "身份认证验证访问者身份，并为后续访问控制提供依据。",
+      "chapters": [
+        "工程实现"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "身份认证",
+      "kind": "机制",
+      "sources": [],
+      "chapter": "工程实现",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "教师登录后才可进入教师编辑入口。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-26",
+      "definition": "集成测试验证多个组件协作时的数据传递和行为。",
+      "chapters": [
+        "测试与交付"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "集成测试",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "测试与交付",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "保存掌握状态后检查推荐接口与页面同步更新。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-01",
+      "definition": "识别用户目标、使用场景及系统约束，形成可验证的需求。",
+      "chapters": [
+        "基础准备"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "需求分析",
+      "kind": "方法",
+      "sources": [],
+      "chapter": "基础准备",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "明确课程系统需要支持知识图谱查询和学习进度保存。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-07",
+      "definition": "非功能需求描述性能、可靠性、安全性等质量要求。",
+      "chapters": [
+        "需求与程序结构"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "非功能需求",
+      "kind": "概念",
+      "sources": [],
+      "chapter": "需求与程序结构",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "学习路径查询在规定规模下及时返回。",
+      "y": 50.0,
+      "x": 50.0
+    },
+    {
+      "uid": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-15",
+      "definition": "高内聚要求模块内部职责紧密相关，围绕明确目标组织。",
+      "chapters": [
+        "架构与数据优化"
+      ],
+      "resource": "人工编写的展示样例；非教材原文",
+      "label": "高内聚",
+      "kind": "原则",
+      "sources": [],
+      "chapter": "架构与数据优化",
+      "teacher_edited": true,
+      "course_id": "50807252-1b2c-4c78-b356-7cff63635785",
+      "example": "学习路径模块只负责依赖计算与推荐。",
+      "y": 50.0,
+      "x": 50.0
+    }
+  ],
+  "edges": [
+    {
+      "uid": "2d594911-8bf5-4c51-b0c7-21d6a5af1688",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-00",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-05",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "0292c68e-d811-4684-b02e-ddbfe2d4eb89",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-00",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "0e05354a-7632-4044-93e1-bfbc0bf0cd87",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-01",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-07",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "3a22cea7-1c3b-45dd-bea1-2d3bf1003b59",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-01",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-06",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "5cb34703-2f90-45ce-93aa-14305558824b",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-02",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-08",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "fe748951-860b-437d-96c3-ff272847a2cb",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-02",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "7cc5c440-c0df-4983-bec6-35ecdb0ae769",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-03",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-09",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "a0d27dce-a72f-4472-aaf9-5781692aa2ab",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-03",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-28",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "2db1d546-5c7f-4f47-a437-472a5eec5519",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-25",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "4f431855-0438-437f-af16-ce303ca7a33a",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "5168959f-1e43-4fea-a275-d3449d79e958",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-04",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "ee451c6d-a491-4df7-a4dc-0409a56b4a68",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-05",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "8e6b3a3c-c6a2-4957-88d5-337d284d5bdd",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-06",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-11",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "57d6a326-882d-4197-9aaa-f198393bfdd7",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-07",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-12",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "60882d2a-55da-4a5c-94c9-16af055c8eef",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-08",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "9445cd7e-27f1-4212-9e19-625ee3010b30",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-08",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-19",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "d3d77486-1b28-4c63-a2b0-d3aa09ee7a34",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-08",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-23",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "2f3ad4d9-1d54-464a-8242-8ecbe155b3ac",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-09",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "fda732c2-d3f7-4f06-8658-9d26d47949a3",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-09",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-18",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "cf6e7da9-1a62-460d-9fff-7b0f863b0669",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-09",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-24",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "88aa2890-d90b-4ec3-9df6-105b55c514c4",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-15",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "b757da1b-fd63-4a27-aa20-fe1add936ef0",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-16",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "fe14873a-3eb8-441f-8eca-e8dbca1b9bfc",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-10",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-25",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "85b2e1f0-c6dc-4b7f-9a68-56649088c912",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-11",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-06",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "209a0bcd-9032-439b-b4d8-51c4f1267fa3",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-11",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "d2da9275-6b29-4d20-a34e-cb519ec5d289",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-12",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-27",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "8f20f873-2a3f-4aad-a436-03c3e255141d",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-12",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-22",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "126b73a3-e687-40c7-873b-361af0040e14",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-24",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "2828cfa1-65f2-4630-8876-744c4b4ebaa2",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-21",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "5d8ef27a-defa-4576-8df5-8e1b7379d53e",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-13",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-18",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "f508bb02-2f37-4a15-9b54-8a2cb1e7d8fe",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-19",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "d4de1665-7e6f-4b4f-aedc-4a6a2cebca6b",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-23",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "837ac162-9496-4b13-bf40-f7fd861bd2bb",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-14",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-22",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "1bab071e-f4f1-46e1-8851-2bea4bcdfb77",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-15",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-21",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "b6735e21-b578-48f9-b6ce-b6fbaf9cae32",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-15",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-29",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "02bd2f47-6931-475d-9420-1afe1b647ad4",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-15",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "8692f4e3-a8cc-48f8-9ed6-e040e0fde880",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-16",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-21",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "a20ef940-50c0-49a9-8c73-ef0c4c6ff76e",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-16",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "4030925d-b81f-4cf6-959c-bc235e1ee4e8",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-16",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-29",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "03254f98-012c-4910-b836-fd09c1adb172",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-16",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-20",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "115120aa-1348-4c33-9a4e-ec2a60d3e745",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-27",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "91cc3338-dc65-4155-9f0d-1013aa3646b4",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-17",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-28",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "053795df-8166-4acd-b0fe-cc7443fba1ea",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-18",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-26",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "3a49fee4-78d1-4748-a15c-caea6c507717",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-19",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-22",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "f0369694-9fe7-4152-88a3-731a701d2bed",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-20",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-21",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "7b2c1f8d-d22d-496c-9b5b-c50d2aeeb840",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-22",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-12",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "ff604664-b69b-464b-bf1f-a092657969bd",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-23",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-26",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "92e67cbc-8ee7-4089-be39-94634b73e5f6",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-24",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-23",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "03677ab6-8a71-4cbc-92aa-d031b25a188d",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-25",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-26",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "48ea34e7-7fe1-40d1-9879-06737cab8717",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-26",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-29",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "6e4f85ad-3951-4b12-ad76-241895bf6017",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-27",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-29",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "9ce29f1a-2587-4654-bdc6-a8fc5d187f68",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-27",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-28",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "a0ccbcb2-4f2c-40b4-8d5f-5dbc1d74a0b7",
+      "source": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-28",
+      "target": "50807252-1b2c-4c78-b356-7cff63635785:manual:demo30-26",
+      "kind": "RELATED_TO"
+    }
+  ],
+  "chapters": []
+}

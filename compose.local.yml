@@ -1,0 +1,27 @@
+services:
+  database:
+    image: neo4j:5.26.0
+    environment:
+      NEO4J_AUTH: neo4j/localdemo1234
+      NEO4J_PLUGINS: '["apoc"]'
+    ports:
+      - "127.0.0.1:7474:7474"
+      - "127.0.0.1:7687:7687"
+    volumes:
+      - neo4j_data:/data
+    networks:
+      - net
+
+  backend:
+    ports: !override
+      - "127.0.0.1:8000:8000"
+    environment:
+      IS_EMBEDDING: "true"
+      EMBEDDING_PROVIDER: sentence-transformer
+      EMBEDDING_MODEL: all-MiniLM-L6-v2
+    depends_on:
+      - database
+    command: ["gunicorn", "score:app", "--workers", "2", "--threads", "4", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000", "--timeout", "300"]
+
+volumes:
+  neo4j_data:

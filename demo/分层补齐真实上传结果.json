@@ -1,0 +1,311 @@
+{
+  "course": {
+    "uid": "385b6277-5574-4c10-b008-c3bcca93c71e",
+    "title": "分层功能验收示范",
+    "documents": [
+      "分层补齐_双章节样例.md"
+    ],
+    "revision": 2,
+    "deleted_origins": [],
+    "deleted_edges": [],
+    "teacher_graph_edited": null
+  },
+  "points": [
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:c8fbad3bd1e47a4d4801",
+      "kind_evidence": "函数是从定义域到值域的单值映射。",
+      "definition": "函数是从定义域到值域的单值映射。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第二章 函数基础"
+      ],
+      "resource": "学习资源：《离散数学》函数章节。",
+      "label": "函数",
+      "kind": "概念",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第二章 函数基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:18",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "示例：每位学生映射到唯一学号。",
+      "y": 8.0,
+      "x": 8.0
+    },
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:2422e8782c17bbc592cd",
+      "kind_evidence": "函数应用：用函数表示摄氏温度到华氏温度的转换。",
+      "definition": "用函数表示摄氏温度到华氏温度的转换。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第二章 函数基础"
+      ],
+      "resource": "",
+      "label": "函数应用",
+      "kind": "应用",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第二章 函数基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:172",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "",
+      "y": 92.0,
+      "x": 36.0
+    },
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:7aeb233b833d7ce17cbb",
+      "kind_evidence": "函数求值方法：先代入内层函数，再计算外层函数。",
+      "definition": "函数求值方法：先代入内层函数，再计算外层函数。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第二章 函数基础"
+      ],
+      "resource": "",
+      "label": "函数求值方法",
+      "kind": "方法",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第二章 函数基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:171",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "示例：先计算f(2)，再计算g(f(2))。",
+      "y": 50.0,
+      "x": 92.0
+    },
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:bc723b5fe695f4046713",
+      "kind_evidence": "复合函数公式：(g∘f)(x)=g(f(x))。",
+      "definition": "复合函数公式：(g∘f)(x)=g(f(x))。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第二章 函数基础"
+      ],
+      "resource": "",
+      "label": "复合函数公式",
+      "kind": "公式",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第二章 函数基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:157",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "示例：f(x)=x+1、g(x)=2x，则复合结果为2(x+1)。",
+      "y": 92.0,
+      "x": 8.0
+    },
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:311755aa9ecddac76738",
+      "kind_evidence": "复合函数结合律定理：函数满足可复合条件时，h∘(g∘f)=(h∘g)∘f。",
+      "definition": "函数满足可复合条件时，h∘(g∘f)=(h∘g)∘f。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第二章 函数基础"
+      ],
+      "resource": "",
+      "label": "复合函数结合律定理",
+      "kind": "定理",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第二章 函数基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:158",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "",
+      "y": 50.0,
+      "x": 64.0
+    },
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:343115a15c742323a0cd",
+      "kind_evidence": "并集公式：A∪B={x|x∈A 或 x∈B}。",
+      "definition": "并集公式：A∪B={x|x∈A 或 x∈B}。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第一章 集合基础"
+      ],
+      "resource": "",
+      "label": "并集公式",
+      "kind": "公式",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第一章 集合基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:149",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "示例：{1,2}∪{2,3}={1,2,3}。",
+      "y": 8.0,
+      "x": 92.0
+    },
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:0513aa6fd7b468e30e82",
+      "kind_evidence": "德摩根定理：在同一全集中，(A∪B)ᶜ=Aᶜ∩Bᶜ。",
+      "definition": "在同一全集中，(A∪B)ᶜ=Aᶜ∩Bᶜ。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第一章 集合基础"
+      ],
+      "resource": "",
+      "label": "德摩根定理",
+      "kind": "定理",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第一章 集合基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:150",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "",
+      "y": 50.0,
+      "x": 36.0
+    },
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:12e40ed3260b08db7c59",
+      "kind_evidence": "集合是具有确定性、互异性和无序性的对象全体。",
+      "definition": "集合是具有确定性、互异性和无序性的对象全体。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第一章 集合基础"
+      ],
+      "resource": "学习资源：《离散数学》集合章节。",
+      "label": "集合",
+      "kind": "概念",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第一章 集合基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:5",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "示例：集合 A={1,2,3}。",
+      "y": 8.0,
+      "x": 64.0
+    },
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:82eeec97d5229c5ef9f0",
+      "kind_evidence": "集合应用：用集合表示选课学生名单，交集表示同时选两门课的学生。",
+      "definition": "用集合表示选课学生名单，交集表示同时选两门课的学生。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第一章 集合基础"
+      ],
+      "resource": "",
+      "label": "集合应用",
+      "kind": "应用",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第一章 集合基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:156",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "",
+      "y": 8.0,
+      "x": 36.0
+    },
+    {
+      "uid": "385b6277-5574-4c10-b008-c3bcca93c71e:a2068de7a63aaeb59598",
+      "kind_evidence": "集合枚举方法：逐一列出元素，然后检查是否有重复元素。",
+      "definition": "集合枚举方法：逐一列出元素，然后检查是否有重复元素。",
+      "chapters": [
+        "分层补齐_双章节样例.md / 第一章 集合基础"
+      ],
+      "resource": "",
+      "label": "集合枚举方法",
+      "kind": "方法",
+      "sources": [
+        "分层补齐_双章节样例.md"
+      ],
+      "chapter": "分层补齐_双章节样例.md / 第一章 集合基础",
+      "origin_id": "4:47d8cde1-d4e5-44ca-b03c-3980149adb48:155",
+      "content_version": "course-content-v1",
+      "course_id": "385b6277-5574-4c10-b008-c3bcca93c71e",
+      "example": "示例：把一周工作日列为集合。",
+      "y": 50.0,
+      "x": 8.0
+    }
+  ],
+  "edges": [
+    {
+      "uid": "98fd955d-b79e-4c51-8be9-5206b2873011",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:c8fbad3bd1e47a4d4801",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:7aeb233b833d7ce17cbb",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "fd61a008-10ef-47ae-a3b0-352ba47bfa86",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:c8fbad3bd1e47a4d4801",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:bc723b5fe695f4046713",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "bcad6944-87f6-4b76-b82b-6429a85c95be",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:c8fbad3bd1e47a4d4801",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:311755aa9ecddac76738",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "9971a62b-4452-452b-913b-0d95e01ee4ea",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:c8fbad3bd1e47a4d4801",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:2422e8782c17bbc592cd",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "f08a8d6e-7f7a-42cb-b594-31eb3eed614f",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:12e40ed3260b08db7c59",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:0513aa6fd7b468e30e82",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "bb5b1a69-4217-4458-8e20-bf4f7e6b1a7a",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:12e40ed3260b08db7c59",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:82eeec97d5229c5ef9f0",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "9c8fab60-ddc2-4185-8eb4-f9094676e7c8",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:12e40ed3260b08db7c59",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:a2068de7a63aaeb59598",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "ed8a2c43-456b-4490-997c-e0b9990c284e",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:12e40ed3260b08db7c59",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:343115a15c742323a0cd",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "3ac14a23-b6e9-45aa-96c8-6d0bb0049466",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:343115a15c742323a0cd",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:0513aa6fd7b468e30e82",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "97530e1c-e99c-42a0-8e5b-7be011682614",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:bc723b5fe695f4046713",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:311755aa9ecddac76738",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "522fc64c-f4f5-431b-90b6-838f27d507c5",
+      "source": "385b6277-5574-4c10-b008-c3bcca93c71e:bc723b5fe695f4046713",
+      "target": "385b6277-5574-4c10-b008-c3bcca93c71e:7aeb233b833d7ce17cbb",
+      "kind": "RELATED_TO"
+    }
+  ],
+  "chapters": [
+    {
+      "key": "分层补齐_双章节样例.md / 第一章 集合基础",
+      "title": "第一章 集合基础",
+      "document": "分层补齐_双章节样例.md",
+      "page": 1,
+      "count": 5,
+      "recognized": true
+    },
+    {
+      "key": "分层补齐_双章节样例.md / 第二章 函数基础",
+      "title": "第二章 函数基础",
+      "document": "分层补齐_双章节样例.md",
+      "page": 1,
+      "count": 5,
+      "recognized": true
+    }
+  ]
+}

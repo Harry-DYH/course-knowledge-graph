@@ -1,0 +1,21 @@
+[
+  {
+    "course": "离散数学",
+    "points": 20,
+    "stages": 6,
+    "recommended": [
+      "集合",
+      "图",
+      "元素"
+    ]
+  },
+  {
+    "course": "软件架构基础",
+    "points": 20,
+    "stages": 7,
+    "recommended": [
+      "需求",
+      "数据库"
+    ]
+  }
+]

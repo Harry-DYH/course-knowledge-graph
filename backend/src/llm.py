@@ -17,8 +17,16 @@ import google.auth
 from src.shared.constants import ADDITIONAL_INSTRUCTIONS
 from src.shared.llm_graph_builder_exception import LLMGraphBuilderException
 import re
+from urllib.parse import urlparse
 from langchain_core.callbacks.manager import CallbackManager
 from src.shared.common_fn import UniversalTokenUsageHandler,get_value_from_env
+
+class DeepSeekChatOpenAI(ChatOpenAI):
+    """Use tool calling for structured output on the DeepSeek endpoint."""
+
+    def with_structured_output(self, schema=None, **kwargs):
+        kwargs.setdefault("method", "function_calling")
+        return super().with_structured_output(schema, **kwargs)
 
 def get_llm(model: str):
     """Retrieve the specified language model based on the model name."""
@@ -131,12 +139,15 @@ def get_llm(model: str):
         
         else: 
             model_name, api_endpoint, api_key = env_value.split(",")
-            llm = ChatOpenAI(
+            is_deepseek = urlparse(api_endpoint).hostname == "api.deepseek.com"
+            chat_class = DeepSeekChatOpenAI if is_deepseek else ChatOpenAI
+            llm = chat_class(
                 api_key=api_key,
                 base_url=api_endpoint,
                 model=model_name,
                 temperature=0,
                 callbacks=callback_manager,
+                **({"extra_body": {"thinking": {"type": "disabled"}}} if is_deepseek else {}),
             )
     except Exception as e:
         err = f"Error while creating LLM '{model}': {str(e)}"

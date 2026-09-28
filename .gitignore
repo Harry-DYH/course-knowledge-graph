@@ -178,3 +178,21 @@ startupfrontend.sh
 /crab
 .mcp.json
 mcp.json
+/local-logs/
+/backend/course_upload_cache/
+# Desktop delivery artifacts and dependencies
+/desktop/node_modules/
+/desktop/release/
+/desktop/resources/course-ui/
+/desktop/.image-staging/
+/desktop/.build-temp/
+
+# Local configuration and generated artifacts
+.env.*
+!.env.example
+!.env.sample
+node_modules/
+*.pem
+*.key
+/desktop/.build-temp-*
+/desktop/resources/*.tar

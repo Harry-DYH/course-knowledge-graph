@@ -1,5 +1,13 @@
 [
   {
+    "schema": "course",
+    "triplet": [
+      "KnowledgePoint-PREREQUISITE_OF->KnowledgePoint",
+      "KnowledgePoint-CONTAINS->KnowledgePoint",
+      "KnowledgePoint-RELATED_TO->KnowledgePoint"
+    ]
+  },
+  {
     "schema": "crime",
     "triplet": [
       "PhoneCall-CALLED->Phone",

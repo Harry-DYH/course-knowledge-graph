@@ -1,0 +1,18 @@
+[
+  {
+    "course": "离散数学",
+    "nodes": 20,
+    "edges": 37,
+    "labelOverlaps": 0,
+    "parallelPathsUnique": true,
+    "deterministic": true
+  },
+  {
+    "course": "软件架构基础",
+    "nodes": 20,
+    "edges": 27,
+    "labelOverlaps": 0,
+    "parallelPathsUnique": true,
+    "deterministic": true
+  }
+]

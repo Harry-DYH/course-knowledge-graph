@@ -50,14 +50,10 @@ def load_document_content(file_path):
     if file_extension == '.pdf':
         loader = PyMuPDFLoader(file_path)
         return loader, encoding_flag
-    if file_extension == ".txt":
-        encoding = detect_encoding(file_path)
-        logging.info("Detected encoding for text file: %s", encoding)
-        if encoding.lower() == "utf-8":
-            loader = UnstructuredFileLoader(file_path, mode="elements", autodetect_encoding=True)
-            return loader, encoding_flag
-        with open(file_path, encoding=encoding, errors="replace") as f:
-            content = f.read()
+    if file_extension in {".txt", ".md"}:
+        from src.course_content import read_text_file
+        content, encoding = read_text_file(Path(file_path))
+        logging.info("Text encoding: %s", encoding)
         loader = ListLoader([Document(page_content=content, metadata={"source": file_path})])
         encoding_flag = True
         return loader, encoding_flag
@@ -86,58 +82,44 @@ def get_documents_from_file_by_path(file_path, file_name):
     try:
         loader, encoding_flag = load_document_content(file_path)
         file_extension = file_path.suffix.lower()
-        if file_extension == ".pdf" or (file_extension == ".txt" and encoding_flag):
+        if file_extension in {".pdf", ".txt", ".md"}:
             pages = loader.load()
         else:
             unstructured_pages = loader.load()
             pages = get_pages_with_page_numbers(unstructured_pages)
     except Exception as exc:
         raise Exception(f'Error while reading the file content or metadata, {exc}')
+    from src.course_content import clean_pages
+    for page, cleaned in zip(pages, clean_pages([page.page_content for page in pages])):
+        page.page_content = cleaned
     return file_name, pages, file_extension
 
 def get_pages_with_page_numbers(unstructured_pages):
-    """
-    Groups unstructured pages into logical pages with page numbers and metadata.
-
-    Args:
-        unstructured_pages (list): List of Document objects.
-
-    Returns:
-        list: List of Document objects with page numbers and metadata.
-    """
+    """Keep every element and paragraph when grouping parsed document pages."""
     pages = []
-    page_number = 1
-    page_content = ''
+    paragraphs = []
     metadata = {}
-    for idx, page in enumerate(unstructured_pages):
-        if 'page_number' in page.metadata:
-            if page.metadata['page_number'] == page_number:
-                page_content += page.page_content
-                metadata = {
-                    'source': page.metadata['source'],
-                    'page_number': page_number,
-                    'filename': page.metadata['filename'],
-                    'filetype': page.metadata['filetype']
-                }
-            if page.metadata['page_number'] > page_number:
-                page_number += 1
-                pages.append(Document(page_content=page_content))
-                page_content = ''
-            if page == unstructured_pages[-1]:
-                pages.append(Document(page_content=page_content))
-        elif page.metadata.get('category') == 'PageBreak' and page != unstructured_pages[0]:
-            page_number += 1
-            pages.append(Document(page_content=page_content, metadata=metadata))
-            page_content = ''
+    current_number = 1
+
+    def flush():
+        if paragraphs:
+            pages.append(Document(page_content="\n\n".join(paragraphs), metadata=dict(metadata)))
+            paragraphs.clear()
+
+    for element in unstructured_pages:
+        number = element.metadata.get("page_number", current_number)
+        if element.metadata.get("category") == "PageBreak":
+            flush()
+            current_number += 1
             metadata = {}
-        else:
-            page_content += page.page_content
-            metadata_with_custom_page_number = {
-                'source': page.metadata['source'],
-                'page_number': 1,
-                'filename': page.metadata['filename'],
-                'filetype': page.metadata['filetype']
-            }
-            if page == unstructured_pages[-1]:
-                pages.append(Document(page_content=page_content, metadata=metadata_with_custom_page_number))
+            continue
+        if number != current_number:
+            flush()
+            current_number = number
+            metadata = {}
+        metadata.update(element.metadata)
+        metadata["page_number"] = current_number
+        if element.page_content.strip():
+            paragraphs.append(element.page_content)
+    flush()
     return pages

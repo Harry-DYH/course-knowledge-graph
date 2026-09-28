@@ -386,11 +386,16 @@ def initialize_neo4j_vector(graph, chat_mode_settings, embedding_provider, embed
     return neo_db
 
 def create_retriever(neo_db, document_names, chat_mode_settings,search_k, score_threshold,ef_ratio):
-    if document_names and chat_mode_settings["document_filter"]:
+    if chat_mode_settings.get("strict_document_scope"):
+        retriever = neo_db.as_retriever(
+            search_type="similarity_score_threshold",
+            search_kwargs={"k":search_k,"effective_search_ratio":ef_ratio,"score_threshold":score_threshold,"params":{"course_document_names":document_names}},
+        )
+    elif document_names and chat_mode_settings["document_filter"]:
         retriever = neo_db.as_retriever(
             search_type="similarity_score_threshold",
             search_kwargs={
-                'top_k': search_k,
+                'k': search_k,
                 'effective_search_ratio': ef_ratio,
                 'score_threshold': score_threshold,
                 'filter': {'fileName': {'$in': document_names}}
@@ -400,14 +405,24 @@ def create_retriever(neo_db, document_names, chat_mode_settings,search_k, score_
     else:
         retriever = neo_db.as_retriever(
             search_type="similarity_score_threshold",
-            search_kwargs={'top_k': search_k,'effective_search_ratio': ef_ratio, 'score_threshold': score_threshold}
+            search_kwargs={'k': search_k,'effective_search_ratio': ef_ratio, 'score_threshold': score_threshold}
         )
         logging.info(f"Successfully created retriever with search_k={search_k}, score_threshold={score_threshold}")
     return retriever
 
 def get_neo4j_retriever(graph, document_names,chat_mode_settings, score_threshold=CHAT_SEARCH_KWARG_SCORE_THRESHOLD, embedding_provider=None, embedding_model=None):
     try:
-
+        if document_names and chat_mode_settings.get("mode") == "vector":
+            # Chunk IDs are content hashes and may belong to several Documents.
+            # Rank chunks through their PART_OF membership instead of mutable fileName.
+            chat_mode_settings = dict(chat_mode_settings)
+            original = "WITH node AS chunk, score\nMATCH (chunk)-[:PART_OF]->(d:Document)"
+            scoped = "WITH collect(node) AS candidates\nMATCH (chunk:Chunk)-[:PART_OF]->(d:Document)\nWHERE d.fileName IN $course_document_names AND chunk.embedding IS NOT NULL\nWITH DISTINCT chunk,d,vector.similarity.cosine(chunk.embedding,$query_vector) AS score\nORDER BY score DESC LIMIT $top_k"
+            query = chat_mode_settings["retrieval_query"]
+            if original not in query:
+                raise ValueError("Vector retrieval query does not support strict document scoping")
+            chat_mode_settings["retrieval_query"] = query.replace(original,scoped,1)
+            chat_mode_settings["strict_document_scope"] = True
         neo_db = initialize_neo4j_vector(graph, chat_mode_settings, embedding_provider, embedding_model)
         # document_names= list(map(str.strip, json.loads(document_names)))
         search_k = chat_mode_settings["top_k"]

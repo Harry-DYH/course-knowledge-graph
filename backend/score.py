@@ -25,6 +25,7 @@ from src.QA_integration import QA_RAG, clear_chat_history, get_chat_history
 from src.api_response import create_api_response
 from src.auth_middleware import BearerAuthMiddleware
 from src.chunkid_entities import get_entities_from_chunkids
+from src.course_workspace import router as course_workspace_router
 from src.communities import create_communities
 from src.entities.source_extract_params import SourceScanExtractParams, get_source_scan_extract_params
 from src.entities.user_credential import Neo4jCredentials, get_neo4j_credentials, get_neo4j_credentials_from_session
@@ -122,6 +123,7 @@ class CustomGZipMiddleware:
 
 
 app = FastAPI()
+app.include_router(course_workspace_router)
 app.add_middleware(XContentTypeOptions)
 app.add_middleware(XFrame, Option={'X-Frame-Options': 'DENY'})
 app.add_middleware(

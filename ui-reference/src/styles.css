@@ -1,0 +1,203 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+/* 纯浅色主题：仅 :root 一套。
+   视觉取向 —— Linear / Vercel 式高端工作台：
+   发丝级描边 + 分层柔和投影建立纵深，主色克制、只落在关键动作与选中态，
+   动效统一 ease-out-expo，缓慢启动、快速收敛。 */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 3px);
+  --radius-md: calc(var(--radius) - 1px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --font-sans: var(--font-sans);
+  --font-num: var(--font-num);
+  /* 分层投影：越远层级阴影越软越大，全部低透明度冷灰 */
+  --shadow-xs: 0 1px 2px oklch(0.3 0.03 258 / 0.045);
+  --shadow-sm: 0 1px 2px oklch(0.3 0.03 258 / 0.05), 0 3px 8px -2px oklch(0.3 0.03 258 / 0.05);
+  --shadow-md: 0 2px 4px oklch(0.3 0.03 258 / 0.05), 0 8px 20px -6px oklch(0.3 0.03 258 / 0.09);
+  --shadow-lg: 0 4px 8px oklch(0.3 0.03 258 / 0.05), 0 16px 36px -10px oklch(0.3 0.03 258 / 0.14);
+  /* 动效曲线： expo 出缓动，起步柔、收尾利落 */
+  --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  /* 语义扩展 token —— 知识图谱关系类型 / 掌握状态（功能色，非装饰） */
+  --color-ink: var(--ink);
+  --color-paper: var(--paper);
+  --color-relation-prereq: var(--relation-prereq);
+  --color-relation-contain: var(--relation-contain);
+  --color-relation-related: var(--relation-related);
+  --color-mastery-mastered: var(--mastery-mastered);
+  --color-mastery-learning: var(--mastery-learning);
+  --color-mastery-locked: var(--mastery-locked);
+}
+
+:root {
+  --radius: 0.5rem; /* 8px：高端工具的柔和圆角基准 */
+  --font-sans: "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-num: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* 冷白纸底 + 深靛主色；描边降到发丝级，靠投影分层 */
+  --background: oklch(0.988 0.003 250);
+  --foreground: oklch(0.25 0.024 258);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.024 258);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.024 258);
+  --primary: oklch(0.44 0.125 254);
+  --primary-foreground: oklch(0.985 0.004 250);
+  --secondary: oklch(0.962 0.007 250);
+  --secondary-foreground: oklch(0.35 0.04 258);
+  --muted: oklch(0.962 0.006 250);
+  --muted-foreground: oklch(0.545 0.02 257);
+  --accent: oklch(0.945 0.016 250);
+  --accent-foreground: oklch(0.32 0.06 253);
+  --destructive: oklch(0.57 0.19 23);
+  --destructive-foreground: oklch(0.985 0.004 250);
+  --border: oklch(0.918 0.009 250);
+  --input: oklch(0.918 0.009 250);
+  --ring: oklch(0.58 0.11 253);
+
+  --chart-1: oklch(0.55 0.13 250);
+  --chart-2: oklch(0.63 0.12 195);
+  --chart-3: oklch(0.6 0.11 165);
+  --chart-4: oklch(0.68 0.13 85);
+  --chart-5: oklch(0.58 0.15 320);
+
+  /* 侧栏：更深的墨蓝近黑，拉开与内容的层级 */
+  --sidebar: oklch(0.205 0.03 262);
+  --sidebar-foreground: oklch(0.93 0.012 250);
+  --sidebar-primary: oklch(0.74 0.11 235);
+  --sidebar-primary-foreground: oklch(0.2 0.03 258);
+  --sidebar-accent: oklch(0.285 0.032 260);
+  --sidebar-accent-foreground: oklch(0.96 0.008 250);
+  --sidebar-border: oklch(0.3 0.028 260);
+
+  --ink: oklch(0.28 0.03 258);
+  --paper: oklch(0.978 0.005 250);
+  --relation-prereq: oklch(0.55 0.15 250);
+  --relation-contain: oklch(0.57 0.12 168);
+  --relation-related: oklch(0.62 0.14 320);
+  --mastery-mastered: oklch(0.58 0.13 158);
+  --mastery-learning: oklch(0.62 0.13 235);
+  --mastery-locked: oklch(0.72 0.015 258);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    letter-spacing: 0.002em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* 数字统一等宽对齐，便于表格与统计位读 */
+  .tnum {
+    font-family: var(--font-num);
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 18%, transparent);
+  }
+}
+
+/* ── 动效 token：全部走 ease-soft，时长分级 ─────────────── */
+@keyframes dash-flow {
+  to { stroke-dashoffset: -24; }
+}
+.edge-flow {
+  stroke-dasharray: 6 6;
+  animation: dash-flow 1.2s linear infinite;
+}
+
+@keyframes node-pulse {
+  /* 仅动 opacity：SVG 子元素的 CSS transform 会覆盖 <g transform="translate(...)">
+     的定位属性，若在此写 scale() 会把光晕甩到坐标系原点，形成游离灰斑 */
+  0%, 100% { opacity: 0.26; }
+  50% { opacity: 0.05; }
+}
+.node-pulse {
+  animation: node-pulse 2.6s var(--ease-soft) infinite;
+}
+
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(5px) scale(0.99); }
+  to { opacity: 1; transform: none; }
+}
+.panel-in { animation: panel-in 0.24s var(--ease-soft) both; }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in { animation: fade-in 0.3s var(--ease-soft) both; }
+
+@keyframes caret-blink {
+  50% { opacity: 0; }
+}
+.caret::after {
+  content: "";
+  display: inline-block;
+  width: 2px; height: 1em;
+  margin-left: 2px;
+  background: currentColor;
+  vertical-align: -2px;
+  animation: caret-blink 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .edge-flow, .node-pulse, .panel-in, .fade-in, .caret::after { animation: none; }
+}
+
+/* 图谱画布：点阵网格比线网格更轻，干扰更小 */
+.graph-grid {
+  background-image: radial-gradient(circle, oklch(0.84 0.014 250) 1px, transparent 1.2px);
+  background-size: 22px 22px;
+}
+
+/* 通用滚动条：更细更淡 */
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-thumb { background: oklch(0.87 0.012 250); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: oklch(0.79 0.018 250); }
+::-webkit-scrollbar-track { background: transparent; }

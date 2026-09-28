@@ -1,0 +1,51 @@
+{
+  "time": "2026-09-28T03:06:15.905678+00:00",
+  "scope": "自编 DOCX 样例的接口闭环；不代表真实课程准确率",
+  "checks": [
+    {
+      "check": "DOCX 课程导入与重复导入去重",
+      "passed": true,
+      "points": 20,
+      "edges": 27
+    },
+    {
+      "check": "重复关系及先修环拒绝保存",
+      "passed": true
+    },
+    {
+      "check": "教师修订刷新持久化与版本冲突",
+      "passed": true
+    },
+    {
+      "check": "教师关系用于路径、进度持久化、学习者隔离与已掌握目标",
+      "passed": true
+    },
+    {
+      "check": "教师关系优先问答、资料片段和课程出处隔离",
+      "passed": true,
+      "seconds": 2.34
+    },
+    {
+      "check": "未提供的知识问题明确拒答",
+      "passed": true,
+      "seconds": 2.11
+    },
+    {
+      "check": "自测正确评分、重复提交一致与学习者记录隔离",
+      "passed": true,
+      "questions": 5
+    },
+    {
+      "check": "后续资料导入保留教师删除、定义和关系修订",
+      "passed": true
+    },
+    {
+      "check": "课程改名保留课程身份与资料",
+      "passed": true
+    },
+    {
+      "check": "模拟中断恢复、重试去重且保留教师修订",
+      "passed": true
+    }
+  ]
+}
