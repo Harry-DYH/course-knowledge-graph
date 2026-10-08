@@ -132,7 +132,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               <div className="px-3 py-2 text-[10px] font-medium uppercase tracking-[0.14em] text-sidebar-foreground/35">切换课程</div>
               {courses.length === 0 && <p className="px-3 pb-2 text-[11px] text-sidebar-foreground/45">暂无课程</p>}
               {courses.map((c) => (
-                <button key={c.uid} onClick={() => { setCourseId(c.uid); localStorage.setItem("knowtrace:course:v2", c.uid); setMenu("none"); }}
+                <button key={c.uid} onClick={() => { setCourseId(c.uid); localStorage.setItem("knowtrace:course:v2", c.uid); window.dispatchEvent(new Event("knowtrace:course-changed")); setMenu("none"); }}
                   className="flex w-full items-center gap-2 px-3 py-2 text-left text-[12.5px] text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent">
                   <span className="size-1.5 shrink-0 rounded-full bg-sidebar-primary" />
                   <span className="min-w-0 flex-1 truncate">{c.title}</span>

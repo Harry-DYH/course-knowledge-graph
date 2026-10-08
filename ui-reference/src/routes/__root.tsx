@@ -6,6 +6,7 @@ import {
   createRootRouteWithContext,
   useRouterState,
 } from '@tanstack/react-router';
+import { AppShell } from '@/components/AppShell';
 
 function NotFoundComponent() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -32,7 +33,9 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <AppShell>
+        <Outlet />
+      </AppShell>
     </QueryClientProvider>
   );
 }
