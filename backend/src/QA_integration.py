@@ -2,8 +2,8 @@ import hashlib
 import json
 import time
 import logging
-
 import threading
+import re
 from datetime import datetime
 from typing import Any
 from dotenv import load_dotenv
@@ -278,6 +278,34 @@ def process_documents(docs, question, messages, llm, model,chat_mode_settings):
     
     return content, result, total_tokens, formatted_docs
 
+def keyword_fallback_documents(graph, question, document_names):
+    """向量检索为空时的兜底：用问题中的关键词做 Cypher 子串匹配，从课程文档 Chunk 捞回相关片段。"""
+    from langchain_core.documents import Document
+    try:
+        keywords = [t for t in re.findall(r"[A-Za-z0-9\u4e00-\u9fff]+", question) if len(t) >= 2]
+        if not keywords:
+            return []
+        # 按关键词长度降序，长词优先（更精准）
+        keywords = sorted(set(keywords), key=len, reverse=True)[:5]
+        clauses = " OR ".join([f"ch.text CONTAINS ${'k%d' % i}" for i in range(len(keywords))])
+        params = {f"k{i}": kw for i, kw in enumerate(keywords)}
+        doc_list = document_names if isinstance(document_names, list) else [document_names]
+        query = f"MATCH (ch:Chunk)-[:PART_OF]->(d:Document) WHERE d.fileName IN $docs AND ({clauses}) RETURN DISTINCT ch.text AS text, d.fileName AS doc ORDER BY ch.text LIMIT 5"
+        params["docs"] = doc_list
+        records = graph.query(query, params=params)
+        docs = []
+        for r in records:
+            data = r if isinstance(r, dict) else (r.data() if hasattr(r, "data") else {})
+            text = data.get("text") or ""
+            if not text:
+                continue
+            docs.append(Document(page_content=text, metadata={"document_name": data.get("doc") or ""}))
+        return docs
+    except Exception as e:
+        logging.warning(f"Keyword fallback retrieval failed: {e}")
+        return []
+
+
 def retrieve_documents(doc_retriever, messages):
 
     start_time = time.time()
@@ -468,13 +496,18 @@ def process_chat_response(messages, history, question, model, graph, document_na
         
         docs,transformed_question = retrieve_documents(doc_retriever, messages)  
 
+        if not docs:
+            docs = keyword_fallback_documents(graph, question, document_names)
+            if docs:
+                logging.info(f"Vector retrieval returned no documents; keyword fallback found {len(docs)} documents.")
+
         if docs:
             content, result, total_tokens,formatted_docs = process_documents(docs, question, messages, llm, model, chat_mode_settings)
             # if get_value_from_env("TRACK_USER_USAGE", "false", "bool"):
             #     latest_token = track_token_usage(email=email, uri=uri, usage=total_tokens, last_used_model=model, operation_type="chat")
             #     logging.info(f"Total token usage {latest_token} for user {email} ")
         else:
-            content = "I couldn't find any relevant documents to answer your question."
+            content = "抱歉，我在当前课程资料中没有找到与该问题相关的内容。您可以换个问法，或联系老师补充相关课程资料。"
             result = {"sources": list(), "nodedetails": list(), "entities": list()}
             total_tokens = 0
             formatted_docs = ""

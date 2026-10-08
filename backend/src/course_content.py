@@ -55,6 +55,13 @@ def chapter_title(line):
         return line
     if re.match(r"^(?:Chapter|CHAPTER)\s+\d+\b",line) and len(line)<=120:
         return line
+    # 中文序号标题：一、xxx 或 （一）xxx 或 1. xxx 或 1、xxx（序号+标点+后续文字，非纯数字）
+    if re.match(r"^[零〇一二三四五六七八九十百]+[、.．](?:\s*\S.*)?$",line) and len(line)<=120 and not re.fullmatch(r"^[零〇一二三四五六七八九十百]+[、.．]\s*\d+$",line):
+        return line
+    if re.match(r"^（[零〇一二三四五六七八九十百]+）(?:\s*\S.*)?$",line) and len(line)<=120:
+        return line
+    if re.match(r"^\d+[、.．]\s*\S",line) and len(line)<=120:
+        return line
     return None
 
 

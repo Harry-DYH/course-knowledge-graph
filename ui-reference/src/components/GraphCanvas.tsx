@@ -17,6 +17,10 @@ interface Props {
   selectedId?: string | null;
   onSelect?: (id: string | null) => void;
   highlightPath?: string[];
+  /** 外部请求聚焦某节点（变化时居中定位） */
+  focusId?: string | null;
+  /** 当前推荐可学的节点（绿色高亮） */
+  recommendedIds?: string[];
   /** 教师编辑态：显示置信度徽标 */
   editable?: boolean;
   /** 节点被拖动后上报（0~100 坐标） */
@@ -32,7 +36,7 @@ interface Props {
 
 export function GraphCanvas({
   nodes, edges, layoutNodes=nodes, layoutEdges=edges, courseId = "default", selectedId, onSelect, highlightPath = [], editable,
-  onNodeMove, onResetLayout, onCanvasBlank, onRequestRelation, connectMode,
+  onNodeMove, onResetLayout, onCanvasBlank, onRequestRelation, connectMode, focusId, recommendedIds = [],
 }: Props) {
   const layout=useMemo(()=>spaciousGraph(layoutNodes,layoutEdges),[layoutNodes,layoutEdges]);
   const H=layout.height;
@@ -45,7 +49,7 @@ export function GraphCanvas({
   const [frame,setFrame]=useState({width:1200,height:680});
   const viewportH=Math.max(H,W*frame.height/Math.max(1,frame.width));
   useEffect(()=>{const svg=svgRef.current;if(!svg)return;const observer=new ResizeObserver(entries=>{const r=entries[0].contentRect;if(r.width&&r.height)setFrame({width:r.width,height:r.height});});observer.observe(svg);return()=>observer.disconnect();},[]);
-  const pan = useRef<{ sx: number; sy: number; ox: number; oy: number } | null>(null);
+  const pan = useRef<{ sx: number; sy: number; ox: number; oy: number; lastX: number; lastY: number } | null>(null);
   const dragNode = useRef<{ id: string; moved: boolean; x?:number; y?:number } | null>(null);
 
   // 本地持久化的节点位置覆盖（学生端可拖动改布局）
@@ -83,6 +87,7 @@ export function GraphCanvas({
   };
   const visibleIds=nodes.map(n=>n.id).join('|');
   useEffect(()=>{fitView();},[courseId,visibleIds,frame.width,frame.height]);
+  useEffect(()=>{if(focusId)centerOn(focusId);},[focusId]);
 
   const candidates = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -104,6 +109,18 @@ export function GraphCanvas({
   }, [hover, selectedId, edges]);
 
   const pathSet = new Set(highlightPath);
+  const recommendedSet = new Set(recommendedIds);
+  const degree = useMemo(() => {
+    const d = new Map<string, number>();
+    edges.forEach((e) => { d.set(e.from, (d.get(e.from) || 0) + 1); d.set(e.to, (d.get(e.to) || 0) + 1); });
+    return d;
+  }, [edges]);
+  const chapterColors = ["oklch(0.55 0.15 250)", "oklch(0.6 0.15 165)", "oklch(0.65 0.16 55)", "oklch(0.55 0.16 350)", "oklch(0.6 0.13 300)", "oklch(0.55 0.12 200)"];
+  const chapterColorOf = (chapter: string) => {
+    const chapters = Array.from(new Set(nodes.map((n) => n.chapter)));
+    const idx = chapters.indexOf(chapter);
+    return chapterColors[(idx < 0 ? 0 : idx) % chapterColors.length];
+  };
 
   const zoom = (factor: number) => setView((v) => ({ ...v, k: Math.min(2.6, Math.max(0.45, v.k * factor)) }));
 
@@ -134,7 +151,7 @@ export function GraphCanvas({
 
   const onPointerDownCanvas = (e: React.PointerEvent) => {
     if (dragNode.current) return;
-    pan.current = { sx: e.clientX, sy: e.clientY, ox: view.x, oy: view.y };
+    pan.current = { sx: e.clientX, sy: e.clientY, ox: view.x, oy: view.y, lastX: e.clientX, lastY: e.clientY };
     svgRef.current?.setPointerCapture?.(e.pointerId);
   };
 
@@ -151,7 +168,17 @@ export function GraphCanvas({
       return;
     }
     if (!pan.current) return;
-    setView((v) => ({ ...v, x: pan.current!.ox + (e.clientX - pan.current!.sx) * (W / (svgRef.current?.getBoundingClientRect().width || W)), y: pan.current!.oy + (e.clientY - pan.current!.sy) * (viewportH / (svgRef.current?.getBoundingClientRect().height || viewportH)) }));
+    const rect = svgRef.current?.getBoundingClientRect();
+    const fx = W / (rect?.width || W);
+    const fy = viewportH / (rect?.height || viewportH);
+    const MAX_STEP = 120;
+    let dx = e.clientX - pan.current.lastX;
+    let dy = e.clientY - pan.current.lastY;
+    if (Math.abs(dx * fx) > MAX_STEP) dx = (Math.sign(dx) * MAX_STEP) / fx;
+    if (Math.abs(dy * fy) > MAX_STEP) dy = (Math.sign(dy) * MAX_STEP) / fy;
+    pan.current.lastX = e.clientX;
+    pan.current.lastY = e.clientY;
+    setView((v) => ({ ...v, x: v.x + dx * fx, y: v.y + dy * fy }));
   };
 
   const endAll = () => {
@@ -338,12 +365,15 @@ export function GraphCanvas({
           {/* 节点 */}
           {nodes.map((n) => {
             const p = pos.get(n.id)!;
-            const r = 42;
+            const deg = degree.get(n.id) || 0;
+            const r = Math.min(52, 34 + deg * 4);
             const isSel = selectedId === n.id;
             const isHover = hover === n.id;
             const dim = (activeSet && !activeSet.has(n.id)) || (matched && !matched.has(n.id));
             const inPath = pathSet.has(n.id);
+            const isRec = recommendedSet.has(n.id);
             const mc = MASTERY_META[n.mastery].color;
+            const cc = chapterColorOf(n.chapter || "未分章");
             return (
               <g key={n.id} transform={`translate(${p.cx} ${p.cy})`} opacity={dim ? 0.42 : 1}
                 tabIndex={0} role="button" aria-label={`${n.label}，${n.kind}${n.chapter ? `，${n.chapter}` : ""}`}
@@ -354,10 +384,10 @@ export function GraphCanvas({
                 onClick={(e) => clickNode(e, n.id)} onDoubleClick={(e) => dblNode(e, n.id)}
                 onKeyDown={(e) => onKeyDown(e, n.id)}>
                 <title>{n.label} · {n.kind}{n.chapter?` · ${n.chapter}`:""}</title>
-                {(isSel||inPath)&&<circle r="51" fill={inPath?"var(--primary)":mc} className="node-pulse"/>}
-                <circle r="46" fill="none" stroke={mc} strokeWidth="1" opacity={isHover?0.5:0}/>
-                <circle data-node-circle r="42" fill="var(--card)" stroke={isSel?"var(--primary)":mc} strokeWidth={isSel?2.5:1.5} filter={isSel||isHover?"url(#node-shadow-strong)":"url(#node-shadow)"}/>
-                {isSel&&<circle r="38" fill="none" stroke="var(--primary)" strokeOpacity="0.35"/>}
+                {(isSel||inPath||isRec)&&<circle r={r+9} fill={inPath?"var(--primary)":isRec?"var(--mastery-mastered)":mc} className="node-pulse"/>}
+                <circle r={r+4} fill="none" stroke={isRec?"var(--mastery-mastered)":cc} strokeWidth={isRec?2.5:1} opacity={isHover?0.5:isRec?1:0}/>
+                <circle data-node-circle r={r} fill="var(--card)" stroke={isSel?"var(--primary)":isRec?"var(--mastery-mastered)":cc} strokeWidth={isSel||isRec?2.5:2} filter={isSel||isHover?"url(#node-shadow-strong)":"url(#node-shadow)"}/>
+                {isSel&&<circle r={r-4} fill="none" stroke="var(--primary)" strokeOpacity="0.35"/>}
                 <text textAnchor="middle" dy="0.35em" fontSize="22" fontWeight="600" fill="var(--ink)" stroke="var(--card)" strokeWidth="3" paintOrder="stroke" strokeLinejoin="round">{n.label.length>7?n.label.slice(0,7)+"…":n.label}</text>
                 <text textAnchor="middle" y="61" fontSize="12" fill="var(--muted-foreground)" stroke="var(--paper)" strokeWidth="3" paintOrder="stroke">{n.kind}</text>
                 {editable && n.confidence < 1 && (
@@ -371,6 +401,12 @@ export function GraphCanvas({
                   <g transform={`translate(${-r - 1} ${-r - 1})`} pointerEvents="none">
                     <circle r="8.5" fill="var(--primary)" stroke="var(--card)" strokeWidth="1.5" />
                     <text textAnchor="middle" y="3.2" fontSize="9.5" fontWeight={700} fill="#fff" stroke="none">{pathIndex(pathSet, n.id)}</text>
+                  </g>
+                )}
+                {isRec && (
+                  <g transform={`translate(${r + 1} ${r + 1})`} pointerEvents="none">
+                    <circle r="8.5" fill="var(--mastery-mastered)" stroke="var(--card)" strokeWidth="1.5" />
+                    <text textAnchor="middle" y="3.2" fontSize="10" fontWeight={700} fill="#fff" stroke="none">✓</text>
                   </g>
                 )}
               </g>

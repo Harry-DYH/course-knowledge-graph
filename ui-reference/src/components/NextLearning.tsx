@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { api, type NextRecommendation } from "@/lib/course-api";
-export function NextLearning({courseId,learner,mastered,onSelect,onMaster,busy=false}:{courseId:string;learner:string;mastered:string[];onSelect:(id:string)=>void;onMaster:(id:string)=>void;busy?:boolean}) {
+export function NextLearning({courseId,learner,mastered,onSelect,onMaster,busy=false,onRecommended}:{courseId:string;learner:string;mastered:string[];onSelect:(id:string)=>void;onMaster:(id:string)=>void;busy?:boolean;onRecommended?:(ids:string[])=>void}) {
  const [result,setResult]=useState<NextRecommendation|null>(null),[error,setError]=useState(""),[refreshing,setRefreshing]=useState(false);
- useEffect(()=>{let active=true;setRefreshing(true);setError("");api.next(courseId,learner).then(r=>{if(active)setResult(r)}).catch(e=>{if(active)setError(e.message)}).finally(()=>{if(active)setRefreshing(false)});return()=>{active=false}},[courseId,learner,mastered]);
+ useEffect(()=>{let active=true;setRefreshing(true);setError("");api.next(courseId,learner).then(r=>{if(active){setResult(r);onRecommended?.(r.steps.map(s=>s.uid));}}).catch(e=>{if(active)setError(e.message)}).finally(()=>{if(active)setRefreshing(false)});return()=>{active=false}},[courseId,learner,mastered]);
  const disabled=busy||refreshing;
  const stages=result?.stages||[];
  const summary=[{title:"基础起点",subtitle:"先建立根基",select:(level:number|null)=>level===0},{title:"知识衔接",subtitle:"连接已有基础",select:(level:number|null)=>level===1},{title:"逐步进阶",subtitle:"先修掌握后再深入",select:(level:number|null)=>level!==null&&level>=2}];

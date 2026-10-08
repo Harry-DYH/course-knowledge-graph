@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link, useLocation } from "@tanstack/react-router";
 import {
   Network, Upload, ListTree, GitBranch, BookOpen, MessagesSquare, Route as RouteIcon,
@@ -6,7 +6,8 @@ import {
   RotateCcw, LogOut, UserCircle2, Layers,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { BRAND, COURSES } from "@/lib/mock";
+import { BRAND } from "@/lib/mock";
+import { api, type Course } from "@/lib/course-api";
 
 type Role = "teacher" | "student";
 
@@ -33,8 +34,18 @@ export function AppShell({ children }: { children: ReactNode }) {
   const role: Role = pathname.startsWith("/teacher") ? "teacher" : "student";
   const [open, setOpen] = useState(false);
   const [menu, setMenu] = useState<"none" | "user" | "course">("none");
-  const [courseId, setCourseId] = useState(COURSES[0].id);
-  const course = COURSES.find((c) => c.id === courseId)!;
+  const [courses, setCourses] = useState<Course[]>([]);
+  const [courseId, setCourseId] = useState(localStorage.getItem("knowtrace:course:v2") || "");
+  useEffect(() => {
+    let active = true;
+    api.courses().then((list) => {
+      if (!active) return;
+      setCourses(list);
+      setCourseId((cur) => (list.some((c) => c.uid === cur) ? cur : (list[0]?.uid || "")));
+    }).catch(() => {});
+    return () => { active = false; };
+  }, []);
+  const course = courses.find((c) => c.uid === courseId);
   const items = NAV[role];
 
   // 按最长前缀匹配，避免 /teacher/editor 被 /teacher 抢先命中
@@ -109,8 +120,8 @@ export function AppShell({ children }: { children: ReactNode }) {
               <Layers size={12.5} className="text-sidebar-foreground/55" />
             </span>
             <span className="min-w-0 flex-1">
-              <span className="block truncate text-[12.5px] font-medium">{course.name}</span>
-              <span className="block truncate text-[10.5px] text-sidebar-foreground/45">{course.code} · {course.currentChapter}</span>
+              <span className="block truncate text-[12.5px] font-medium">{course?.title || "请选择课程"}</span>
+              <span className="block truncate text-[10.5px] text-sidebar-foreground/45">{course ? `${course.documents.length} 份资料` : "前往多课程管理创建"}</span>
             </span>
             <ChevronDown size={13} className={cn("mt-1.5 shrink-0 text-sidebar-foreground/40 transition-transform duration-200", menu === "course" && "rotate-180")} />
           </button>
@@ -119,12 +130,13 @@ export function AppShell({ children }: { children: ReactNode }) {
             <div className="panel-in absolute bottom-full left-2.5 right-2.5 mb-1.5 overflow-hidden rounded-xl border border-sidebar-border bg-sidebar shadow-lg"
               onClick={(e) => e.stopPropagation()}>
               <div className="px-3 py-2 text-[10px] font-medium uppercase tracking-[0.14em] text-sidebar-foreground/35">切换课程</div>
-              {COURSES.map((c) => (
-                <button key={c.id} onClick={() => { setCourseId(c.id); setMenu("none"); }}
+              {courses.length === 0 && <p className="px-3 pb-2 text-[11px] text-sidebar-foreground/45">暂无课程</p>}
+              {courses.map((c) => (
+                <button key={c.uid} onClick={() => { setCourseId(c.uid); localStorage.setItem("knowtrace:course:v2", c.uid); setMenu("none"); }}
                   className="flex w-full items-center gap-2 px-3 py-2 text-left text-[12.5px] text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent">
-                  <span className="size-1.5 shrink-0 rounded-full" style={{ background: c.accent }} />
-                  <span className="min-w-0 flex-1 truncate">{c.name}</span>
-                  {c.id === courseId && <Check size={13} className="shrink-0 text-sidebar-primary" />}
+                  <span className="size-1.5 shrink-0 rounded-full bg-sidebar-primary" />
+                  <span className="min-w-0 flex-1 truncate">{c.title}</span>
+                  {c.uid === courseId && <Check size={13} className="shrink-0 text-sidebar-primary" />}
                 </button>
               ))}
               <div className="border-t border-sidebar-border/80 px-3 py-2 text-[10.5px] text-sidebar-foreground/35">
