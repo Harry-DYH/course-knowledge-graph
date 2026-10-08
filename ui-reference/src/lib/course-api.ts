@@ -41,6 +41,7 @@ export const api = {
   saveGraph: (id: string, graph: CourseGraph) => request<CourseGraph>(`/courses/${encodeURIComponent(id)}/graph`, { method: "PUT", body: JSON.stringify({ revision: graph.course.revision, points: graph.points, edges: graph.edges }) }),
   upload: (id: string, file: File) => { const form = new FormData(); form.append("file", file); return request<{ graph: CourseGraph }>(`/courses/${encodeURIComponent(id)}/upload`, { method: "POST", body: form }); },
   jobs: (id:string)=>request<ProcessJob[]>(`/courses/${encodeURIComponent(id)}/jobs`),
+  activity: (id:string)=>request<{action:string,detail:string,at_ms:number}[]>(`/courses/${encodeURIComponent(id)}/activity`),
   retry: (id:string,job_id:string)=>request<{graph:CourseGraph}>(`/courses/${encodeURIComponent(id)}/retry`,{method:"POST",body:JSON.stringify({job_id})}),
   quiz: (id:string,learner:string,count?:number,types?:string[])=>request<Quiz>(`/courses/${encodeURIComponent(id)}/quiz`,{method:"POST",body:JSON.stringify({learner,count,types})}),
   submitQuiz: (id:string,learner:string,attempt_id:string,answers:string[])=>request<QuizResult>(`/courses/${encodeURIComponent(id)}/quiz/submit`,{method:"POST",body:JSON.stringify({learner,attempt_id,answers})}),

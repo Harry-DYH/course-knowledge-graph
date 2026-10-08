@@ -108,6 +108,15 @@ def _query(statement: str, **params):
             return [r.data() for r in session.run(statement, **params)]
 
 
+def _log_activity(course_id: str, action: str, detail: str = ""):
+    """记录课程操作日志（供教师端查看最近操作）。"""
+    try:
+        _query("CREATE (a:CourseActivityLog {uid:randomUUID(),course_id:$cid,action:$action,detail:$detail,at_ms:timestamp()})", cid=course_id, action=action, detail=detail[:200])
+        logging.info("活动日志 [%s] %s %s", course_id, action, detail)
+    except Exception:
+        pass
+
+
 def _course(course_id: str):
     rows = _query("MATCH (c:CourseWorkspace {uid:$uid}) RETURN c.uid AS uid,c.title AS title,c.documents AS documents,c.revision AS revision,c.deleted_origins AS deleted_origins,c.deleted_edges AS deleted_edges,c.teacher_graph_edited AS teacher_graph_edited", uid=course_id)
     if not rows:
@@ -215,6 +224,12 @@ def documents():
     return _query("MATCH (d:Document) WHERE d.fileName IS NOT NULL RETURN d.fileName AS name,d.status AS status,d.nodeCount AS nodes ORDER BY d.fileName")
 
 
+@router.get("/courses/{course_id}/activity")
+def course_activity(course_id: str):
+    _course(course_id)
+    return _query("MATCH (a:CourseActivityLog {course_id:$cid}) RETURN a.action AS action,a.detail AS detail,a.at_ms AS at_ms ORDER BY a.at_ms DESC LIMIT 50", cid=course_id)
+
+
 @router.get("/courses")
 def courses():
     return _query("MATCH (c:CourseWorkspace) RETURN c.uid AS uid,c.title AS title,c.documents AS documents,c.revision AS revision ORDER BY c.title")
@@ -226,6 +241,7 @@ def create_course(data: CourseInput):
         raise HTTPException(400,"课程名称至少需要两个字")
     uid = str(uuid4())
     _query("CREATE (c:CourseWorkspace {uid:$uid,title:$title,documents:[],revision:0,deleted_origins:[],deleted_edges:[]})", uid=uid, title=data.title.strip())
+    _log_activity(uid, "创建课程", data.title.strip())
     return _course(uid)
 
 
@@ -235,12 +251,14 @@ def rename_course(course_id: str, data: CourseInput):
     if len(data.title.strip())<2:
         raise HTTPException(400,"课程名称至少需要两个字")
     _query("MATCH (c:CourseWorkspace {uid:$uid}) SET c.title=$title",uid=course_id,title=data.title.strip())
+    _log_activity(course_id, "改名课程", data.title.strip())
     return _course(course_id)
 
 
 @router.delete("/courses/{course_id}")
 def delete_course(course_id: str):
     course = _course(course_id)
+    _log_activity(course_id, "删除课程", course["title"])
     with _driver() as driver:
         with driver.session(database=os.getenv("NEO4J_DATABASE", "neo4j")) as session:
             def write(tx):
@@ -263,6 +281,7 @@ def delete_course_document(course_id: str, filename: str):
     course = _course(course_id)
     if filename not in course["documents"]:
         raise HTTPException(404, "该课程未关联此文档")
+    _log_activity(course_id, "删除资料", filename)
     with _driver() as driver:
         with driver.session(database=os.getenv("NEO4J_DATABASE", "neo4j")) as session:
             def write(tx):
@@ -503,6 +522,7 @@ async def upload_course_document(course_id: str, file: UploadFile = File(...)):
             os.makedirs(os.path.dirname(cache_file),exist_ok=True)
             shutil.copyfile(os.path.join(merged_dir,filename),cache_file)
             result = await _finish_document(course_id,filename,job_id,creds,merged_dir)
+            _log_activity(course_id, "上传资料", filename)
             return {"upload":uploaded,"graph":result,"job_id":job_id}
         except HTTPException as exc:
             _job_status(job_id,"Failed",error=str(exc.detail))

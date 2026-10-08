@@ -24,6 +24,7 @@ const NAV: Record<Role, NavItem[]> = {
     { to: "/", label: "知识地图", Icon: Network },
     { to: "/learn/path", label: "学习路径", Icon: RouteIcon },
     { to: "/learn/ask", label: "向助教提问", Icon: MessagesSquare },
+    { to: "/learn/quiz", label: "知识自测", Icon: BookOpen },
   ],
 };
 
@@ -82,7 +83,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           {(["student", "teacher"] as Role[]).map((r) => {
             const active = r === role;
             return (
-              <Link key={r} to={r === "student" ? "/" : "/teacher"} onClick={() => setOpen(false)}
+              <Link key={r} to={r === "student" ? "/" : "/teacher"} onClick={(event) => { if ((window as any).__knowtrace_dirty && !confirm("当前图谱有未保存的修改，确定切换角色吗？")) { event.preventDefault(); return; } setOpen(false); }}
                 className={cn("flex flex-1 items-center justify-center gap-1.5 rounded-md py-1.5 text-[12px] font-medium transition-all duration-200 [transition-timing-function:var(--ease-soft)]",
                   active ? "bg-sidebar-accent text-sidebar-accent-foreground shadow-[0_1px_3px_oklch(0_0_0/0.25),inset_0_1px_0_oklch(1_0_0/0.06)]" : "text-sidebar-foreground/50 hover:text-sidebar-foreground/85")}>
                 {r === "student" ? <GraduationCap size={13} /> : <Presentation size={13} />}
@@ -99,7 +100,7 @@ export function AppShell({ children }: { children: ReactNode }) {
           {items.map((it) => {
             const active = isOn(it.to);
             return (
-              <Link key={it.to} to={it.to} onClick={() => setOpen(false)}
+              <Link key={it.to} to={it.to} onClick={(event) => { if ((window as any).__knowtrace_dirty && !confirm("当前图谱有未保存的修改，确定离开吗？")) { event.preventDefault(); return; } setOpen(false); }}
                 className={cn("group relative flex items-center gap-2.5 rounded-lg px-2.5 py-[7.5px] text-[13px] transition-all duration-200 [transition-timing-function:var(--ease-soft)]",
                   active
                     ? "bg-sidebar-accent font-medium text-sidebar-accent-foreground shadow-[inset_0_1px_0_oklch(1_0_0/0.05)]"
@@ -132,7 +133,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               <div className="px-3 py-2 text-[10px] font-medium uppercase tracking-[0.14em] text-sidebar-foreground/35">切换课程</div>
               {courses.length === 0 && <p className="px-3 pb-2 text-[11px] text-sidebar-foreground/45">暂无课程</p>}
               {courses.map((c) => (
-                <button key={c.uid} onClick={() => { setCourseId(c.uid); localStorage.setItem("knowtrace:course:v2", c.uid); window.dispatchEvent(new Event("knowtrace:course-changed")); setMenu("none"); }}
+                <button key={c.uid} onClick={() => { if ((window as any).__knowtrace_dirty && !confirm("当前图谱有未保存的修改，确定切换课程吗？")) return; setCourseId(c.uid); localStorage.setItem("knowtrace:course:v2", c.uid); window.dispatchEvent(new Event("knowtrace:course-changed")); setMenu("none"); }}
                   className="flex w-full items-center gap-2 px-3 py-2 text-left text-[12.5px] text-sidebar-foreground/80 transition-colors hover:bg-sidebar-accent">
                   <span className="size-1.5 shrink-0 rounded-full bg-sidebar-primary" />
                   <span className="min-w-0 flex-1 truncate">{c.title}</span>
