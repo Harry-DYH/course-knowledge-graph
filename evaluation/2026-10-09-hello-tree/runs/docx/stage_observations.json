@@ -1,0 +1,44 @@
+[
+  {
+    "elapsed_seconds": 1.146,
+    "status": "Extracting",
+    "job": {
+      "started_ms": 1791548946241,
+      "uid": "a9ecf2ee-3235-4561-987a-d23b7143ca2b",
+      "document": "Hello算法_第7章树_正文.docx",
+      "error": "",
+      "updated_ms": 1791548946560,
+      "status": "Extracting",
+      "attempts": 1,
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2"
+    }
+  },
+  {
+    "elapsed_seconds": 9.267,
+    "status": "Importing",
+    "job": {
+      "started_ms": 1791548946241,
+      "uid": "a9ecf2ee-3235-4561-987a-d23b7143ca2b",
+      "document": "Hello算法_第7章树_正文.docx",
+      "error": "",
+      "updated_ms": 1791548954671,
+      "status": "Importing",
+      "attempts": 1,
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2"
+    }
+  },
+  {
+    "elapsed_seconds": 10.283,
+    "status": "Enriching",
+    "job": {
+      "started_ms": 1791548946241,
+      "uid": "a9ecf2ee-3235-4561-987a-d23b7143ca2b",
+      "document": "Hello算法_第7章树_正文.docx",
+      "error": "",
+      "updated_ms": 1791548955457,
+      "status": "Enriching",
+      "attempts": 1,
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2"
+    }
+  }
+]

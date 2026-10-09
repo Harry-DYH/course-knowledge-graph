@@ -1,0 +1,104 @@
+{
+  "kind": "Post-run offline diagnostic; not a change to the frozen protocol",
+  "MAX_TOKEN_CHUNK_SIZE": 10000,
+  "token_chunk_size": 1500,
+  "chunk_overlap": 100,
+  "email": "empty, normal course upload path",
+  "limit_formula": "int(MAX_TOKEN_CHUNK_SIZE / token_chunk_size)",
+  "code": "backend/src/create_chunks.py:43-44,78-80",
+  "coverage_note": "Token prefix coverage, not knowledge-point recall. Overlap is counted once. Section offsets are approximate because token boundaries can straddle prefixes.",
+  "runs": [
+    {
+      "format": "txt",
+      "input_sha256": "1ca398ef8e3aed3fa319a979220d19f550ff5e94d39b278ee3c37f81af1744f8",
+      "parsed_pages": 1,
+      "full_chunks": 13,
+      "retained_chunks": 6,
+      "discarded_chunks": 7,
+      "matches_original_run_log": true,
+      "tokenizer": "gpt2 (application TokenTextSplitter default)",
+      "full_text_tokens": 18084,
+      "unique_prefix_tokens_retained": 8500,
+      "prefix_token_coverage": 0.47002875470028754,
+      "last_retained_chunk_tail": "左子树 < 根节点 < 右子树”的性质，插入操作流程如下图所示。 1. 查找插入位置：与查找操作相似，从根节点出发，根据当前节点值和 num 的大小关系循环向下搜索，直到越过叶节点（遍历至 None ）时跳出循环。 2. 在该位置插入节点：初始化节点 num ，将该节点置于 None 的位置。 在代码实现中，需要注意以下两点。 - 二叉搜索树不允许存在重复节点，否则将违反其定义。因此，若待插入节点在树中已存在，则不执行插入，直接返回。 - 为了实现插入节点，我们需要借助节点 pre 保存上一轮循环的节点。这样在遍历至 None 时，我们可以获取到其父节点，从而完成节点插入操作。 与查找节点相同，插入节点使用 O(\\log n) 时间。 删除节点 先在二叉树中查找到目标节点，再将其删除。与插入",
+      "section_headings": [
+        {
+          "heading": "7.1 二叉树",
+          "token_start_approx": 10,
+          "heading_inside_retained_prefix": true
+        },
+        {
+          "heading": "7.2 二叉树遍历",
+          "token_start_approx": 3272,
+          "heading_inside_retained_prefix": true
+        },
+        {
+          "heading": "7.3 二叉树数组表示",
+          "token_start_approx": 5003,
+          "heading_inside_retained_prefix": true
+        },
+        {
+          "heading": "7.4 二叉搜索树",
+          "token_start_approx": 6949,
+          "heading_inside_retained_prefix": true
+        },
+        {
+          "heading": "7.5 AVL 树",
+          "token_start_approx": 10547,
+          "heading_inside_retained_prefix": false
+        },
+        {
+          "heading": "7.6 小结",
+          "token_start_approx": 14679,
+          "heading_inside_retained_prefix": false
+        }
+      ]
+    },
+    {
+      "format": "docx",
+      "input_sha256": "2a74907d367eb829a98901fe55f5f6fba7a6e95cba8596815b36c7c310225ef5",
+      "parsed_pages": 1,
+      "full_chunks": 13,
+      "retained_chunks": 6,
+      "discarded_chunks": 7,
+      "matches_original_run_log": true,
+      "tokenizer": "gpt2 (application TokenTextSplitter default)",
+      "full_text_tokens": 18061,
+      "unique_prefix_tokens_retained": 8500,
+      "prefix_token_coverage": 0.47062731853164275,
+      "last_retained_chunk_tail": "树 < 根节点 < 右子树”的性质，插入操作流程如下图所示。 1. 查找插入位置：与查找操作相似，从根节点出发，根据当前节点值和 num 的大小关系循环向下搜索，直到越过叶节点（遍历至 None ）时跳出循环。 2. 在该位置插入节点：初始化节点 num ，将该节点置于 None 的位置。 在代码实现中，需要注意以下两点。 二叉搜索树不允许存在重复节点，否则将违反其定义。因此，若待插入节点在树中已存在，则不执行插入，直接返回。 为了实现插入节点，我们需要借助节点 pre 保存上一轮循环的节点。这样在遍历至 None 时，我们可以获取到其父节点，从而完成节点插入操作。 与查找节点相同，插入节点使用 O(\\log n) 时间。 删除节点 先在二叉树中查找到目标节点，再将其删除。与插入节点类似，�",
+      "section_headings": [
+        {
+          "heading": "7.1 二叉树",
+          "token_start_approx": 10,
+          "heading_inside_retained_prefix": true
+        },
+        {
+          "heading": "7.2 二叉树遍历",
+          "token_start_approx": 3270,
+          "heading_inside_retained_prefix": true
+        },
+        {
+          "heading": "7.3 二叉树数组表示",
+          "token_start_approx": 4998,
+          "heading_inside_retained_prefix": true
+        },
+        {
+          "heading": "7.4 二叉搜索树",
+          "token_start_approx": 6936,
+          "heading_inside_retained_prefix": true
+        },
+        {
+          "heading": "7.5 AVL 树",
+          "token_start_approx": 10532,
+          "heading_inside_retained_prefix": false
+        },
+        {
+          "heading": "7.6 小结",
+          "token_start_approx": 14666,
+          "heading_inside_retained_prefix": false
+        }
+      ]
+    }
+  ]
+}

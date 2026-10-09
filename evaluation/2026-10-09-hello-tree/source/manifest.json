@@ -1,0 +1,85 @@
+{
+  "title": "Hello 算法 第7章 树 正文7.1–7.6",
+  "author": "krahets and Hello Algo contributors",
+  "repository": "https://github.com/krahets/hello-algo",
+  "commit": "28c1e74c1d3594fca7cc41b78a6bd18b700c5ce9",
+  "license": "CC BY-NC-SA 4.0",
+  "license_url": "https://raw.githubusercontent.com/krahets/hello-algo/28c1e74c1d3594fca7cc41b78a6bd18b700c5ce9/LICENSE",
+  "access_date": "2026-10-09",
+  "source_files": [
+    {
+      "file": "binary_tree.md",
+      "url": "https://raw.githubusercontent.com/krahets/hello-algo/28c1e74c1d3594fca7cc41b78a6bd18b700c5ce9/docs/chapter_tree/binary_tree.md",
+      "sha256": "0a6292ddcbbd2586c0418214932ed03a821012215feab3104a574776384f4ac5",
+      "bytes": 21606
+    },
+    {
+      "file": "binary_tree_traversal.md",
+      "url": "https://raw.githubusercontent.com/krahets/hello-algo/28c1e74c1d3594fca7cc41b78a6bd18b700c5ce9/docs/chapter_tree/binary_tree_traversal.md",
+      "sha256": "09330a1fbf84eb19b1d3ffbb4f56201aae422cf4caa32bdfae3289db6adbe5bd",
+      "bytes": 3798
+    },
+    {
+      "file": "array_representation_of_tree.md",
+      "url": "https://raw.githubusercontent.com/krahets/hello-algo/28c1e74c1d3594fca7cc41b78a6bd18b700c5ce9/docs/chapter_tree/array_representation_of_tree.md",
+      "sha256": "a991b8ce6412bc48ec933faee055bcacb4fabf53090d585885cb5911e7af5261",
+      "bytes": 6175
+    },
+    {
+      "file": "binary_search_tree.md",
+      "url": "https://raw.githubusercontent.com/krahets/hello-algo/28c1e74c1d3594fca7cc41b78a6bd18b700c5ce9/docs/chapter_tree/binary_search_tree.md",
+      "sha256": "5c54b59bfa25fb587ac1952496ff3ea77ae10fbec874225a56db61a835914e5b",
+      "bytes": 6772
+    },
+    {
+      "file": "avl_tree.md",
+      "url": "https://raw.githubusercontent.com/krahets/hello-algo/28c1e74c1d3594fca7cc41b78a6bd18b700c5ce9/docs/chapter_tree/avl_tree.md",
+      "sha256": "96e95ab24824e06b5db5dea44af13383f1cceb54d97f55fd98181f159aec60d1",
+      "bytes": 12954
+    },
+    {
+      "file": "summary.md",
+      "url": "https://raw.githubusercontent.com/krahets/hello-algo/28c1e74c1d3594fca7cc41b78a6bd18b700c5ce9/docs/chapter_tree/summary.md",
+      "sha256": "cc415fa76ff72ec135ccec0961a0d40a64ab9136691567a0ff213ccb1fab96b8",
+      "bytes": 5063
+    }
+  ],
+  "preprocessing": {
+    "scope": "7.1–7.6 prose, including textual formulas and tables; excludes exercises, figures, all programming-language code blocks and code-loader macros",
+    "changes": "Removed Markdown/HTML formatting delimiters; preserved prose order and wording. No new teaching content or prerequisite statements added.",
+    "sections": [
+      {
+        "file": "binary_tree.md",
+        "title": "7.1 二叉树",
+        "characters": 1869
+      },
+      {
+        "file": "binary_tree_traversal.md",
+        "title": "7.2 二叉树遍历",
+        "characters": 966
+      },
+      {
+        "file": "array_representation_of_tree.md",
+        "title": "7.3 二叉树数组表示",
+        "characters": 984
+      },
+      {
+        "file": "binary_search_tree.md",
+        "title": "7.4 二叉搜索树",
+        "characters": 2053
+      },
+      {
+        "file": "avl_tree.md",
+        "title": "7.5 AVL 树",
+        "characters": 2413
+      },
+      {
+        "file": "summary.md",
+        "title": "7.6 小结",
+        "characters": 1978
+      }
+    ],
+    "input_txt_sha256": "1ca398ef8e3aed3fa319a979220d19f550ff5e94d39b278ee3c37f81af1744f8",
+    "characters": 10344
+  }
+}

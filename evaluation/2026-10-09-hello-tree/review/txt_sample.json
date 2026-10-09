@@ -1,0 +1,291 @@
+{
+  "format": "txt",
+  "seed": 20261009,
+  "annotation_status": "Awaiting independent AI source review, then human confirmation",
+  "node_population": 50,
+  "edge_population": 70,
+  "selection": "Stable label sorting, random.Random(seed); node sample then edge sample without replacement",
+  "rules": "Review entity identity only (not definition quality); relations require text support, correct type and direction. RELATED_TO is symmetric. Do not infer prerequisites merely from teaching order. Supported / unsupported / uncertain; provide verbatim evidence. Do not inspect strict-reference scores.",
+  "items": [
+    {
+      "sample_id": "txt-N01",
+      "item_type": "node",
+      "label": "节点的高度",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3f6e24774e11adbf95b"
+    },
+    {
+      "sample_id": "txt-N02",
+      "item_type": "node",
+      "label": "二叉树遍历",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3c24ee40e1a8372539a"
+    },
+    {
+      "sample_id": "txt-N03",
+      "item_type": "node",
+      "label": "广度优先遍历",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:1a04d93c87e6f8ef06b2"
+    },
+    {
+      "sample_id": "txt-N04",
+      "item_type": "node",
+      "label": "二叉树数组表示",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f35dc8c5ba198bbed2ac"
+    },
+    {
+      "sample_id": "txt-N05",
+      "item_type": "node",
+      "label": "完满二叉树",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:e14c056052cdde08454d"
+    },
+    {
+      "sample_id": "txt-N06",
+      "item_type": "node",
+      "label": "二叉搜索树的操作",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ad68582febdaf04e729d"
+    },
+    {
+      "sample_id": "txt-N07",
+      "item_type": "node",
+      "label": "队列",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0a29f8322affbab23633"
+    },
+    {
+      "sample_id": "txt-N08",
+      "item_type": "node",
+      "label": "高度",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:890bdc2ea9326293de92"
+    },
+    {
+      "sample_id": "txt-N09",
+      "item_type": "node",
+      "label": "节点的深度",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d3b0d94764b51244b226"
+    },
+    {
+      "sample_id": "txt-N10",
+      "item_type": "node",
+      "label": "根节点",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:628f42185cd384fbafd1"
+    },
+    {
+      "sample_id": "txt-N11",
+      "item_type": "node",
+      "label": "链表表示",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0c66ac149708634521ec"
+    },
+    {
+      "sample_id": "txt-N12",
+      "item_type": "node",
+      "label": "删除节点",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:5633e2409cc898dee052"
+    },
+    {
+      "sample_id": "txt-N13",
+      "item_type": "node",
+      "label": "二叉树",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b"
+    },
+    {
+      "sample_id": "txt-N14",
+      "item_type": "node",
+      "label": "节点所在的层",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0ef52ed06f45e9620e80"
+    },
+    {
+      "sample_id": "txt-N15",
+      "item_type": "node",
+      "label": "右子树",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:9e7e12e2ee0898a2fead"
+    },
+    {
+      "sample_id": "txt-N16",
+      "item_type": "node",
+      "label": "深度",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:8154b2ea75950d58a008"
+    },
+    {
+      "sample_id": "txt-N17",
+      "item_type": "node",
+      "label": "递归",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2cf70b8b062adb1eebc5"
+    },
+    {
+      "sample_id": "txt-N18",
+      "item_type": "node",
+      "label": "后序遍历",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f64dc3efd62ca8b09694"
+    },
+    {
+      "sample_id": "txt-N19",
+      "item_type": "node",
+      "label": "层序遍历序列",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:c57fc00b0ee5f88069a1"
+    },
+    {
+      "sample_id": "txt-N20",
+      "item_type": "node",
+      "label": "边",
+      "prediction_uid": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:de5214549cd2302e91d3"
+    },
+    {
+      "sample_id": "txt-E01",
+      "item_type": "edge",
+      "source": "深度优先遍历",
+      "kind": "CONTAINS",
+      "target": "后序遍历",
+      "prediction_uid": "8ad11958-e43d-424c-9ba1-c90548aa983b"
+    },
+    {
+      "sample_id": "txt-E02",
+      "item_type": "edge",
+      "source": "二叉搜索树的操作",
+      "kind": "CONTAINS",
+      "target": "删除节点",
+      "prediction_uid": "03a406ab-ebf0-4824-9f30-d203d8bd1c3b"
+    },
+    {
+      "sample_id": "txt-E03",
+      "item_type": "edge",
+      "source": "链表表示",
+      "kind": "CONTAINS",
+      "target": "Treenode",
+      "prediction_uid": "64e40dc9-4d80-4d9e-bc74-35e41ec986ef"
+    },
+    {
+      "sample_id": "txt-E04",
+      "item_type": "edge",
+      "source": "深度优先遍历",
+      "kind": "CONTAINS",
+      "target": "前序遍历",
+      "prediction_uid": "4e15ac15-8025-4ec3-bca9-853ed53cdf4e"
+    },
+    {
+      "sample_id": "txt-E05",
+      "item_type": "edge",
+      "source": "常见二叉树类型",
+      "kind": "CONTAINS",
+      "target": "完美二叉树",
+      "prediction_uid": "d27efce5-2686-4f17-bdd7-e6a11ce2c61f"
+    },
+    {
+      "sample_id": "txt-E06",
+      "item_type": "edge",
+      "source": "二叉树数组表示",
+      "kind": "RELATED_TO",
+      "target": "完美二叉树",
+      "prediction_uid": "ff35cd4a-063f-4df3-8ad5-a7b149a5fdee"
+    },
+    {
+      "sample_id": "txt-E07",
+      "item_type": "edge",
+      "source": "深度",
+      "kind": "RELATED_TO",
+      "target": "二叉树",
+      "prediction_uid": "cfa38b85-5eec-4bec-9152-1432e5776550"
+    },
+    {
+      "sample_id": "txt-E08",
+      "item_type": "edge",
+      "source": "二叉树数组表示",
+      "kind": "RELATED_TO",
+      "target": "链表表示",
+      "prediction_uid": "f9275d43-b76b-4c52-86d5-a723abafff95"
+    },
+    {
+      "sample_id": "txt-E09",
+      "item_type": "edge",
+      "source": "二叉树",
+      "kind": "CONTAINS",
+      "target": "常见二叉树类型",
+      "prediction_uid": "35699946-36c5-4a2a-987f-9dc1f5eb1716"
+    },
+    {
+      "sample_id": "txt-E10",
+      "item_type": "edge",
+      "source": "二叉树的高度",
+      "kind": "RELATED_TO",
+      "target": "节点的高度",
+      "prediction_uid": "a61f7263-697c-47d9-ae9f-09baf360763f"
+    },
+    {
+      "sample_id": "txt-E11",
+      "item_type": "edge",
+      "source": "二叉树的数组表示",
+      "kind": "RELATED_TO",
+      "target": "层序遍历序列",
+      "prediction_uid": "82396f2b-4b9f-45cc-b99f-e15b9f2d6632"
+    },
+    {
+      "sample_id": "txt-E12",
+      "item_type": "edge",
+      "source": "查找节点",
+      "kind": "PREREQUISITE_OF",
+      "target": "删除节点",
+      "prediction_uid": "63bb799e-7ae8-40cc-bbc0-34b025928aad"
+    },
+    {
+      "sample_id": "txt-E13",
+      "item_type": "edge",
+      "source": "二叉树",
+      "kind": "CONTAINS",
+      "target": "节点的深度",
+      "prediction_uid": "edc39012-7ea0-4c1c-a36e-11c8f016e6a1"
+    },
+    {
+      "sample_id": "txt-E14",
+      "item_type": "edge",
+      "source": "常见二叉树类型",
+      "kind": "CONTAINS",
+      "target": "平衡二叉树",
+      "prediction_uid": "b3f62762-a1a1-4057-b9e5-6233214f9398"
+    },
+    {
+      "sample_id": "txt-E15",
+      "item_type": "edge",
+      "source": "前序遍历",
+      "kind": "RELATED_TO",
+      "target": "深度优先遍历",
+      "prediction_uid": "d68b4574-d748-4301-8882-6f191baa7717"
+    },
+    {
+      "sample_id": "txt-E16",
+      "item_type": "edge",
+      "source": "层序遍历",
+      "kind": "RELATED_TO",
+      "target": "广度优先遍历",
+      "prediction_uid": "37c4c92f-7ace-4690-ad25-d04cbdd2d2ef"
+    },
+    {
+      "sample_id": "txt-E17",
+      "item_type": "edge",
+      "source": "二叉树",
+      "kind": "RELATED_TO",
+      "target": "链表",
+      "prediction_uid": "d57ef6e7-5b98-4927-b653-30fdeb43db4a"
+    },
+    {
+      "sample_id": "txt-E18",
+      "item_type": "edge",
+      "source": "二叉树的高度",
+      "kind": "RELATED_TO",
+      "target": "节点的深度",
+      "prediction_uid": "6bb707e3-b4d4-40a5-9a71-5358fbb1aabb"
+    },
+    {
+      "sample_id": "txt-E19",
+      "item_type": "edge",
+      "source": "二叉树的数组表示",
+      "kind": "RELATED_TO",
+      "target": "前序遍历",
+      "prediction_uid": "74f544ff-54a9-4f10-a574-c4abda752763"
+    },
+    {
+      "sample_id": "txt-E20",
+      "item_type": "edge",
+      "source": "二叉树基本操作",
+      "kind": "CONTAINS",
+      "target": "插入与删除节点",
+      "prediction_uid": "5a2763b9-ca82-4343-8609-53cded6e5f7b"
+    }
+  ]
+}

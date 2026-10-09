@@ -3,6 +3,8 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-green)
 ![React](https://img.shields.io/badge/React-blue)
 
+本项目最新交接：[知识抽取测评交接报告](docs/知识抽取测评交接报告-20261009.md) · [真实教材测试文件与结果](evaluation/2026-10-09-hello-tree/README.md) · [本机启动与配置](docs/测评接手说明.md)。
+
 
 Transform unstructured data (PDFs, DOCs, TXTs, YouTube videos, web pages, etc.) into a structured Knowledge Graph stored in Neo4j using the power of Large Language Models (LLMs) and the LangChain framework.
 

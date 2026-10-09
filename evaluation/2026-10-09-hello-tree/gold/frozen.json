@@ -1,0 +1,15 @@
+{
+  "frozen_at": "2026-10-09T20:27:29.993725+08:00",
+  "reference_sha256": "79e2a0ac5d7015d439f8b96a32c74047d414051dda2c405488de6650ba2e272e",
+  "text_sha256": "1ca398ef8e3aed3fa319a979220d19f550ff5e94d39b278ee3c37f81af1744f8",
+  "input_sha256": {
+    "txt": "1ca398ef8e3aed3fa319a979220d19f550ff5e94d39b278ee3c37f81af1744f8",
+    "docx": "2a74907d367eb829a98901fe55f5f6fba7a6e95cba8596815b36c7c310225ef5"
+  },
+  "protocol_sha256": "9c9eef03e417f280f2ddb10783ca4ce0df18d4aa55912ae2f6df12f86c5a7a56",
+  "scorer_sha256": "f6f131a2f9b2369c2dbe75aeebe1c074e52ff5bf45138723157b6d3731b30671",
+  "nodes": 70,
+  "edges": 101,
+  "predictions_seen": false,
+  "human_verified": false
+}

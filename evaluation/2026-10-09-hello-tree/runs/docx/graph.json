@@ -1,0 +1,1210 @@
+{
+  "course": {
+    "uid": "db537b35-95d8-4049-8bba-b630b85041e2",
+    "title": "真实教材测评 树 DOCX",
+    "documents": [
+      "Hello算法_第7章树_正文.docx"
+    ],
+    "revision": 1,
+    "deleted_origins": [],
+    "deleted_edges": [],
+    "teacher_graph_edited": null
+  },
+  "points": [
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:5028ba5465311a155c4a",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:39",
+      "definition": "深度优先遍历中每个节点遇到的三个位置之一",
+      "resource": "",
+      "label": "中序遍历",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 22.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 78.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:c777a78bc290cd8e21a5",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:57",
+      "definition": "每轮排除一半情况的查找算法，与二叉搜索树的查找操作工作原理一致",
+      "resource": "",
+      "label": "二分查找算法",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 8.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 22.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:9a404f610b6afca994db",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:52",
+      "definition": "对于根节点，左子树中所有节点的值 < 根节点的值 < 右子树中所有节点的值；任意节点的左、右子树也是二叉搜索树",
+      "resource": "",
+      "label": "二叉搜索树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 8.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 50.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:7019f7c08d4b7a9a5037",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:53",
+      "definition": "将二叉搜索树封装为类 BinarySearchTree，并声明成员变量 root 指向树的根节点",
+      "resource": "",
+      "label": "二叉搜索树的操作",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 8.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 78.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:11",
+      "definition": "一种树形数据结构，每个节点最多有两个子节点，可通过映射公式访问左、右子节点。",
+      "resource": "",
+      "label": "二叉树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 22.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 8.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:db42f124b8536046e56d",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:26",
+      "definition": "二叉树的基本操作，包括初始化、插入与删除节点等",
+      "resource": "",
+      "label": "二叉树基本操作",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 64.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 22.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:a8e67fa194dfe69ee970",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:46",
+      "definition": "用数组来表示二叉树的方法",
+      "resource": "",
+      "label": "二叉树数组表示",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 50.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 8.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:7fe116bd2802d736cc5e",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:51",
+      "definition": "使用数组存储二叉树的方法，优点是连续内存、缓存友好、无需指针、支持随机访问；局限是不适合大数据量、增删效率低、存在大量 None 时空间利用率低。",
+      "resource": "",
+      "label": "二叉树的数组表示",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 22.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 22.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:f95e9c62bac17440ab42",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:34",
+      "definition": "当二叉树的每层节点都被填满时达到完美二叉树；当所有节点都偏向一侧时，二叉树退化为链表；链表情况下各项操作变为线性操作，时间复杂度退化至O(n)",
+      "resource": "",
+      "label": "二叉树的退化",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 64.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 50.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:68a9da52faff3eb205bf",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:23",
+      "definition": "从根节点到最远叶节点所经过的边的数量。",
+      "resource": "",
+      "label": "二叉树的高度",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 64.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 78.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:a9ce1b1992e4049331bc",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:36",
+      "definition": "通过指针逐个访问二叉树节点的方式，需要借助搜索算法实现",
+      "resource": "",
+      "label": "二叉树遍历",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 50.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 36.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:a7e54f918a725b66ad0c",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:49",
+      "definition": "非完美二叉树的数组表示",
+      "resource": "",
+      "label": "任意二叉树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 22.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 92.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:d3bd109ea246ed8381ff",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:27",
+      "definition": "与链表类似，首先初始化节点，然后构建引用（指针）",
+      "resource": "",
+      "label": "初始化二叉树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 50.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 78.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:c98d892e531ce1ea1d2b",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:56",
+      "definition": "先在二叉树中查找到目标节点，再将其删除，与插入节点类似，需要保证删除操作完成后二叉搜索树的性质",
+      "resource": "",
+      "label": "删除节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 8.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 36.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:e0d54ea2428108fd0294",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:38",
+      "definition": "深度优先遍历中每个节点遇到的三个位置之一",
+      "resource": "",
+      "label": "前序遍历",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 36.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 8.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:25084ec4dc8c8bb33388",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:17",
+      "definition": "某节点的右子节点及其以下节点形成的树。",
+      "resource": "",
+      "label": "右子树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 92.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 64.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:12fcfb0418463bb0574a",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:14",
+      "definition": "节点的一个引用（指针）所指向的子节点。",
+      "resource": "",
+      "label": "右子节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 92.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 8.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:ca39a6da3705987f0bff",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:19",
+      "definition": "没有子节点的节点，其两个指针均指向 None。",
+      "resource": "",
+      "label": "叶节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 78.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 78.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:8799769e486e1438358a",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:40",
+      "definition": "深度优先遍历中每个节点遇到的三个位置之一",
+      "resource": "",
+      "label": "后序遍历",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 36.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 22.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:9cdd305f905209d222a7",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:31",
+      "definition": "None 只出现在最底层且靠右位置的二叉树，适合使用数组表示，可省略存储所有 None。",
+      "resource": "",
+      "label": "完全二叉树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 22.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 36.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:14329dd8cdc90642f634",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:32",
+      "definition": "除了叶节点之外，其余所有节点都有两个子节点",
+      "resource": "",
+      "label": "完满二叉树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 50.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 92.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:30",
+      "definition": "二叉树的一个特例，所有层都被完全填满。",
+      "resource": "",
+      "label": "完美二叉树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 22.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 50.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:fde253a89a821ded0b3a",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:21",
+      "definition": "节点所在的层，从顶至底递增，根节点所在层为 1。",
+      "resource": "",
+      "label": "层",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 78.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 8.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:fb5d3c29803575136a61",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:37",
+      "definition": "按层顺序遍历二叉树",
+      "resource": "",
+      "label": "层序遍历",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 36.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 36.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:6074f230f6649adde63a",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:50",
+      "definition": "按层序遍历二叉树得到的节点序列；不包含 None 时无法唯一表示二叉树结构。",
+      "resource": "",
+      "label": "层序遍历序列",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 8.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 92.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:902f86239611fe739e89",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:16",
+      "definition": "某节点的左子节点及其以下节点形成的树。",
+      "resource": "",
+      "label": "左子树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 78.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 22.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:d1446aa4917c87a6d35d",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:13",
+      "definition": "节点的一个引用（指针）所指向的子节点。",
+      "resource": "",
+      "label": "左子节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 78.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 64.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:2f8b6c1517532b3bc41f",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:29",
+      "definition": "常见的二叉树类型，包括完美二叉树、完全二叉树、完满二叉树、平衡二叉树",
+      "resource": "",
+      "label": "常见二叉树类型",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 64.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 64.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:3bed71f9eae7a64bf69d",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:33",
+      "definition": "任意节点的左子树和右子树的高度之差的绝对值不超过1",
+      "resource": "",
+      "label": "平衡二叉树",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 64.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 36.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:37b21cd27ed1cc930bf2",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:41",
+      "definition": "也称广度优先搜索（BFS），体现一圈一圈向外扩展的逐层遍历方式，通常借助队列实现",
+      "resource": "",
+      "label": "广度优先遍历",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 50.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 22.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:f1163a5642abfd2d0f23",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:22",
+      "definition": "节点的子节点的数量。在二叉树中，度的取值范围是 0、1、2。",
+      "resource": "",
+      "label": "度",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 64.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 92.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:75512974dc52f207a29f",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:28",
+      "definition": "与链表类似，在二叉树中插入与删除节点可以通过修改指针来实现；插入节点可能会改变二叉树的原有逻辑结构，删除节点通常意味着删除该节点及其所有子树",
+      "resource": "",
+      "label": "插入与删除节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 64.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 8.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:a9d9c4fb6b08fd89dc72",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:55",
+      "definition": "给定待插入元素 num，先查找插入位置，从根节点出发根据大小关系循环向下搜索直到越过叶节点（None），再在该位置初始化节点 num 并置于 None 的位置。不允许重复节点，若已存在则不插入直接返回。需借助节点 pre 保存上一轮循环的节点以获取父节点。时间复杂度 O(log n)",
+      "resource": "",
+      "label": "插入节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 8.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 64.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:5ceb0e332ab9a4b99b12",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:48",
+      "definition": "若某节点的索引为i，则该节点的左子节点索引为2i+1，右子节点索引为2i+2",
+      "resource": "",
+      "label": "映射公式",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 36.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 64.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:7afa4e5e00ade907d906",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:54",
+      "definition": "给定目标节点值 num，从根节点 root 出发，循环比较 cur.val 和 num 的大小关系；若 cur.val < num 则向右子树查找，若 cur.val > num 则向左子树查找，若相等则找到目标节点。与二分查找原理一致，每轮排除一半情况，循环次数最多为二叉树高度，平衡时为 O(log n)",
+      "resource": "",
+      "label": "查找节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 8.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 8.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:42a917e37b3eb20db25b",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:18",
+      "definition": "位于二叉树顶层的节点，没有父节点。",
+      "resource": "",
+      "label": "根节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 78.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 36.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:4d8c64a07a42adc12e30",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:42",
+      "definition": "也称深度优先搜索（DFS），体现“先走到尽头，再回溯继续”的遍历方式",
+      "resource": "",
+      "label": "深度优先遍历",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 22.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 64.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:32994eaa1a585c1af499",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:15",
+      "definition": "拥有左子节点和右子节点的节点。",
+      "resource": "",
+      "label": "父节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 78.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 50.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:605405620cf958579f90",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:12",
+      "definition": "二叉树的基本单元，每个节点包含值、左子节点引用和右子节点引用。",
+      "resource": "",
+      "label": "节点",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 92.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 36.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:8d867e8929220f73590e",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:24",
+      "definition": "从根节点到该节点所经过的边的数量。",
+      "resource": "",
+      "label": "节点的深度",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 92.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 22.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:6cee52bec2523291711a",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:25",
+      "definition": "从距离该节点最远的叶节点到该节点所经过的边的数量。",
+      "resource": "",
+      "label": "节点的高度",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 78.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 92.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:dbfbed94248716f54d21",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:20",
+      "definition": "连接两个节点的线段，即节点引用（指针）。",
+      "resource": "",
+      "label": "边",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 92.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 50.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:d3ab56a3e48278251c5b",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:45",
+      "definition": "深度优先搜索也可以基于迭代实现",
+      "resource": "",
+      "label": "迭代",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 36.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 92.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:f3cba622217e8e9ea201",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:44",
+      "definition": "深度优先搜索通常基于递归实现",
+      "resource": "",
+      "label": "递归",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 36.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 78.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:f8c4819a19342e5f294d",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:35",
+      "definition": "二叉树的最差结构，第i层节点数量为1，高度为h的树叶节点数量为1，节点总数为h+1",
+      "resource": "",
+      "label": "链表",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 50.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 50.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:c6af0a05e9af3eeeba42",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:47",
+      "definition": "二叉树的存储单元为节点TreeNode，节点之间通过指针相连接",
+      "resource": "",
+      "label": "链表表示",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 36.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 50.0
+    },
+    {
+      "uid": "db537b35-95d8-4049-8bba-b630b85041e2:a25e90b2715bdefe1109",
+      "origin_id": "4:90a7dcd3-ff6b-4621-9c53-069b5ec07138:43",
+      "definition": "遵循先进先出规则的数据结构，用于实现广度优先遍历",
+      "resource": "",
+      "label": "队列",
+      "course_id": "db537b35-95d8-4049-8bba-b630b85041e2",
+      "example": "",
+      "y": 50.0,
+      "kind": "概念",
+      "sources": [
+        "Hello算法_第7章树_正文.docx"
+      ],
+      "x": 64.0
+    }
+  ],
+  "edges": [
+    {
+      "uid": "6da6feed-497a-43a0-8a82-0179a3bc7302",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:7afa4e5e00ade907d906",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:c98d892e531ce1ea1d2b",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "98062010-6d52-4b6c-836e-26db13b15581",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:7afa4e5e00ade907d906",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:c777a78bc290cd8e21a5",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "79791c45-bec4-4072-a7d1-619cb1218c75",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:7afa4e5e00ade907d906",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:a9d9c4fb6b08fd89dc72",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "e2dc5377-4096-4465-ab66-a4b4b3acc0ab",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:9a404f610b6afca994db",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "6fda1b49-0a30-42d3-9ffd-05181948bd8b",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:9a404f610b6afca994db",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:7019f7c08d4b7a9a5037",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "47b46117-653d-4136-ac4e-48cdc223328e",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:a9d9c4fb6b08fd89dc72",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:c98d892e531ce1ea1d2b",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "21cd7fba-9e46-4388-8ffd-a9d4f059e1c4",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:7019f7c08d4b7a9a5037",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:a9d9c4fb6b08fd89dc72",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "b72b8c7b-7478-4793-944f-2cb19d91142d",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:7019f7c08d4b7a9a5037",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:c98d892e531ce1ea1d2b",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "70a92a20-4784-40f9-b6cd-0247b08a75c5",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:7019f7c08d4b7a9a5037",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:7afa4e5e00ade907d906",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "ea28b27b-e069-496a-8287-6fc40edcb95a",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:6074f230f6649adde63a",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "dd375069-222d-4224-848e-50976df53b21",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:8d867e8929220f73590e",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "393c5b78-fd94-45f1-bb61-3aa72dc1db7b",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:68a9da52faff3eb205bf",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "bc09d73c-2eba-4006-95c9-43c6c3f33f1c",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:fde253a89a821ded0b3a",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "fd245029-4260-4d51-8de5-6175d9193fc9",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "8046fa8f-7e2d-4727-85e9-f0938a17d4d6",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:ca39a6da3705987f0bff",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "0b9d79fd-851b-4502-9d93-8ab2d635f965",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:a9ce1b1992e4049331bc",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "8f161d5b-ec8b-4500-9c2d-85cb6703fdb5",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:42a917e37b3eb20db25b",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "0322859f-e547-48fc-85ae-ce7bf10cfdad",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:dbfbed94248716f54d21",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "dcdc1dac-70d0-4e48-9927-0a8ebaa51a81",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:f8c4819a19342e5f294d",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "865a017a-78a0-49af-8091-94813735f261",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:605405620cf958579f90",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "0c8f4386-540a-49cf-a945-6c34061147f0",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:6cee52bec2523291711a",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "b5782259-cebf-48a4-b6ca-96284e662637",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:f1163a5642abfd2d0f23",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "24d6c690-fbbb-4659-a283-0b966981c7fd",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:7fe116bd2802d736cc5e",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:9cdd305f905209d222a7",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "89950cfe-280d-4f9d-91f8-d5dc5fb9c8d4",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:9cdd305f905209d222a7",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "b2a44f5c-9f9c-4fbb-8288-6265231372f6",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:5ceb0e332ab9a4b99b12",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "dbb3df2d-3a18-4c17-ab32-bb1f4ce8ba7b",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:9cdd305f905209d222a7",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "f50ded49-1be2-45c8-9b51-ddcf09b1d17f",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:fb5d3c29803575136a61",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "60969aa2-dd1a-448d-8fdb-074da29d5530",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:598befc6ccc946ea2103",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "bab944bf-a121-46d2-bb09-528ad163f7bb",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:4d8c64a07a42adc12e30",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:f3cba622217e8e9ea201",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "01d2fddb-6267-421f-b023-c1804cb5943a",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:4d8c64a07a42adc12e30",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:5028ba5465311a155c4a",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "6ab9ccd3-8b8e-43d1-b002-b12f6694c79a",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:4d8c64a07a42adc12e30",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:d3ab56a3e48278251c5b",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "cf0efef7-6dfb-4f4f-a33c-35457c3f6bcc",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:4d8c64a07a42adc12e30",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:e0d54ea2428108fd0294",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "f08aeb13-5cd7-4798-bbc5-e88ae565176d",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:4d8c64a07a42adc12e30",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:8799769e486e1438358a",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "578ed498-a915-4b1e-a1ad-580b66ee5b76",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:5028ba5465311a155c4a",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:4d8c64a07a42adc12e30",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "fee2ff3d-2dc6-4058-a349-f43858e3b7ce",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:e0d54ea2428108fd0294",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:4d8c64a07a42adc12e30",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "50fa04ab-3ebc-45ff-a852-707c01c6bdff",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:8799769e486e1438358a",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:4d8c64a07a42adc12e30",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "b1b972a1-d633-43cb-9398-54c519206543",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:fb5d3c29803575136a61",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:37b21cd27ed1cc930bf2",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "91eac392-bacc-4a6a-9f81-8538045ec4ba",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:fb5d3c29803575136a61",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:5ceb0e332ab9a4b99b12",
+      "kind": "PREREQUISITE_OF"
+    },
+    {
+      "uid": "b22ed2fa-a864-4cdf-a34b-f958e41cd59f",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:a8e67fa194dfe69ee970",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:a7e54f918a725b66ad0c",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "51828bf4-47ba-4ffb-9fdc-03258f23e4d2",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:a8e67fa194dfe69ee970",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:c6af0a05e9af3eeeba42",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "5de6e02f-c163-467f-b0b0-e9639edfdd72",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:a8e67fa194dfe69ee970",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "6c1b33e8-5dc2-4137-a5dd-7db7b2833a96",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:37b21cd27ed1cc930bf2",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:a25e90b2715bdefe1109",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "2d3fd1f7-e683-4b90-9a8d-7de84e6ddb82",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:a9ce1b1992e4049331bc",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:e0d54ea2428108fd0294",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "8d006b4c-cec0-4fc7-80ca-9c6f58f0f304",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:a9ce1b1992e4049331bc",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:8799769e486e1438358a",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "dd46a1c1-648c-4feb-a17f-72b027879311",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:a9ce1b1992e4049331bc",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:5028ba5465311a155c4a",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "e21d6ba2-b42b-40ac-b205-8e396ebf61f4",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:a9ce1b1992e4049331bc",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:fb5d3c29803575136a61",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "e0bcaf52-5a61-48f6-b593-75ca811739eb",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:db42f124b8536046e56d",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:75512974dc52f207a29f",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "8e1176a8-454f-4e97-892b-7ad9ad0e599b",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:db42f124b8536046e56d",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:d3bd109ea246ed8381ff",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "fb23bc0a-b785-49cd-9dde-adbdd197ad98",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:f95e9c62bac17440ab42",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:f8c4819a19342e5f294d",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "a3cd5002-f681-4024-9ea1-f7dbcc0189e7",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:f95e9c62bac17440ab42",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "663f3bec-a5b8-44aa-ae44-f50b3209a81a",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:2f8b6c1517532b3bc41f",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:9cdd305f905209d222a7",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "8d4fb1f8-a703-40b7-8425-2b36120ecf3d",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:2f8b6c1517532b3bc41f",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "8f8104cc-b406-4b9b-970e-f5523ac33061",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:2f8b6c1517532b3bc41f",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:14329dd8cdc90642f634",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "ee152a77-34e6-4b94-a33f-45a462bf32ed",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:2f8b6c1517532b3bc41f",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:3bed71f9eae7a64bf69d",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "1a26ba0d-2fc1-46e8-94f0-3b0a3e743a8c",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:68a9da52faff3eb205bf",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:8d867e8929220f73590e",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "c0de00d0-c059-464c-8c6d-4117a01a2069",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:d1446aa4917c87a6d35d",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:902f86239611fe739e89",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "48ec1c54-908c-4290-bf52-6d85faa344ab",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:12fcfb0418463bb0574a",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:25084ec4dc8c8bb33388",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "ab9dc87c-ba73-4415-87f6-7b394af4a821",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:8d867e8929220f73590e",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:6cee52bec2523291711a",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "ef87167d-5469-40af-9ae5-93b0bc68b931",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:605405620cf958579f90",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:12fcfb0418463bb0574a",
+      "kind": "CONTAINS"
+    },
+    {
+      "uid": "01331d3d-de74-4e0c-a936-ad4cf59210ee",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:605405620cf958579f90",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:32994eaa1a585c1af499",
+      "kind": "RELATED_TO"
+    },
+    {
+      "uid": "43f247df-ab58-47d3-8e9b-c70aa0cbf092",
+      "source": "db537b35-95d8-4049-8bba-b630b85041e2:605405620cf958579f90",
+      "target": "db537b35-95d8-4049-8bba-b630b85041e2:d1446aa4917c87a6d35d",
+      "kind": "CONTAINS"
+    }
+  ],
+  "chapters": [
+    {
+      "key": "Hello算法_第7章树_正文.docx / 第7章 树",
+      "title": "第7章 树",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 7.1 二叉树",
+      "title": "7.1 二叉树",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 7.2 二叉树遍历",
+      "title": "7.2 二叉树遍历",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 1. “递”表示开启新方法，程序在此过程中访问下一个节点。",
+      "title": "1. “递”表示开启新方法，程序在此过程中访问下一个节点。",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 2. “归”表示函数返回，代表当前节点已经访问完毕。",
+      "title": "2. “归”表示函数返回，代表当前节点已经访问完毕。",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 7.3 二叉树数组表示",
+      "title": "7.3 二叉树数组表示",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 7.4 二叉搜索树",
+      "title": "7.4 二叉搜索树",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 1. 对于根节点，左子树中所有节点的值 < 根节点的值 < 右子树中所有节点的值。",
+      "title": "1. 对于根节点，左子树中所有节点的值 < 根节点的值 < 右子树中所有节点的值。",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 2. 任意节点的左、右子树也是二叉搜索树，即同样满足条件 1. 。",
+      "title": "2. 任意节点的左、右子树也是二叉搜索树，即同样满足条件 1. 。",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 1. 查找插入位置：与查找操作相似，从根节点出发，根据当前节点值和 num 的大小关系循环向下搜索，直到越过叶节点（遍历至 None ）时跳出循环。",
+      "title": "1. 查找插入位置：与查找操作相似，从根节点出发，根据当前节点值和 num 的大小关系循环向下搜索，直到越过叶节点（遍历至 None ）时跳出循环。",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 2. 在该位置插入节点：初始化节点 num ，将该节点置于 None 的位置。",
+      "title": "2. 在该位置插入节点：初始化节点 num ，将该节点置于 None 的位置。",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 1. 找到待删除节点在“中序遍历序列”中的下一个节点，记为 tmp 。",
+      "title": "1. 找到待删除节点在“中序遍历序列”中的下一个节点，记为 tmp 。",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 2. 用 tmp 的值覆盖待删除节点的值，并在树中递归删除节点 tmp 。",
+      "title": "2. 用 tmp 的值覆盖待删除节点的值，并在树中递归删除节点 tmp 。",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 7.5 AVL 树",
+      "title": "7.5 AVL 树",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    },
+    {
+      "key": "Hello算法_第7章树_正文.docx / 7.6 小结",
+      "title": "7.6 小结",
+      "document": "Hello算法_第7章树_正文.docx",
+      "page": 1,
+      "count": 0,
+      "recognized": true
+    }
+  ]
+}

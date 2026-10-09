@@ -1,0 +1,291 @@
+{
+  "format": "docx",
+  "seed": 20261009,
+  "annotation_status": "Awaiting independent AI source review, then human confirmation",
+  "node_population": 47,
+  "edge_population": 61,
+  "selection": "Stable label sorting, random.Random(seed); node sample then edge sample without replacement",
+  "rules": "Review entity identity only (not definition quality); relations require text support, correct type and direction. RELATED_TO is symmetric. Do not infer prerequisites merely from teaching order. Supported / unsupported / uncertain; provide verbatim evidence. Do not inspect strict-reference scores.",
+  "items": [
+    {
+      "sample_id": "docx-N01",
+      "item_type": "node",
+      "label": "迭代",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:d3ab56a3e48278251c5b"
+    },
+    {
+      "sample_id": "docx-N02",
+      "item_type": "node",
+      "label": "初始化二叉树",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:d3bd109ea246ed8381ff"
+    },
+    {
+      "sample_id": "docx-N03",
+      "item_type": "node",
+      "label": "广度优先遍历",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:37b21cd27ed1cc930bf2"
+    },
+    {
+      "sample_id": "docx-N04",
+      "item_type": "node",
+      "label": "二叉树的退化",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:f95e9c62bac17440ab42"
+    },
+    {
+      "sample_id": "docx-N05",
+      "item_type": "node",
+      "label": "完美二叉树",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:3e9098621bc006bd2d81"
+    },
+    {
+      "sample_id": "docx-N06",
+      "item_type": "node",
+      "label": "二叉树基本操作",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:db42f124b8536046e56d"
+    },
+    {
+      "sample_id": "docx-N07",
+      "item_type": "node",
+      "label": "链表表示",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:c6af0a05e9af3eeeba42"
+    },
+    {
+      "sample_id": "docx-N08",
+      "item_type": "node",
+      "label": "查找节点",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:7afa4e5e00ade907d906"
+    },
+    {
+      "sample_id": "docx-N09",
+      "item_type": "node",
+      "label": "链表",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:f8c4819a19342e5f294d"
+    },
+    {
+      "sample_id": "docx-N10",
+      "item_type": "node",
+      "label": "前序遍历",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:e0d54ea2428108fd0294"
+    },
+    {
+      "sample_id": "docx-N11",
+      "item_type": "node",
+      "label": "二叉树数组表示",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:a8e67fa194dfe69ee970"
+    },
+    {
+      "sample_id": "docx-N12",
+      "item_type": "node",
+      "label": "节点",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:605405620cf958579f90"
+    },
+    {
+      "sample_id": "docx-N13",
+      "item_type": "node",
+      "label": "右子节点",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:12fcfb0418463bb0574a"
+    },
+    {
+      "sample_id": "docx-N14",
+      "item_type": "node",
+      "label": "节点的深度",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:8d867e8929220f73590e"
+    },
+    {
+      "sample_id": "docx-N15",
+      "item_type": "node",
+      "label": "队列",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:a25e90b2715bdefe1109"
+    },
+    {
+      "sample_id": "docx-N16",
+      "item_type": "node",
+      "label": "完全二叉树",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:9cdd305f905209d222a7"
+    },
+    {
+      "sample_id": "docx-N17",
+      "item_type": "node",
+      "label": "根节点",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:42a917e37b3eb20db25b"
+    },
+    {
+      "sample_id": "docx-N18",
+      "item_type": "node",
+      "label": "叶节点",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:ca39a6da3705987f0bff"
+    },
+    {
+      "sample_id": "docx-N19",
+      "item_type": "node",
+      "label": "节点的高度",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:6cee52bec2523291711a"
+    },
+    {
+      "sample_id": "docx-N20",
+      "item_type": "node",
+      "label": "平衡二叉树",
+      "prediction_uid": "db537b35-95d8-4049-8bba-b630b85041e2:3bed71f9eae7a64bf69d"
+    },
+    {
+      "sample_id": "docx-E01",
+      "item_type": "edge",
+      "source": "二叉树遍历",
+      "kind": "CONTAINS",
+      "target": "层序遍历",
+      "prediction_uid": "e21d6ba2-b42b-40ac-b205-8e396ebf61f4"
+    },
+    {
+      "sample_id": "docx-E02",
+      "item_type": "edge",
+      "source": "深度优先遍历",
+      "kind": "CONTAINS",
+      "target": "前序遍历",
+      "prediction_uid": "cf0efef7-6dfb-4f4f-a33c-35457c3f6bcc"
+    },
+    {
+      "sample_id": "docx-E03",
+      "item_type": "edge",
+      "source": "层序遍历序列",
+      "kind": "RELATED_TO",
+      "target": "二叉树",
+      "prediction_uid": "ea28b27b-e069-496a-8287-6fc40edcb95a"
+    },
+    {
+      "sample_id": "docx-E04",
+      "item_type": "edge",
+      "source": "节点",
+      "kind": "CONTAINS",
+      "target": "右子节点",
+      "prediction_uid": "ef87167d-5469-40af-9ae5-93b0bc68b931"
+    },
+    {
+      "sample_id": "docx-E05",
+      "item_type": "edge",
+      "source": "二叉搜索树",
+      "kind": "RELATED_TO",
+      "target": "二叉树",
+      "prediction_uid": "e2dc5377-4096-4465-ab66-a4b4b3acc0ab"
+    },
+    {
+      "sample_id": "docx-E06",
+      "item_type": "edge",
+      "source": "深度优先遍历",
+      "kind": "RELATED_TO",
+      "target": "迭代",
+      "prediction_uid": "6ab9ccd3-8b8e-43d1-b002-b12f6694c79a"
+    },
+    {
+      "sample_id": "docx-E07",
+      "item_type": "edge",
+      "source": "后序遍历",
+      "kind": "RELATED_TO",
+      "target": "深度优先遍历",
+      "prediction_uid": "50fa04ab-3ebc-45ff-a852-707c01c6bdff"
+    },
+    {
+      "sample_id": "docx-E08",
+      "item_type": "edge",
+      "source": "二叉树遍历",
+      "kind": "CONTAINS",
+      "target": "后序遍历",
+      "prediction_uid": "8d006b4c-cec0-4fc7-80ca-9c6f58f0f304"
+    },
+    {
+      "sample_id": "docx-E09",
+      "item_type": "edge",
+      "source": "二叉树的退化",
+      "kind": "RELATED_TO",
+      "target": "链表",
+      "prediction_uid": "fb23bc0a-b785-49cd-9dde-adbdd197ad98"
+    },
+    {
+      "sample_id": "docx-E10",
+      "item_type": "edge",
+      "source": "二叉树",
+      "kind": "CONTAINS",
+      "target": "节点",
+      "prediction_uid": "865a017a-78a0-49af-8091-94813735f261"
+    },
+    {
+      "sample_id": "docx-E11",
+      "item_type": "edge",
+      "source": "二叉树遍历",
+      "kind": "CONTAINS",
+      "target": "前序遍历",
+      "prediction_uid": "2d3fd1f7-e683-4b90-9a8d-7de84e6ddb82"
+    },
+    {
+      "sample_id": "docx-E12",
+      "item_type": "edge",
+      "source": "二叉树遍历",
+      "kind": "CONTAINS",
+      "target": "中序遍历",
+      "prediction_uid": "dd46a1c1-648c-4feb-a17f-72b027879311"
+    },
+    {
+      "sample_id": "docx-E13",
+      "item_type": "edge",
+      "source": "查找节点",
+      "kind": "RELATED_TO",
+      "target": "二分查找算法",
+      "prediction_uid": "98062010-6d52-4b6c-836e-26db13b15581"
+    },
+    {
+      "sample_id": "docx-E14",
+      "item_type": "edge",
+      "source": "完美二叉树",
+      "kind": "RELATED_TO",
+      "target": "二叉树",
+      "prediction_uid": "60969aa2-dd1a-448d-8fdb-074da29d5530"
+    },
+    {
+      "sample_id": "docx-E15",
+      "item_type": "edge",
+      "source": "深度优先遍历",
+      "kind": "CONTAINS",
+      "target": "后序遍历",
+      "prediction_uid": "f08aeb13-5cd7-4798-bbc5-e88ae565176d"
+    },
+    {
+      "sample_id": "docx-E16",
+      "item_type": "edge",
+      "source": "二叉树",
+      "kind": "RELATED_TO",
+      "target": "链表",
+      "prediction_uid": "dcdc1dac-70d0-4e48-9927-0a8ebaa51a81"
+    },
+    {
+      "sample_id": "docx-E17",
+      "item_type": "edge",
+      "source": "节点",
+      "kind": "CONTAINS",
+      "target": "左子节点",
+      "prediction_uid": "43f247df-ab58-47d3-8e9b-c70aa0cbf092"
+    },
+    {
+      "sample_id": "docx-E18",
+      "item_type": "edge",
+      "source": "二叉树数组表示",
+      "kind": "CONTAINS",
+      "target": "完美二叉树",
+      "prediction_uid": "5de6e02f-c163-467f-b0b0-e9639edfdd72"
+    },
+    {
+      "sample_id": "docx-E19",
+      "item_type": "edge",
+      "source": "完美二叉树",
+      "kind": "CONTAINS",
+      "target": "映射公式",
+      "prediction_uid": "b2a44f5c-9f9c-4fbb-8288-6265231372f6"
+    },
+    {
+      "sample_id": "docx-E20",
+      "item_type": "edge",
+      "source": "节点",
+      "kind": "RELATED_TO",
+      "target": "父节点",
+      "prediction_uid": "01331d3d-de74-4e0c-a936-ad4cf59210ee"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "metadata": {
+    "label": "AI-assisted frozen reference, not human verified",
+    "human_verified": false,
+    "scorer_version": "1.0",
+    "interpretation": "TP/FP/FN denote matches, unmatched predictions, and unmatched reference items. Unmatched does not mean factually incorrect.",
+    "normalization": "Unicode NFKC, casefold, remove whitespace; preserve punctuation",
+    "node_matching": "Exact normalized reference label or alias; first prediction in input order wins; one-to-one",
+    "edge_matching": "Only accepted node mappings; exact relation type; CONTAINS and PREREQUISITE_OF directed; RELATED_TO undirected; one-to-one",
+    "zero_denominator": "null; F1 = 2*TP / (2*TP + FP + FN)",
+    "reference_metadata": {
+      "annotation_status": "AI-assisted independent reference; NOT human-annotated gold",
+      "created_at": "2026-10-09T20:23:09+08:00",
+      "scope": "固定输入全文：Hello 算法第 7 章树 7.1–7.6 正文及输入中保留的 Q&A；只标注有原文证据的知识点和关系。",
+      "source_path": "inputs/Hello算法_第7章树_正文.txt",
+      "source_sha256": "1ca398ef8e3aed3fa319a979220d19f550ff5e94d39b278ee3c37f81af1744f8",
+      "independence": "标注前及标注过程中未读取任何抽取运行结果、模型预测或 runs 目录；未调用项目模型 API。",
+      "matching_policy": {
+        "entities": "本轮 primary 仅按规范名 label 与事先显式列出的 aliases 作精确匹配；执行冻结评分器定义的 Unicode NFKC、英文字母大小写和空白归一化。无上下文语义判断，不作子串匹配。附加中英文括号名若整体未列入 aliases，也标为未匹配，留待后续人工复核。",
+        "edges": "必须双端点分别匹配参考实体，且 kind 一致。RELATED_TO 无方向，另外两类有方向。不要由实体召回自动推定关系正确。",
+        "generic_operations": "本轮 primary 不借助章节或描述对泛称查找/插入/删除作语义消歧。仅当预测名精确匹配规范名或显式 aliases 时匹配；其他泛称标为未匹配，留待后续人工复核。禁止一个预测实体复用匹配多个对象。",
+        "height": "本轮 primary 对裸 height/高度 不进行定义或上下文消歧；未列入显式 aliases 的名称标为未匹配，留待后续人工复核。树高度与节点高度仍为不同实体。",
+        "avl": "AVL 树不是所有平衡二叉搜索树的别名；7.6 的宽泛叫法不覆盖 7.5 明示的类别差别。",
+        "unlisted_supported_predictions": "该参考集并非完备本体。本轮 primary 保留所有未通过显式别名精确匹配的未匹配项，不以语义复核修改主分数。后续可人工复核其是否为原文支持的同义表达或其他合理粒度，并单独报告复核结果；未匹配不自动等同事实错误。"
+      },
+      "relation_semantics": {
+        "CONTAINS": "整体到明确组成部分，或原文明示的分类集合到成员；不把所有 is-a/属性/使用关系改成包含。",
+        "RELATED_TO": "对称的、原文直接支持的具体结构、定义、实现、使用、退化或对比关系；不基于共同章节建立笼统关联。",
+        "PREREQUISITE_OF": "source 是原文明说需要在 target 前完成的操作或必备依赖；不用章节顺序推导。"
+      },
+      "node_count": 70,
+      "edge_count": 101,
+      "scoring_policy_note": "主评分遵循固定实体/别名精确匹配规则；基于语义、定义、章节或括号表达的消歧只用于后续独立复核，不纳入本轮 primary。"
+    },
+    "input_hashes": {
+      "gold_sha256": "79e2a0ac5d7015d439f8b96a32c74047d414051dda2c405488de6650ba2e272e",
+      "graph_sha256": "0225fce6327762fe51fb778b10468694c763bc131e2a8ca67529f4bb12e07c49"
+    }
+  },
+  "raw_counts": {
+    "reference_nodes": 70,
+    "reference_edges": 101,
+    "prediction_nodes": 47,
+    "prediction_edges": 61
+  },
+  "nodes": {
+    "tp": 35,
+    "fp": 12,
+    "fn": 35,
+    "precision": 0.7446808510638298,
+    "recall": 0.5,
+    "f1": 0.5982905982905983,
+    "prediction_count": 47,
+    "reference_count": 70
+  },
+  "edges": {
+    "tp": 16,
+    "fp": 45,
+    "fn": 85,
+    "precision": 0.26229508196721313,
+    "recall": 0.15841584158415842,
+    "f1": 0.19753086419753085,
+    "prediction_count": 61,
+    "reference_count": 101
+  },
+  "by_edge_type": {
+    "CONTAINS": {
+      "tp": 11,
+      "fp": 23,
+      "fn": 19,
+      "precision": 0.3235294117647059,
+      "recall": 0.36666666666666664,
+      "f1": 0.34375,
+      "prediction_count": 34,
+      "reference_count": 30
+    },
+    "PREREQUISITE_OF": {
+      "tp": 0,
+      "fp": 4,
+      "fn": 1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "prediction_count": 4,
+      "reference_count": 1
+    },
+    "RELATED_TO": {
+      "tp": 5,
+      "fp": 18,
+      "fn": 65,
+      "precision": 0.21739130434782608,
+      "recall": 0.07142857142857142,
+      "f1": 0.10752688172043011,
+      "prediction_count": 23,
+      "reference_count": 70
+    }
+  },
+  "duplicate_predictions": {
+    "nodes": 1,
+    "edges": 1
+  }
+}

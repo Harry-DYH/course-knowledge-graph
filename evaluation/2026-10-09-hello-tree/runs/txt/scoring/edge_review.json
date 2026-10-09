@@ -1,0 +1,1423 @@
+{
+  "metadata": {
+    "label": "AI-assisted frozen reference, not human verified",
+    "human_verified": false,
+    "scorer_version": "1.0",
+    "interpretation": "TP/FP/FN denote matches, unmatched predictions, and unmatched reference items. Unmatched does not mean factually incorrect.",
+    "normalization": "Unicode NFKC, casefold, remove whitespace; preserve punctuation",
+    "node_matching": "Exact normalized reference label or alias; first prediction in input order wins; one-to-one",
+    "edge_matching": "Only accepted node mappings; exact relation type; CONTAINS and PREREQUISITE_OF directed; RELATED_TO undirected; one-to-one",
+    "zero_denominator": "null; F1 = 2*TP / (2*TP + FP + FN)",
+    "reference_metadata": {
+      "annotation_status": "AI-assisted independent reference; NOT human-annotated gold",
+      "created_at": "2026-10-09T20:23:09+08:00",
+      "scope": "固定输入全文：Hello 算法第 7 章树 7.1–7.6 正文及输入中保留的 Q&A；只标注有原文证据的知识点和关系。",
+      "source_path": "inputs/Hello算法_第7章树_正文.txt",
+      "source_sha256": "1ca398ef8e3aed3fa319a979220d19f550ff5e94d39b278ee3c37f81af1744f8",
+      "independence": "标注前及标注过程中未读取任何抽取运行结果、模型预测或 runs 目录；未调用项目模型 API。",
+      "matching_policy": {
+        "entities": "本轮 primary 仅按规范名 label 与事先显式列出的 aliases 作精确匹配；执行冻结评分器定义的 Unicode NFKC、英文字母大小写和空白归一化。无上下文语义判断，不作子串匹配。附加中英文括号名若整体未列入 aliases，也标为未匹配，留待后续人工复核。",
+        "edges": "必须双端点分别匹配参考实体，且 kind 一致。RELATED_TO 无方向，另外两类有方向。不要由实体召回自动推定关系正确。",
+        "generic_operations": "本轮 primary 不借助章节或描述对泛称查找/插入/删除作语义消歧。仅当预测名精确匹配规范名或显式 aliases 时匹配；其他泛称标为未匹配，留待后续人工复核。禁止一个预测实体复用匹配多个对象。",
+        "height": "本轮 primary 对裸 height/高度 不进行定义或上下文消歧；未列入显式 aliases 的名称标为未匹配，留待后续人工复核。树高度与节点高度仍为不同实体。",
+        "avl": "AVL 树不是所有平衡二叉搜索树的别名；7.6 的宽泛叫法不覆盖 7.5 明示的类别差别。",
+        "unlisted_supported_predictions": "该参考集并非完备本体。本轮 primary 保留所有未通过显式别名精确匹配的未匹配项，不以语义复核修改主分数。后续可人工复核其是否为原文支持的同义表达或其他合理粒度，并单独报告复核结果；未匹配不自动等同事实错误。"
+      },
+      "relation_semantics": {
+        "CONTAINS": "整体到明确组成部分，或原文明示的分类集合到成员；不把所有 is-a/属性/使用关系改成包含。",
+        "RELATED_TO": "对称的、原文直接支持的具体结构、定义、实现、使用、退化或对比关系；不基于共同章节建立笼统关联。",
+        "PREREQUISITE_OF": "source 是原文明说需要在 target 前完成的操作或必备依赖；不用章节顺序推导。"
+      },
+      "node_count": 70,
+      "edge_count": 101,
+      "scoring_policy_note": "主评分遵循固定实体/别名精确匹配规则；基于语义、定义、章节或括号表达的消歧只用于后续独立复核，不纳入本轮 primary。"
+    },
+    "input_hashes": {
+      "gold_sha256": "79e2a0ac5d7015d439f8b96a32c74047d414051dda2c405488de6650ba2e272e",
+      "graph_sha256": "5228d6d5a09a4dd2219b3f9ed1e14ee48313bebac872442f441556ba769540c0"
+    }
+  },
+  "items": [
+    {
+      "prediction_index": 0,
+      "prediction": {
+        "uid": "2f37d509-2569-4dfd-9325-f35ff52ee3a6",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2744f63842d173276974",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d210a6cee7715de8caa7",
+        "kind": "PREREQUISITE_OF"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "查找节点",
+      "target_label": "插入节点",
+      "mapped_reference_source": null,
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2744f63842d173276974",
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d210a6cee7715de8caa7"
+      ]
+    },
+    {
+      "prediction_index": 1,
+      "prediction": {
+        "uid": "f415a42b-c188-45e3-92fe-426dd23e430a",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2744f63842d173276974",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:5cac5ea57b4a287255b3",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "查找节点",
+      "target_label": "二分查找算法",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n042",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2744f63842d173276974"
+      ]
+    },
+    {
+      "prediction_index": 2,
+      "prediction": {
+        "uid": "63bb799e-7ae8-40cc-bbc0-34b025928aad",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2744f63842d173276974",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:5633e2409cc898dee052",
+        "kind": "PREREQUISITE_OF"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "查找节点",
+      "target_label": "删除节点",
+      "mapped_reference_source": null,
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2744f63842d173276974",
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:5633e2409cc898dee052"
+      ]
+    },
+    {
+      "prediction_index": 3,
+      "prediction": {
+        "uid": "03a406ab-ebf0-4824-9f30-d203d8bd1c3b",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ad68582febdaf04e729d",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:5633e2409cc898dee052",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉搜索树的操作",
+      "target_label": "删除节点",
+      "mapped_reference_source": null,
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ad68582febdaf04e729d",
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:5633e2409cc898dee052"
+      ]
+    },
+    {
+      "prediction_index": 4,
+      "prediction": {
+        "uid": "068611a4-ce42-42ad-b782-2bd9d732803d",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ad68582febdaf04e729d",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d210a6cee7715de8caa7",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉搜索树的操作",
+      "target_label": "插入节点",
+      "mapped_reference_source": null,
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ad68582febdaf04e729d",
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d210a6cee7715de8caa7"
+      ]
+    },
+    {
+      "prediction_index": 5,
+      "prediction": {
+        "uid": "a72f86d9-acc9-41f5-884e-07b9ff249a28",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ad68582febdaf04e729d",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2744f63842d173276974",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉搜索树的操作",
+      "target_label": "查找节点",
+      "mapped_reference_source": null,
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ad68582febdaf04e729d",
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2744f63842d173276974"
+      ]
+    },
+    {
+      "prediction_index": 6,
+      "prediction": {
+        "uid": "7f03cfd9-0335-4f60-a24f-587d4afec3d5",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:12a7bc29a76656e354df",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ad68582febdaf04e729d",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉搜索树",
+      "target_label": "二叉搜索树的操作",
+      "mapped_reference_source": "n038",
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ad68582febdaf04e729d"
+      ]
+    },
+    {
+      "prediction_index": 7,
+      "prediction": {
+        "uid": "1bac868b-d531-4116-a74c-1a0b93f2c669",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:12a7bc29a76656e354df",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:bde1313549c0e6633030",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉搜索树",
+      "target_label": "二叉搜索树的性质",
+      "mapped_reference_source": "n038",
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:bde1313549c0e6633030"
+      ]
+    },
+    {
+      "prediction_index": 8,
+      "prediction": {
+        "uid": "880cb50e-592c-4d08-b3d3-e96d31b56605",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:12a7bc29a76656e354df",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉搜索树",
+      "target_label": "二叉树",
+      "mapped_reference_source": "n038",
+      "mapped_reference_target": "n002",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 9,
+      "prediction": {
+        "uid": "35699946-36c5-4a2a-987f-9dc1f5eb1716",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "常见二叉树类型",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87"
+      ]
+    },
+    {
+      "prediction_index": 10,
+      "prediction": {
+        "uid": "d6cac80a-47d4-4b33-ac5b-586de11e3d93",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:9fc7be66c9ad3b89139c",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "完美二叉树",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n020",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 11,
+      "prediction": {
+        "uid": "ed18fc82-9a4a-42a1-a68b-dc1b5a7bab0f",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:46c96777c74009b0290e",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "二叉树的退化",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:46c96777c74009b0290e"
+      ]
+    },
+    {
+      "prediction_index": 12,
+      "prediction": {
+        "uid": "d91e73d8-dc63-4ab4-b8b1-246b8a8f9b62",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:de5214549cd2302e91d3",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "边",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n011",
+      "reference_edge_index": 3,
+      "reference_edge": {
+        "source": "n002",
+        "target": "n011",
+        "kind": "CONTAINS",
+        "section": "7.1",
+        "evidence": "边（edge）：连接两个节点的线段，即节点引用（指针）。",
+        "reason": "二叉树通过节点之间的边构成结构。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 13,
+      "prediction": {
+        "uid": "f7aa6143-c6c6-451b-b742-908613a65906",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3c24ee40e1a8372539a",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "二叉树遍历",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n025",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 14,
+      "prediction": {
+        "uid": "54c30225-62bb-4959-8e7d-cc4621e5aa1b",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:638775603bc9de86848f",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "叶节点",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n010",
+      "reference_edge_index": 2,
+      "reference_edge": {
+        "source": "n002",
+        "target": "n010",
+        "kind": "CONTAINS",
+        "section": "7.1",
+        "evidence": "在二叉树中，除叶节点外，其他所有节点都包含子节点和非空子树。",
+        "reason": "叶节点是文中二叉树的一类组成节点。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 15,
+      "prediction": {
+        "uid": "826d2bd2-6f02-4adc-8f11-8d483d3f477b",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4f32d4ccf64f2a8ea21e",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "二叉树基本操作",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4f32d4ccf64f2a8ea21e"
+      ]
+    },
+    {
+      "prediction_index": 16,
+      "prediction": {
+        "uid": "25eddcb9-f449-49e0-bf4f-fa56fd25eb9c",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0fbaf52bd3a5e680e71a",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "二叉树的高度",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n014",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 17,
+      "prediction": {
+        "uid": "d57ef6e7-5b98-4927-b653-30fdeb43db4a",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:910d817b174d954c5d73",
+        "kind": "RELATED_TO"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "链表",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n024",
+      "reference_edge_index": 33,
+      "reference_edge": {
+        "source": "n002",
+        "target": "n024",
+        "kind": "RELATED_TO",
+        "section": "7.1",
+        "evidence": "而当所有节点都偏向一侧时，二叉树退化为“链表”。",
+        "reason": "原文给出的退化关系。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 18,
+      "prediction": {
+        "uid": "611e40bd-b35d-49ee-b12a-c59cca9dd0ac",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:fdd118ac4ccda9f47413",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "节点的度",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n013",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 19,
+      "prediction": {
+        "uid": "80d584f0-c66b-46d7-8a39-f78597b02c7a",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0ef52ed06f45e9620e80",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "节点所在的层",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n012",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 20,
+      "prediction": {
+        "uid": "4383c64a-7c9c-4458-b26c-689ed96d9468",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3f6e24774e11adbf95b",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "节点的高度",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n016",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 21,
+      "prediction": {
+        "uid": "d0d3ede5-b70b-442c-a439-6e4298475e5e",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:628f42185cd384fbafd1",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "根节点",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n009",
+      "reference_edge_index": 1,
+      "reference_edge": {
+        "source": "n002",
+        "target": "n009",
+        "kind": "CONTAINS",
+        "section": "7.1",
+        "evidence": "根节点（root node）：位于二叉树顶层的节点，没有父节点。",
+        "reason": "根节点是文中非空二叉树的组成部分。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 22,
+      "prediction": {
+        "uid": "dee51fc7-54b7-4701-9238-2f45c4a70e22",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:da3ab0102404d9593361",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "节点",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:da3ab0102404d9593361"
+      ]
+    },
+    {
+      "prediction_index": 23,
+      "prediction": {
+        "uid": "edc39012-7ea0-4c1c-a36e-11c8f016e6a1",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d3b0d94764b51244b226",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树",
+      "target_label": "节点的深度",
+      "mapped_reference_source": "n002",
+      "mapped_reference_target": "n015",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 24,
+      "prediction": {
+        "uid": "d68b4574-d748-4301-8882-6f191baa7717",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:cf721f39abe9a354a734",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:faf4c068408c6969150e",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "前序遍历",
+      "target_label": "深度优先遍历",
+      "mapped_reference_source": "n028",
+      "mapped_reference_target": "n031",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 25,
+      "prediction": {
+        "uid": "faf7c615-9a8a-4a59-936f-304d4411c09c",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d03c0235af5caad48e94",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树的数组表示",
+      "target_label": "中序遍历",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n029",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49"
+      ]
+    },
+    {
+      "prediction_index": 26,
+      "prediction": {
+        "uid": "82396f2b-4b9f-45cc-b99f-e15b9f2d6632",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:c57fc00b0ee5f88069a1",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树的数组表示",
+      "target_label": "层序遍历序列",
+      "mapped_reference_source": null,
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49",
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:c57fc00b0ee5f88069a1"
+      ]
+    },
+    {
+      "prediction_index": 27,
+      "prediction": {
+        "uid": "74f544ff-54a9-4f10-a574-c4abda752763",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:cf721f39abe9a354a734",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树的数组表示",
+      "target_label": "前序遍历",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n028",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49"
+      ]
+    },
+    {
+      "prediction_index": 28,
+      "prediction": {
+        "uid": "37f19f1b-0daa-41c4-8de6-a03954a98ec3",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d18b6feefa3ebd8aedf4",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树的数组表示",
+      "target_label": "层序遍历",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n026",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49"
+      ]
+    },
+    {
+      "prediction_index": 29,
+      "prediction": {
+        "uid": "a95433d2-03d7-4184-8c2d-b4ac963845c8",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4a2913267019020822c3",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树的数组表示",
+      "target_label": "完全二叉树",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n021",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49"
+      ]
+    },
+    {
+      "prediction_index": 30,
+      "prediction": {
+        "uid": "0360c8be-25dd-4740-ac66-0eccc31be988",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f64dc3efd62ca8b09694",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树的数组表示",
+      "target_label": "后序遍历",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n030",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2441c4f03289831caf49"
+      ]
+    },
+    {
+      "prediction_index": 31,
+      "prediction": {
+        "uid": "a184f2e3-aa6b-4fa5-ad8d-3f679fb5012a",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d03c0235af5caad48e94",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:faf4c068408c6969150e",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "中序遍历",
+      "target_label": "深度优先遍历",
+      "mapped_reference_source": "n029",
+      "mapped_reference_target": "n031",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 32,
+      "prediction": {
+        "uid": "e5c9fd84-3768-432a-a333-b7ac09b7a6ee",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:9fc7be66c9ad3b89139c",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4a2913267019020822c3",
+        "kind": "RELATED_TO"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "完美二叉树",
+      "target_label": "完全二叉树",
+      "mapped_reference_source": "n020",
+      "mapped_reference_target": "n021",
+      "reference_edge_index": 46,
+      "reference_edge": {
+        "source": "n020",
+        "target": "n021",
+        "kind": "RELATED_TO",
+        "section": "7.1",
+        "evidence": "完美二叉树也是一棵完全二叉树。",
+        "reason": "原文明示类型间蕴含；只有单句 is-a，不将其泛化为内容包含。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 33,
+      "prediction": {
+        "uid": "3a46c985-732a-4c15-a01e-800d517d9dc8",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:9fc7be66c9ad3b89139c",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": true,
+      "source_label": "完美二叉树",
+      "target_label": "二叉树",
+      "mapped_reference_source": "n020",
+      "mapped_reference_target": "n002",
+      "reason": "edge_not_in_reference",
+      "duplicate_of_prediction_index": 10
+    },
+    {
+      "prediction_index": 34,
+      "prediction": {
+        "uid": "9db77c80-5a41-4a76-951c-faa058ef6bdf",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4a2913267019020822c3",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "完全二叉树",
+      "target_label": "二叉树",
+      "mapped_reference_source": "n021",
+      "mapped_reference_target": "n002",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 35,
+      "prediction": {
+        "uid": "0bd9a0c5-2e49-4bb9-866a-7be1ecb492c9",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f64dc3efd62ca8b09694",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:faf4c068408c6969150e",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "后序遍历",
+      "target_label": "深度优先遍历",
+      "mapped_reference_source": "n030",
+      "mapped_reference_target": "n031",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 36,
+      "prediction": {
+        "uid": "37c4c92f-7ace-4690-ad25-d04cbdd2d2ef",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d18b6feefa3ebd8aedf4",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:1a04d93c87e6f8ef06b2",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "层序遍历",
+      "target_label": "广度优先遍历",
+      "mapped_reference_source": "n026",
+      "mapped_reference_target": "n027",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 37,
+      "prediction": {
+        "uid": "4e15ac15-8025-4ec3-bca9-853ed53cdf4e",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:faf4c068408c6969150e",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:cf721f39abe9a354a734",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "深度优先遍历",
+      "target_label": "前序遍历",
+      "mapped_reference_source": "n031",
+      "mapped_reference_target": "n028",
+      "reference_edge_index": 17,
+      "reference_edge": {
+        "source": "n031",
+        "target": "n028",
+        "kind": "CONTAINS",
+        "section": "7.2",
+        "evidence": "前序、中序和后序遍历都属于深度优先遍历",
+        "reason": "明确将三种二叉树遍历归入深度优先遍历类别。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 38,
+      "prediction": {
+        "uid": "8ad11958-e43d-424c-9ba1-c90548aa983b",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:faf4c068408c6969150e",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f64dc3efd62ca8b09694",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "深度优先遍历",
+      "target_label": "后序遍历",
+      "mapped_reference_source": "n031",
+      "mapped_reference_target": "n030",
+      "reference_edge_index": 19,
+      "reference_edge": {
+        "source": "n031",
+        "target": "n030",
+        "kind": "CONTAINS",
+        "section": "7.2",
+        "evidence": "前序、中序和后序遍历都属于深度优先遍历",
+        "reason": "明确将三种二叉树遍历归入深度优先遍历类别。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 39,
+      "prediction": {
+        "uid": "72214e73-ba70-4989-bd9b-5f5f64bd653a",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:faf4c068408c6969150e",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:2cf70b8b062adb1eebc5",
+        "kind": "RELATED_TO"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "深度优先遍历",
+      "target_label": "递归",
+      "mapped_reference_source": "n031",
+      "mapped_reference_target": "n033",
+      "reference_edge_index": 50,
+      "reference_edge": {
+        "source": "n031",
+        "target": "n033",
+        "kind": "RELATED_TO",
+        "section": "7.2",
+        "evidence": "深度优先搜索通常基于递归实现",
+        "reason": "明确的实现方式。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 40,
+      "prediction": {
+        "uid": "0be8e854-1be4-4cbd-ae6d-c7be4e103954",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:faf4c068408c6969150e",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:380d9272c6b7df20554d",
+        "kind": "RELATED_TO"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "深度优先遍历",
+      "target_label": "迭代",
+      "mapped_reference_source": "n031",
+      "mapped_reference_target": "n034",
+      "reference_edge_index": 51,
+      "reference_edge": {
+        "source": "n031",
+        "target": "n034",
+        "kind": "RELATED_TO",
+        "section": "7.2",
+        "evidence": "深度优先搜索也可以基于迭代实现",
+        "reason": "原文明确列出另一个实现方式。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 41,
+      "prediction": {
+        "uid": "7924b166-11d2-4a45-bbff-f5b44d213465",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:faf4c068408c6969150e",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d03c0235af5caad48e94",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "深度优先遍历",
+      "target_label": "中序遍历",
+      "mapped_reference_source": "n031",
+      "mapped_reference_target": "n029",
+      "reference_edge_index": 18,
+      "reference_edge": {
+        "source": "n031",
+        "target": "n029",
+        "kind": "CONTAINS",
+        "section": "7.2",
+        "evidence": "前序、中序和后序遍历都属于深度优先遍历",
+        "reason": "明确将三种二叉树遍历归入深度优先遍历类别。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 42,
+      "prediction": {
+        "uid": "64e40dc9-4d80-4d9e-bc74-35e41ec986ef",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0c66ac149708634521ec",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:ac8611976e6d34dca69a",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "链表表示",
+      "target_label": "Treenode",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n003",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0c66ac149708634521ec"
+      ]
+    },
+    {
+      "prediction_index": 43,
+      "prediction": {
+        "uid": "ff35cd4a-063f-4df3-8ad5-a7b149a5fdee",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f35dc8c5ba198bbed2ac",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:9fc7be66c9ad3b89139c",
+        "kind": "RELATED_TO"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树数组表示",
+      "target_label": "完美二叉树",
+      "mapped_reference_source": "n035",
+      "mapped_reference_target": "n020",
+      "reference_edge_index": 57,
+      "reference_edge": {
+        "source": "n020",
+        "target": "n035",
+        "kind": "RELATED_TO",
+        "section": "7.3",
+        "evidence": "给定一棵完美二叉树，我们将所有节点按照层序遍历的顺序存储在一个数组中",
+        "reason": "原文明示完美二叉树的数组表示方法。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 44,
+      "prediction": {
+        "uid": "634272f4-a313-4557-a372-2178e2b450e8",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f35dc8c5ba198bbed2ac",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:3743de3a2df795b9a781",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树数组表示",
+      "target_label": "映射公式",
+      "mapped_reference_source": "n035",
+      "mapped_reference_target": "n037",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 45,
+      "prediction": {
+        "uid": "2285e314-c7e4-417c-9498-b535fd30cfe3",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f35dc8c5ba198bbed2ac",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d18b6feefa3ebd8aedf4",
+        "kind": "RELATED_TO"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树数组表示",
+      "target_label": "层序遍历",
+      "mapped_reference_source": "n035",
+      "mapped_reference_target": "n026",
+      "reference_edge_index": 55,
+      "reference_edge": {
+        "source": "n026",
+        "target": "n035",
+        "kind": "RELATED_TO",
+        "section": "7.6",
+        "evidence": "二叉树可以用数组表示，方法是将节点值和空位按层序遍历顺序排列，并根据父节点与子节点之间的索引映射关系来实现指针。",
+        "reason": "数组表示的对象、存储介质、排列顺序或索引实现手段。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 46,
+      "prediction": {
+        "uid": "f9275d43-b76b-4c52-86d5-a723abafff95",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f35dc8c5ba198bbed2ac",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0c66ac149708634521ec",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树数组表示",
+      "target_label": "链表表示",
+      "mapped_reference_source": "n035",
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0c66ac149708634521ec"
+      ]
+    },
+    {
+      "prediction_index": 47,
+      "prediction": {
+        "uid": "e985b5c2-c201-4ec6-bfb5-7d0b0c44750b",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:1a04d93c87e6f8ef06b2",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0a29f8322affbab23633",
+        "kind": "RELATED_TO"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "广度优先遍历",
+      "target_label": "队列",
+      "mapped_reference_source": "n027",
+      "mapped_reference_target": "n032",
+      "reference_edge_index": 49,
+      "reference_edge": {
+        "source": "n027",
+        "target": "n032",
+        "kind": "RELATED_TO",
+        "section": "7.2",
+        "evidence": "广度优先遍历通常借助“队列”来实现。",
+        "reason": "明确的实现数据结构。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 48,
+      "prediction": {
+        "uid": "aaa07570-44c4-45a3-ad25-af5fd1f4a52a",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3c24ee40e1a8372539a",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d18b6feefa3ebd8aedf4",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树遍历",
+      "target_label": "层序遍历",
+      "mapped_reference_source": "n025",
+      "mapped_reference_target": "n026",
+      "reference_edge_index": 12,
+      "reference_edge": {
+        "source": "n025",
+        "target": "n026",
+        "kind": "CONTAINS",
+        "section": "7.2",
+        "evidence": "二叉树常见的遍历方式包括层序遍历、前序遍历、中序遍历和后序遍历等。",
+        "reason": "原文明确列出的遍历方法分类成员。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 49,
+      "prediction": {
+        "uid": "eee98879-85c6-437a-be82-867813c157b1",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3c24ee40e1a8372539a",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d03c0235af5caad48e94",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树遍历",
+      "target_label": "中序遍历",
+      "mapped_reference_source": "n025",
+      "mapped_reference_target": "n029",
+      "reference_edge_index": 14,
+      "reference_edge": {
+        "source": "n025",
+        "target": "n029",
+        "kind": "CONTAINS",
+        "section": "7.2",
+        "evidence": "二叉树常见的遍历方式包括层序遍历、前序遍历、中序遍历和后序遍历等。",
+        "reason": "原文明确列出的遍历方法分类成员。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 50,
+      "prediction": {
+        "uid": "ccaa2be9-d327-4413-b39b-cf69a0c20c13",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3c24ee40e1a8372539a",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f64dc3efd62ca8b09694",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树遍历",
+      "target_label": "后序遍历",
+      "mapped_reference_source": "n025",
+      "mapped_reference_target": "n030",
+      "reference_edge_index": 15,
+      "reference_edge": {
+        "source": "n025",
+        "target": "n030",
+        "kind": "CONTAINS",
+        "section": "7.2",
+        "evidence": "二叉树常见的遍历方式包括层序遍历、前序遍历、中序遍历和后序遍历等。",
+        "reason": "原文明确列出的遍历方法分类成员。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 51,
+      "prediction": {
+        "uid": "5bdb6af8-666f-45d5-be28-5e09b6bea379",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3c24ee40e1a8372539a",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:cf721f39abe9a354a734",
+        "kind": "CONTAINS"
+      },
+      "status": "tp",
+      "duplicate": false,
+      "source_label": "二叉树遍历",
+      "target_label": "前序遍历",
+      "mapped_reference_source": "n025",
+      "mapped_reference_target": "n028",
+      "reference_edge_index": 13,
+      "reference_edge": {
+        "source": "n025",
+        "target": "n028",
+        "kind": "CONTAINS",
+        "section": "7.2",
+        "evidence": "二叉树常见的遍历方式包括层序遍历、前序遍历、中序遍历和后序遍历等。",
+        "reason": "原文明确列出的遍历方法分类成员。"
+      },
+      "reason": "exact_edge_match"
+    },
+    {
+      "prediction_index": 52,
+      "prediction": {
+        "uid": "cfa38b85-5eec-4bec-9152-1432e5776550",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:8154b2ea75950d58a008",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "深度",
+      "target_label": "二叉树",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n002",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:8154b2ea75950d58a008"
+      ]
+    },
+    {
+      "prediction_index": 53,
+      "prediction": {
+        "uid": "d27efce5-2686-4f17-bdd7-e6a11ce2c61f",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:9fc7be66c9ad3b89139c",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "常见二叉树类型",
+      "target_label": "完美二叉树",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n020",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87"
+      ]
+    },
+    {
+      "prediction_index": 54,
+      "prediction": {
+        "uid": "9f584858-842e-483c-8a0a-3cf98d3d9baf",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:e14c056052cdde08454d",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "常见二叉树类型",
+      "target_label": "完满二叉树",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n022",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87"
+      ]
+    },
+    {
+      "prediction_index": 55,
+      "prediction": {
+        "uid": "f4d2b230-240c-4b17-be87-2b7ef9e69932",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4a2913267019020822c3",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "常见二叉树类型",
+      "target_label": "完全二叉树",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n021",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87"
+      ]
+    },
+    {
+      "prediction_index": 56,
+      "prediction": {
+        "uid": "b3f62762-a1a1-4057-b9e5-6233214f9398",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:49108fb20556e439bb3d",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "常见二叉树类型",
+      "target_label": "平衡二叉树",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n023",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0e4ba4b526f0e10b3c87"
+      ]
+    },
+    {
+      "prediction_index": 57,
+      "prediction": {
+        "uid": "c8f558b7-3263-4979-a371-74f80701febb",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:890bdc2ea9326293de92",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f363ce191f2ac8afb83b",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "高度",
+      "target_label": "二叉树",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n002",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:890bdc2ea9326293de92"
+      ]
+    },
+    {
+      "prediction_index": 58,
+      "prediction": {
+        "uid": "ab8ea544-ba64-406f-9903-ed647049bf54",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:890bdc2ea9326293de92",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:8154b2ea75950d58a008",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "高度",
+      "target_label": "深度",
+      "mapped_reference_source": null,
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:890bdc2ea9326293de92",
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:8154b2ea75950d58a008"
+      ]
+    },
+    {
+      "prediction_index": 59,
+      "prediction": {
+        "uid": "c7b0f3d5-38f1-4a9d-94e1-03a764d46c58",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:46c96777c74009b0290e",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:910d817b174d954c5d73",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树的退化",
+      "target_label": "链表",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n024",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:46c96777c74009b0290e"
+      ]
+    },
+    {
+      "prediction_index": 60,
+      "prediction": {
+        "uid": "77f134c8-f08b-401d-a4bd-7f06ba76644d",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4f32d4ccf64f2a8ea21e",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:547d5ebaed572cf16968",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树基本操作",
+      "target_label": "初始化二叉树",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n017",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4f32d4ccf64f2a8ea21e"
+      ]
+    },
+    {
+      "prediction_index": 61,
+      "prediction": {
+        "uid": "5a2763b9-ca82-4343-8609-53cded6e5f7b",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4f32d4ccf64f2a8ea21e",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f280041d8c9176a79760",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树基本操作",
+      "target_label": "插入与删除节点",
+      "mapped_reference_source": null,
+      "mapped_reference_target": null,
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:4f32d4ccf64f2a8ea21e",
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:f280041d8c9176a79760"
+      ]
+    },
+    {
+      "prediction_index": 62,
+      "prediction": {
+        "uid": "d2c94e48-db7d-45f9-be8b-21574f3bc3ce",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:da3ab0102404d9593361",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:adc19c189ef6eba3c2ca",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "节点",
+      "target_label": "右子节点",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n005",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:da3ab0102404d9593361"
+      ]
+    },
+    {
+      "prediction_index": 63,
+      "prediction": {
+        "uid": "96d3907b-a1ac-4e96-a8c2-5217e449d266",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:da3ab0102404d9593361",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0b19fc4bfa43f0128ec0",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "节点",
+      "target_label": "父节点",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n006",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:da3ab0102404d9593361"
+      ]
+    },
+    {
+      "prediction_index": 64,
+      "prediction": {
+        "uid": "4711fed2-093d-4ac0-8029-df0eab9ac492",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:da3ab0102404d9593361",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:b962c2a7b8dce04ca83d",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "节点",
+      "target_label": "左子节点",
+      "mapped_reference_source": null,
+      "mapped_reference_target": "n004",
+      "reason": "endpoint_not_one_to_one_matched",
+      "unmatched_endpoint_uids": [
+        "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:da3ab0102404d9593361"
+      ]
+    },
+    {
+      "prediction_index": 65,
+      "prediction": {
+        "uid": "3da564c9-e391-4036-907e-f51767066343",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:b962c2a7b8dce04ca83d",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d12a7a2c81e8ac6d5554",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "左子节点",
+      "target_label": "左子树",
+      "mapped_reference_source": "n004",
+      "mapped_reference_target": "n007",
+      "reason": "direction_mismatch"
+    },
+    {
+      "prediction_index": 66,
+      "prediction": {
+        "uid": "a61f7263-697c-47d9-ae9f-09baf360763f",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0fbaf52bd3a5e680e71a",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3f6e24774e11adbf95b",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树的高度",
+      "target_label": "节点的高度",
+      "mapped_reference_source": "n014",
+      "mapped_reference_target": "n016",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 67,
+      "prediction": {
+        "uid": "6bb707e3-b4d4-40a5-9a71-5358fbb1aabb",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:0fbaf52bd3a5e680e71a",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d3b0d94764b51244b226",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "二叉树的高度",
+      "target_label": "节点的深度",
+      "mapped_reference_source": "n014",
+      "mapped_reference_target": "n015",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 68,
+      "prediction": {
+        "uid": "2a27fcb2-e05e-4cbc-88ed-930846310e42",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:d3b0d94764b51244b226",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:a3f6e24774e11adbf95b",
+        "kind": "RELATED_TO"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "节点的深度",
+      "target_label": "节点的高度",
+      "mapped_reference_source": "n015",
+      "mapped_reference_target": "n016",
+      "reason": "edge_not_in_reference"
+    },
+    {
+      "prediction_index": 69,
+      "prediction": {
+        "uid": "ec6d5d8d-2abe-42d1-a312-b0e265d9905d",
+        "source": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:adc19c189ef6eba3c2ca",
+        "target": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b:9e7e12e2ee0898a2fead",
+        "kind": "CONTAINS"
+      },
+      "status": "fp",
+      "duplicate": false,
+      "source_label": "右子节点",
+      "target_label": "右子树",
+      "mapped_reference_source": "n005",
+      "mapped_reference_target": "n008",
+      "reason": "direction_mismatch"
+    }
+  ]
+}

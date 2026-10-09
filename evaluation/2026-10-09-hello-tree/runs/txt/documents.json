@@ -1,0 +1,27 @@
+[
+  {
+    "errorMessage": "",
+    "fileType": "txt",
+    "model": "deepseek_demo",
+    "communityNodeCount": 0,
+    "status": "Completed",
+    "processingTime": 7.48,
+    "total_chunks": 6,
+    "token_usage": 20087,
+    "embedding_model": "all-MiniLM-L6-v2",
+    "fileSource": "local file",
+    "chunkRelCount": 80,
+    "is_cancelled": false,
+    "entityNodeCount": 50,
+    "updatedAt": "2026-10-09T20:27:52.313304000",
+    "fileSize": 25605,
+    "entityEntityRelCount": 70,
+    "relationshipCount": 150,
+    "createdAt": "2026-10-09T20:27:44.599548000",
+    "processed_chunk": 6,
+    "chunkNodeCount": 6,
+    "fileName": "Hello算法_第7章树_正文.txt",
+    "communityRelCount": 0,
+    "nodeCount": 56
+  }
+]

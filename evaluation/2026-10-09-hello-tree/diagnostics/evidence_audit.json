@@ -1,0 +1,181 @@
+{
+  "auditor": "AI evidence auditor B",
+  "human_verified": false,
+  "audited_at": "2026-10-09T20:38:28.263891+08:00",
+  "method": "Read-only verification of saved artifacts, static source inspection, and offline recomputation; no model requests or business-code changes.",
+  "overall_result": "pass_with_interpretation_limits",
+  "checks": [
+    {
+      "id": "frozen_hashes",
+      "result": "pass",
+      "details": "Current TXT, DOCX, reference, protocol and scorer SHA256 match gold/frozen.json; text_sha256 and both selected-format hashes also match. Run metadata input/reference/protocol hashes match the same frozen artifacts."
+    },
+    {
+      "id": "prediction_counts",
+      "result": "pass",
+      "details": "Metadata point/edge counts equal saved course graph and raw entity graph counts in both runs."
+    },
+    {
+      "id": "metrics_recomputed",
+      "result": "pass",
+      "details": "Independent offline calls to the frozen scorer exactly reproduced nodes, edges, per-edge-type metrics, raw counts and duplicate counts. All node_review, edge_review, missing_nodes and missing_edges item arrays matched saved outputs."
+    },
+    {
+      "id": "scoring_input_hashes",
+      "result": "pass",
+      "details": "Both scoring metadata input hashes match the current frozen reference and their corresponding graph.json."
+    },
+    {
+      "id": "pipeline_outcomes",
+      "result": "pass",
+      "details": "Both metadata files report completed=false and HTTP 502, consistent with upload_response and CourseProcessJob Failed. Document Completed refers to the earlier extraction sub-process, not overall upload success."
+    },
+    {
+      "id": "chunk_coverage",
+      "result": "pass",
+      "details": "Both server logs record Total chunks created: 13, limiting chunks to 6, and Combined 6 chunks; documents.json reports total_chunks=processed_chunk=6. The offline diagnostic agrees with the application cap formula int(MAX_TOKEN_CHUNK_SIZE / token_chunk_size)."
+    },
+    {
+      "id": "review_summary",
+      "result": "pass",
+      "details": "Recomputed consensus from all four reviewer files matches review/summary.json for node/edge counts and exact verdict agreement. Each review covers its 40 sample IDs."
+    },
+    {
+      "id": "source_quotes",
+      "result": "pass",
+      "details": "All 171 reference evidence fields and all nonempty evidence fields in the 160 reviewer judgments occur verbatim in the fixed TXT."
+    },
+    {
+      "id": "model_identity_evidence",
+      "result": "pass_with_limit",
+      "details": "Both run metadata files and server logs identify the configured/requested model as deepseek-flash via https://api.deepseek.com. This establishes the client model alias, not an independently verified vendor model snapshot."
+    },
+    {
+      "id": "report_review",
+      "result": "pass_with_wording_observations",
+      "details": "Reviewed the report generator and the actual DOCX body. Report counts, strict node/edge metrics, duplicate counts, relation-type details, durations, stage observations, token coverage and AI consensus agree with saved evidence. The report correctly distinguishes failed partial output from completed extraction, AI assistance from human acceptance, and failure-response time from successful-processing performance.",
+      "reviewed_at": "2026-10-09T20:40:28.977410+08:00",
+      "artifacts": [
+        "scripts/create_report.py",
+        "report/真实课程知识抽取测评报告_20261009.docx"
+      ],
+      "numeric_or_acceptance_blockers": [],
+      "wording_observations": [
+        {
+          "location": "Pages 1 and 4, omitted chapter coverage",
+          "recommendation": "Prefer 未进入首轮实体与关系抽取 over 未进入知识抽取, because the full outline and subsequent enrichment may still access later source sections. The measured 47 percent applies specifically to graph-extraction input token prefixes."
+        },
+        {
+          "location": "Page 2, model configuration table",
+          "recommendation": "Describe deepseek-flash as the requested model alias via the official DeepSeek endpoint; temperature 0 and disabled thinking are configuration values. Do not imply independent verification of an immutable provider model snapshot."
+        }
+      ]
+    }
+  ],
+  "key_counts": {
+    "reference_nodes": 70,
+    "reference_edges": 101,
+    "txt": {
+      "graph_nodes": 50,
+      "graph_edges": 70,
+      "raw_nodes": 50,
+      "raw_edges": 70,
+      "http_status": 502,
+      "job_status": "Failed",
+      "document_status": "Completed",
+      "attempts": 1,
+      "upload_seconds": 24.553,
+      "node_metric": {
+        "tp": 35,
+        "fp": 15,
+        "fn": 35,
+        "precision": 0.7,
+        "recall": 0.5,
+        "f1": 0.5833333333333334
+      },
+      "edge_metric": {
+        "tp": 17,
+        "fp": 53,
+        "fn": 84,
+        "precision": 0.24285714285714285,
+        "recall": 0.16831683168316833,
+        "f1": 0.19883040935672514
+      },
+      "full_chunks": 13,
+      "retained_chunks": 6,
+      "discarded_chunks": 7,
+      "unique_prefix_tokens_retained": 8500,
+      "full_text_tokens": 18084,
+      "prefix_token_coverage": 0.47002875470028754,
+      "ai_node_consensus": {
+        "supported": 20,
+        "unsupported": 0,
+        "pending_human": 0
+      },
+      "ai_edge_consensus": {
+        "supported": 16,
+        "unsupported": 2,
+        "pending_human": 2
+      },
+      "reviewer_exact_agreement": 39,
+      "reviewed_samples": 40
+    },
+    "docx": {
+      "graph_nodes": 47,
+      "graph_edges": 61,
+      "raw_nodes": 47,
+      "raw_edges": 61,
+      "http_status": 502,
+      "job_status": "Failed",
+      "document_status": "Completed",
+      "attempts": 1,
+      "upload_seconds": 24.897,
+      "node_metric": {
+        "tp": 35,
+        "fp": 12,
+        "fn": 35,
+        "precision": 0.7446808510638298,
+        "recall": 0.5,
+        "f1": 0.5982905982905983
+      },
+      "edge_metric": {
+        "tp": 16,
+        "fp": 45,
+        "fn": 85,
+        "precision": 0.26229508196721313,
+        "recall": 0.15841584158415842,
+        "f1": 0.19753086419753085
+      },
+      "full_chunks": 13,
+      "retained_chunks": 6,
+      "discarded_chunks": 7,
+      "unique_prefix_tokens_retained": 8500,
+      "full_text_tokens": 18061,
+      "prefix_token_coverage": 0.47062731853164275,
+      "ai_node_consensus": {
+        "supported": 19,
+        "unsupported": 0,
+        "pending_human": 1
+      },
+      "ai_edge_consensus": {
+        "supported": 18,
+        "unsupported": 2,
+        "pending_human": 0
+      },
+      "reviewer_exact_agreement": 39,
+      "reviewed_samples": 40
+    }
+  },
+  "interpretation_limits": [
+    "Both outputs are retained partial results after enrichment failure, not successful completed end-to-end extractions.",
+    "The common error says enrichment failed source validation OR a model request failed. No underlying exception is captured, so the evidence cannot establish a specific root cause.",
+    "Document nodeCount 56/53 includes six Chunk nodes; use entityNodeCount or graph point counts 50/47 for knowledge points. Document relationshipCount 150/132 also includes infrastructure relations; course graph knowledge-relation counts are 70/61.",
+    "About 47 percent is unique token-prefix coverage passed into graph extraction, not knowledge recall or a claim that only 47 percent of the document was parsed. Later outline preparation and enrichment can use other source text.",
+    "The chunk cap is a post-run diagnosis corroborated by logs and static code; do not retroactively rewrite the frozen protocol to claim this limit was pre-registered.",
+    "Stage observations are sampled once per second and may omit short-lived states. DOCX has no sampled Failed state, while the authoritative saved final job is Failed; this is not a contradictory final outcome.",
+    "Temperature 0, disabled thinking and SDK maximum two retries are configured behavior. The artifacts do not independently establish a vendor snapshot, absence of generation variation, or that a retry actually occurred.",
+    "Strict reference scores measure agreement with an AI-assisted frozen reference. Unmatched items are not automatically factual errors, and scores cannot certify the human-sampled contest threshold.",
+    "AI sampled source support evaluates predicted item support only, not missing items, node definitions, full-population accuracy or human acceptance. Reviewer agreement is not correctness.",
+    "One independent run per format cannot isolate causal effects of TXT versus DOCX or prove one format is generally more accurate."
+  ]
+}

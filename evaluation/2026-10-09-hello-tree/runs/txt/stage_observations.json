@@ -1,0 +1,59 @@
+[
+  {
+    "elapsed_seconds": 1.136,
+    "status": "Extracting",
+    "job": {
+      "started_ms": 1791548864564,
+      "uid": "f0c9150b-949f-4c30-8bca-8f2fe24b91a8",
+      "document": "Hello算法_第7章树_正文.txt",
+      "error": "",
+      "updated_ms": 1791548864880,
+      "status": "Extracting",
+      "attempts": 1,
+      "course_id": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b"
+    }
+  },
+  {
+    "elapsed_seconds": 8.279,
+    "status": "Importing",
+    "job": {
+      "started_ms": 1791548864564,
+      "uid": "f0c9150b-949f-4c30-8bca-8f2fe24b91a8",
+      "document": "Hello算法_第7章树_正文.txt",
+      "error": "",
+      "updated_ms": 1791548872387,
+      "status": "Importing",
+      "attempts": 1,
+      "course_id": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b"
+    }
+  },
+  {
+    "elapsed_seconds": 9.293,
+    "status": "Enriching",
+    "job": {
+      "started_ms": 1791548864564,
+      "uid": "f0c9150b-949f-4c30-8bca-8f2fe24b91a8",
+      "document": "Hello算法_第7章树_正文.txt",
+      "error": "",
+      "updated_ms": 1791548873180,
+      "status": "Enriching",
+      "attempts": 1,
+      "course_id": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b"
+    }
+  },
+  {
+    "elapsed_seconds": 24.554,
+    "status": "Failed",
+    "job": {
+      "started_ms": 1791548864564,
+      "uid": "f0c9150b-949f-4c30-8bca-8f2fe24b91a8",
+      "ended_ms": 1791548888984,
+      "document": "Hello算法_第7章树_正文.txt",
+      "error": "内容补全未通过原文校验或模型请求失败，可重试；未覆盖已有内容",
+      "updated_ms": 1791548888984,
+      "status": "Failed",
+      "attempts": 1,
+      "course_id": "f23970f1-69e8-4d70-8e98-4d0c1bb93e6b"
+    }
+  }
+]

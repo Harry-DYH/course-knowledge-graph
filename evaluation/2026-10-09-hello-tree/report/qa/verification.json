@@ -1,0 +1,88 @@
+{
+  "page_count": 6,
+  "all_pages_visually_reviewed": true,
+  "numeric_consistency_checks": "passed",
+  "review_summary_consistency": "passed",
+  "checks": [
+    "Chinese text complete",
+    "Black titles and headings",
+    "No clipping or overlap",
+    "Tables fit and have visible borders",
+    "No unsupported acceptance claim",
+    "Failure-response time clearly distinguished from successful completion time",
+    "AI reference and AI reviews clearly distinguished from human acceptance"
+  ],
+  "outputs": [
+    {
+      "path": "/Users/sleepy_gyn/Documents/数字马力杯/src/evaluation/2026-10-09-hello-tree/report/真实课程知识抽取测评报告_20261009.docx",
+      "sha256": "bee105b6a0594df45d8940e0b94a7e5aaa659f9db2ba433fbcc3d5d521cb63c2"
+    },
+    {
+      "path": "/Users/sleepy_gyn/Documents/数字马力杯/src/evaluation/2026-10-09-hello-tree/report/真实课程知识抽取测评报告_20261009.pdf",
+      "sha256": "57a72f9f3aaca32a15f883d17c6570fb3f41c98ac144cea05ab1e142b88d0441"
+    },
+    {
+      "path": "/Users/sleepy_gyn/Documents/数字马力杯/doc/真实课程知识抽取测评报告_20261009.docx",
+      "sha256": "bee105b6a0594df45d8940e0b94a7e5aaa659f9db2ba433fbcc3d5d521cb63c2"
+    },
+    {
+      "path": "/Users/sleepy_gyn/Documents/数字马力杯/doc/真实课程知识抽取测评报告_20261009.pdf",
+      "sha256": "57a72f9f3aaca32a15f883d17c6570fb3f41c98ac144cea05ab1e142b88d0441"
+    }
+  ],
+  "pages": [
+    {
+      "page": 1,
+      "visual_review": "passed",
+      "image_sha256": "d0e0005967b483508cd78425dc26705859ff445d486697697cacc61f2e863403",
+      "page_width_pt": 612,
+      "page_height_pt": 792,
+      "latest_review": "visually reviewed final page"
+    },
+    {
+      "page": 2,
+      "visual_review": "passed",
+      "image_sha256": "018e2cacd73c4cc4f7f23f5c05ec0bc4e17e308aa6c7071103d6f2f20a42401e",
+      "page_width_pt": 612,
+      "page_height_pt": 792,
+      "latest_review": "visually reviewed final page"
+    },
+    {
+      "page": 3,
+      "visual_review": "passed",
+      "image_sha256": "fa187ad6778922b50da5742cf998f1ddcf8e639d3f67688cb80458b089ae9f00",
+      "page_width_pt": 612,
+      "page_height_pt": 792,
+      "latest_review": "pixel-identical to previously visually reviewed page"
+    },
+    {
+      "page": 4,
+      "visual_review": "passed",
+      "image_sha256": "87bdd2faf19fe23befdfe24a3d5894959544c58c6f4864da9b0f4bc086c4afd4",
+      "page_width_pt": 612,
+      "page_height_pt": 792,
+      "latest_review": "visually reviewed final page"
+    },
+    {
+      "page": 5,
+      "visual_review": "passed",
+      "image_sha256": "f50b81736f07fc01ff6d192773fe494d5dad88b2e4ba28d41addbc0141401993",
+      "page_width_pt": 612,
+      "page_height_pt": 792,
+      "latest_review": "pixel-identical to previously visually reviewed page"
+    },
+    {
+      "page": 6,
+      "visual_review": "passed",
+      "image_sha256": "0bf15c27140dda9acd39d00d272eba3d844eb7c8cc2f794ca5178d94cfd3691c",
+      "page_width_pt": 612,
+      "page_height_pt": 792,
+      "latest_review": "pixel-identical to previously visually reviewed page"
+    }
+  ],
+  "render_directory": "/Users/sleepy_gyn/Documents/数字马力杯/src/evaluation/2026-10-09-hello-tree/report/qa/render_final",
+  "final_wording_corrections": [
+    "Coverage applies to first-pass entity and relation extraction",
+    "Requested model alias and client settings distinguished from provider model version"
+  ]
+}

@@ -1,0 +1,7 @@
+# Local render previews; retain final reports and compact QA records.
+/qa/*/render*/
+/report/qa/render*/
+
+# These two frozen benchmark logs were redacted and reviewed for publication.
+!/runs/txt/server.log
+!/runs/docx/server.log

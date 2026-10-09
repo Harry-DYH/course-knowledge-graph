@@ -1,0 +1,116 @@
+{
+  "page_count": 11,
+  "all_pages_visually_reviewed": true,
+  "checks": [
+    "Chinese glyphs visible",
+    "No clipping or overlap",
+    "No header/footer text or page numbers",
+    "Attribution/source/license retained only in document properties",
+    "Text formulas and table rows preserved verbatim",
+    "Caption remains with its table rows"
+  ],
+  "renderer": "bundled LibreOffice via documents render_docx.py with explicit bundled FONTCONFIG_FILE",
+  "pages": [
+    {
+      "page": 1,
+      "page_height_pt": 792,
+      "body_bottom_pt": 695.54,
+      "image_sha256": "6656593d63eb24dfe4eafd439a2437d27567305fcf6a28fc2454be8a4128ffdd",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 2,
+      "page_height_pt": 792,
+      "body_bottom_pt": 683.14,
+      "image_sha256": "c73fdb8f744af9d12f42327a23f1e8bac0298a047506b97d957678e810ae1ba5",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 3,
+      "page_height_pt": 792,
+      "body_bottom_pt": 727.14,
+      "image_sha256": "6b0c8b135f27e94aa60d6155d01e0f4a538e9e5d7648d82181fe9ded781dbbe0",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 4,
+      "page_height_pt": 792,
+      "body_bottom_pt": 707.64,
+      "image_sha256": "bad839b2c80f01585d62cc14277707c441bb1ddd9386c457c5750714d827b276",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 5,
+      "page_height_pt": 792,
+      "body_bottom_pt": 708.14,
+      "image_sha256": "61b6a8bb08d308c122a1e8987a1d049a28c9c4a394f23c84e398ecf60af14349",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 6,
+      "page_height_pt": 792,
+      "body_bottom_pt": 710.64,
+      "image_sha256": "1a01af291dbf38a84e89fb6c57d7da6624ed7015103bb23aef7c01d5767644f3",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 7,
+      "page_height_pt": 792,
+      "body_bottom_pt": 712.64,
+      "image_sha256": "03f089be4321e55c133fc9f2926ab6362328d90e7c7979b7bf7dd4d20e0ee87e",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 8,
+      "page_height_pt": 792,
+      "body_bottom_pt": 608.14,
+      "image_sha256": "28d0a606743fb0913ed09baa726a7740c400b158cb397073bea8b0ad4cfa58bc",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 9,
+      "page_height_pt": 792,
+      "body_bottom_pt": 719.14,
+      "image_sha256": "e3a59817a2370022010cf58f6874a13c8ac3087adc7497e917bd1896bb14428e",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 10,
+      "page_height_pt": 792,
+      "body_bottom_pt": 668.14,
+      "image_sha256": "5f2364d33a8a79ca65637c8d1e499aa4e5513fe36d1bf05953485a9ca614dc5f",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    },
+    {
+      "page": 11,
+      "page_height_pt": 792,
+      "body_bottom_pt": 425.64,
+      "image_sha256": "e1a1afd4201c803417176d888acf066bc33b32eb40b5baaef2547b697a685a67",
+      "visual_review": "passed",
+      "body_pixel_identical_to_reviewed_render": true,
+      "footer_removed_verified_blank": true
+    }
+  ],
+  "render_directory": "/Users/sleepy_gyn/Documents/数字马力杯/src/evaluation/2026-10-09-hello-tree/qa/input_docx/render_no_footer",
+  "no_header_footer_parts": true
+}

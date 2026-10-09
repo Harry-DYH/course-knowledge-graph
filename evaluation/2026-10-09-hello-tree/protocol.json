@@ -1,0 +1,39 @@
+{
+  "title": "真实教材树章节知识抽取初测",
+  "status": "AI-assisted reference; human acceptance pending",
+  "application_commit": "b510c6933f037daa5d4bb913010d8e719f714b52",
+  "input_scope": "Hello 算法 第7章7.1–7.6文字正文（含原文小结Q&A、公式和表格），不含图像、代码或练习",
+  "formats": [
+    "txt",
+    "docx"
+  ],
+  "runs_per_format": 1,
+  "harness_automatic_reruns": 0,
+  "sdk_max_retries_per_request": 2,
+  "retry_policy": "One harness upload attempt per format; no automatic rerun. Keep the unmodified model client and OpenAI SDK default of at most 2 retries per request for eligible transient errors. These SDK retries are included in upload timing; no business model parameters are changed.",
+  "database_isolation": "One fresh Neo4j 5.26.0 container and named volume per run; initial node count must be zero",
+  "model": "deepseek-flash",
+  "temperature": 0,
+  "thinking": "disabled",
+  "chunk_tokens": 1500,
+  "overlap_tokens": 100,
+  "chunks_to_combine": 1,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "embedding_dimensions": 384,
+  "warm_start": true,
+  "node_scope": "Named concepts and operations explained in the supplied text; excludes instance numbers, person names and unelaborated variable names",
+  "prediction_stage": "Unedited product course graph after the upload attempt. If enrichment fails, score retained graph as PARTIAL, not a successful completed extraction.",
+  "primary_matching": "Locked reference names/aliases only; Unicode NFKC + casefold + whitespace removal, one-to-one. Duplicates count as unmatched predictions. No fuzzy matching.",
+  "relations": "CONTAINS and PREREQUISITE_OF directed; RELATED_TO symmetric. Relation type and mapped endpoints must both match. No inferred transitive closure.",
+  "metrics": "Node and edge TP FP FN precision recall F1; edge metrics by type; duplicates and missing items retained. Unmatched reference != demonstrated factual error.",
+  "timing": "Wall-clock from HTTP upload dispatch to response; includes parsing, embedding, extraction, DB operations and content enrichment; excludes service/model startup. Also sample server job stages once per second.",
+  "threshold_interpretation": "70% contest accuracy is not formally defined; report each metric separately. AI-assisted scores cannot certify the required human-sampled 70% threshold.",
+  "source_review_sampling": {
+    "seed": 20261009,
+    "nodes_per_run": 20,
+    "edges_per_run": 20,
+    "method": "Uniform without replacement over stable sorted predictions, independent AI check against source; human confirmation remains pending"
+  },
+  "human_review": "The report and itemized evidence form a reviewable draft; no claim of human annotation or formal acceptance.",
+  "comparison_limit": "One independent run per format; generation variation and parser differences are confounded, not a controlled causal estimate of format effects."
+}

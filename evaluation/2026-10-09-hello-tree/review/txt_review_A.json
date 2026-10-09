@@ -1,0 +1,246 @@
+{
+  "reviewer": "AI reviewer A",
+  "human_verified": false,
+  "items": [
+    {
+      "sample_id": "txt-N01",
+      "verdict": "supported",
+      "evidence": "节点的高度（height）：从距离该节点最远的叶节点到该节点所经过的边的数量。",
+      "reason": "原文明确介绍节点高度这一术语。"
+    },
+    {
+      "sample_id": "txt-N02",
+      "verdict": "supported",
+      "evidence": "二叉树常见的遍历方式包括层序遍历、前序遍历、中序遍历和后序遍历等。",
+      "reason": "原文明确讨论二叉树遍历及其方法。"
+    },
+    {
+      "sample_id": "txt-N03",
+      "verdict": "supported",
+      "evidence": "层序遍历本质上属于广度优先遍历（breadth-first traversal）",
+      "reason": "原文直接使用并解释广度优先遍历术语。"
+    },
+    {
+      "sample_id": "txt-N04",
+      "verdict": "supported",
+      "evidence": "7.3 二叉树数组表示",
+      "reason": "章节标题和正文均以二叉树数组表示为知识主题。"
+    },
+    {
+      "sample_id": "txt-N05",
+      "verdict": "supported",
+      "evidence": "完满二叉树（full binary tree）除了叶节点之外，其余所有节点都有两个子节点。",
+      "reason": "原文明确介绍完满二叉树，未与完美二叉树混用。"
+    },
+    {
+      "sample_id": "txt-N06",
+      "verdict": "supported",
+      "evidence": "二叉搜索树的操作",
+      "reason": "原文以该标题组织查找、插入和删除操作，是有来源依据的概念组。"
+    },
+    {
+      "sample_id": "txt-N07",
+      "verdict": "supported",
+      "evidence": "广度优先遍历通常借助“队列”来实现。",
+      "reason": "队列在原文中是明确使用和解释的数据结构。"
+    },
+    {
+      "sample_id": "txt-N08",
+      "verdict": "supported",
+      "evidence": "请注意，我们通常将“高度”和“深度”定义为“经过的边的数量”",
+      "reason": "高度作为术语直接出现；此次只审核术语身份，不据裸标签判断其具体指树高度还是节点高度。"
+    },
+    {
+      "sample_id": "txt-N09",
+      "verdict": "supported",
+      "evidence": "节点的深度（depth）：从根节点到该节点所经过的边的数量。",
+      "reason": "原文明确介绍节点深度。"
+    },
+    {
+      "sample_id": "txt-N10",
+      "verdict": "supported",
+      "evidence": "根节点（root node）：位于二叉树顶层的节点，没有父节点。",
+      "reason": "原文明确介绍根节点。"
+    },
+    {
+      "sample_id": "txt-N11",
+      "verdict": "supported",
+      "evidence": "在链表表示下，二叉树的存储单元为节点 TreeNode ，节点之间通过指针相连接。",
+      "reason": "链表表示是原文明说的二叉树存储方式。"
+    },
+    {
+      "sample_id": "txt-N12",
+      "verdict": "supported",
+      "evidence": "先在二叉树中查找到目标节点，再将其删除。",
+      "reason": "删除节点在多节原文中明确讨论；此处只判操作术语身份，不要求裸标签唯一指定 BST 或 AVL。"
+    },
+    {
+      "sample_id": "txt-N13",
+      "verdict": "supported",
+      "evidence": "二叉树（binary tree）是一种非线性数据结构",
+      "reason": "原文明确介绍二叉树。"
+    },
+    {
+      "sample_id": "txt-N14",
+      "verdict": "supported",
+      "evidence": "节点所在的层（level）：从顶至底递增，根节点所在层为 1 。",
+      "reason": "原文明确介绍节点所在的层。"
+    },
+    {
+      "sample_id": "txt-N15",
+      "verdict": "supported",
+      "evidence": "当给定一个二叉树的节点时，我们将该节点的左子节点及其以下节点形成的树称为该节点的左子树（left subtree），同理可得右子树（right subtree）。",
+      "reason": "原文明确引入右子树。"
+    },
+    {
+      "sample_id": "txt-N16",
+      "verdict": "supported",
+      "evidence": "请注意，我们通常将“高度”和“深度”定义为“经过的边的数量”",
+      "reason": "深度作为度量术语被直接讨论，标签较概括不改变其来源身份。"
+    },
+    {
+      "sample_id": "txt-N17",
+      "verdict": "supported",
+      "evidence": "深度优先搜索通常基于递归实现",
+      "reason": "递归是原文明说的实现方法。"
+    },
+    {
+      "sample_id": "txt-N18",
+      "verdict": "supported",
+      "evidence": "二叉树常见的遍历方式包括层序遍历、前序遍历、中序遍历和后序遍历等。",
+      "reason": "原文明确介绍后序遍历。"
+    },
+    {
+      "sample_id": "txt-N19",
+      "verdict": "supported",
+      "evidence": "层序遍历序列就可以唯一表示二叉树了。",
+      "reason": "原文将层序遍历序列作为具体表示对象讨论。"
+    },
+    {
+      "sample_id": "txt-N20",
+      "verdict": "supported",
+      "evidence": "边（edge）：连接两个节点的线段，即节点引用（指针）。",
+      "reason": "原文明确介绍边。"
+    },
+    {
+      "sample_id": "txt-E01",
+      "verdict": "supported",
+      "evidence": "前序、中序和后序遍历都属于深度优先遍历",
+      "reason": "原文明示后序遍历属于深度优先遍历类别，整体到分类成员的方向正确。"
+    },
+    {
+      "sample_id": "txt-E02",
+      "verdict": "supported",
+      "evidence": "先在二叉树中查找到目标节点，再将其删除。与插入节点类似，我们需要保证在删除操作完成后，二叉搜索树的“左子树 < 根节点 < 右子树”的性质仍然满足。",
+      "reason": "该段位于“二叉搜索树的操作”下的“删除节点”小节；删除是明列的一种操作，集合到成员符合 CONTAINS。"
+    },
+    {
+      "sample_id": "txt-E03",
+      "verdict": "supported",
+      "evidence": "在链表表示下，二叉树的存储单元为节点 TreeNode ，节点之间通过指针相连接。",
+      "reason": "原文明说链表表示以 TreeNode 节点为组成存储单元；Treenode 的大小写不改变身份，组成关系方向正确。"
+    },
+    {
+      "sample_id": "txt-E04",
+      "verdict": "supported",
+      "evidence": "前序、中序和后序遍历都属于深度优先遍历",
+      "reason": "原文明示前序遍历属于深度优先遍历类别，方向正确。"
+    },
+    {
+      "sample_id": "txt-E05",
+      "verdict": "supported",
+      "evidence": "常见的二叉树类型有完美二叉树、完全二叉树、完满二叉树和平衡二叉树。",
+      "reason": "原文明列完美二叉树是常见类型集合的一员。"
+    },
+    {
+      "sample_id": "txt-E06",
+      "verdict": "supported",
+      "evidence": "给定一棵完美二叉树，我们将所有节点按照层序遍历的顺序存储在一个数组中",
+      "reason": "原文具体展示完美二叉树的数组表示，具有直接实现关联。"
+    },
+    {
+      "sample_id": "txt-E07",
+      "verdict": "supported",
+      "evidence": "二叉树的相关术语包括根节点、叶节点、层、度、边、高度和深度等。",
+      "reason": "原文直接将深度列为二叉树的相关度量术语，RELATED_TO 对称方向无误。"
+    },
+    {
+      "sample_id": "txt-E08",
+      "verdict": "supported",
+      "evidence": "映射公式的角色相当于链表中的节点引用（指针）。",
+      "reason": "数组表示小节明确将其索引映射与链表表示的指针比较，二者存在具体实现对比。"
+    },
+    {
+      "sample_id": "txt-E09",
+      "verdict": "unsupported",
+      "evidence": "常见的二叉树类型有完美二叉树、完全二叉树、完满二叉树和平衡二叉树。",
+      "reason": "原文提供二叉树的类型分类，但“常见二叉树类型”是分类集合标题，不是二叉树的组成部分或某个分类成员；此边把主题到文档分组标题当成了规定的 CONTAINS。"
+    },
+    {
+      "sample_id": "txt-E10",
+      "verdict": "uncertain",
+      "evidence": "二叉树的高度（height）：从根节点到最远叶节点所经过的边的数量。\n- 节点的深度（depth）：从根节点到该节点所经过的边的数量。\n- 节点的高度（height）：从距离该节点最远的叶节点到该节点所经过的边的数量。",
+      "reason": "原文分别定义两种高度，均按边数计量，但没有直接说明两者关系。RELATED_TO 未带具体关系内容，难以判断是合理度量对比还是仅按相邻术语关联，保留人工复核。"
+    },
+    {
+      "sample_id": "txt-E11",
+      "verdict": "supported",
+      "evidence": "我们可以考虑在层序遍历序列中显式地写出所有 None 。",
+      "reason": "该句位于数组表示任意二叉树的方法中，明确使用含空位的层序遍历序列完成表示。"
+    },
+    {
+      "sample_id": "txt-E12",
+      "verdict": "supported",
+      "evidence": "先在二叉树中查找到目标节点，再将其删除。",
+      "reason": "原文直接规定删除之前先查找目标节点，操作前置和方向均正确，不依靠章节顺序推断。"
+    },
+    {
+      "sample_id": "txt-E13",
+      "verdict": "unsupported",
+      "evidence": "节点的深度（depth）：从根节点到该节点所经过的边的数量。",
+      "reason": "节点深度是结构的度量属性，不是二叉树的组成部分或分类成员；应为属性相关关系，CONTAINS 类型不成立。"
+    },
+    {
+      "sample_id": "txt-E14",
+      "verdict": "supported",
+      "evidence": "常见的二叉树类型有完美二叉树、完全二叉树、完满二叉树和平衡二叉树。",
+      "reason": "原文明列平衡二叉树为常见类型集合成员。"
+    },
+    {
+      "sample_id": "txt-E15",
+      "verdict": "supported",
+      "evidence": "前序、中序和后序遍历都属于深度优先遍历",
+      "reason": "原文明确联系前序遍历与深度优先遍历类别；RELATED_TO 虽不如分类关系具体，仍有直接来源支持。"
+    },
+    {
+      "sample_id": "txt-E16",
+      "verdict": "supported",
+      "evidence": "层序遍历本质上属于广度优先遍历",
+      "reason": "原文直接说明层序遍历与广度优先遍历的关系。"
+    },
+    {
+      "sample_id": "txt-E17",
+      "verdict": "supported",
+      "evidence": "而当所有节点都偏向一侧时，二叉树退化为“链表”。",
+      "reason": "原文明确说明退化关联，不只是同章共现。"
+    },
+    {
+      "sample_id": "txt-E18",
+      "verdict": "supported",
+      "evidence": "Q：对于只有一个节点的二叉树，树的高度和根节点的深度都是 0 吗？\n\n是的，因为高度和深度通常定义为“经过的边的数量”。",
+      "reason": "Q&A 直接同时比较树高度和根节点深度，给出单节点场景下的联系；RELATED_TO 只断言相关，不推广为一般相等。"
+    },
+    {
+      "sample_id": "txt-E19",
+      "verdict": "supported",
+      "evidence": "以下代码实现了一棵基于数组表示的二叉树，包括以下几种操作。\n\n- 给定某节点，获取它的值、左（右）子节点、父节点。\n- 获取前序遍历、中序遍历、后序遍历、层序遍历序列。",
+      "reason": "原文明说数组表示的二叉树实现支持获取前序遍历序列，存在具体操作关联。"
+    },
+    {
+      "sample_id": "txt-E20",
+      "verdict": "supported",
+      "evidence": "二叉树基本操作\n\n初始化二叉树\n\n与链表类似，首先初始化节点，然后构建引用（指针）。\n\n插入与删除节点",
+      "reason": "原文明确在基本操作分组下列出插入与删除节点，该操作组属于基本操作集合。"
+    }
+  ]
+}

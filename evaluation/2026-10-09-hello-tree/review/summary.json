@@ -1,0 +1,607 @@
+{
+  "human_verified": false,
+  "consensus_policy": "Both supported => supported; both unsupported => unsupported; all other combinations => pending_human. Original judgments retained.",
+  "interpretation": "Source support for sampled predictions only. Does not measure missing knowledge, definition quality, or formal contest accuracy.",
+  "runs": {
+    "txt": {
+      "nodes": {
+        "supported": 20,
+        "unsupported": 0,
+        "pending_human": 0,
+        "sample_size": 20,
+        "unanimous_support_fraction": 1.0
+      },
+      "edges": {
+        "supported": 16,
+        "unsupported": 2,
+        "pending_human": 2,
+        "sample_size": 20,
+        "unanimous_support_fraction": 0.8
+      },
+      "exact_verdict_agreement": 39,
+      "sample_size": 40,
+      "items": [
+        {
+          "sample_id": "txt-N01",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N02",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N03",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N04",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N05",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N06",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N07",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N08",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N09",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N10",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N11",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N12",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N13",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N14",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N15",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N16",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N17",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N18",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N19",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-N20",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E01",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E02",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E03",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "unsupported",
+          "consensus": "pending_human"
+        },
+        {
+          "sample_id": "txt-E04",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E05",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E06",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E07",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E08",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E09",
+          "item_type": "edge",
+          "review_A": "unsupported",
+          "review_B": "unsupported",
+          "consensus": "unsupported"
+        },
+        {
+          "sample_id": "txt-E10",
+          "item_type": "edge",
+          "review_A": "uncertain",
+          "review_B": "uncertain",
+          "consensus": "pending_human"
+        },
+        {
+          "sample_id": "txt-E11",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E12",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E13",
+          "item_type": "edge",
+          "review_A": "unsupported",
+          "review_B": "unsupported",
+          "consensus": "unsupported"
+        },
+        {
+          "sample_id": "txt-E14",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E15",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E16",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E17",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E18",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E19",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "txt-E20",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        }
+      ]
+    },
+    "docx": {
+      "nodes": {
+        "supported": 19,
+        "unsupported": 0,
+        "pending_human": 1,
+        "sample_size": 20,
+        "unanimous_support_fraction": 0.95
+      },
+      "edges": {
+        "supported": 18,
+        "unsupported": 2,
+        "pending_human": 0,
+        "sample_size": 20,
+        "unanimous_support_fraction": 0.9
+      },
+      "exact_verdict_agreement": 39,
+      "sample_size": 40,
+      "items": [
+        {
+          "sample_id": "docx-N01",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N02",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N03",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N04",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N05",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N06",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "uncertain",
+          "consensus": "pending_human"
+        },
+        {
+          "sample_id": "docx-N07",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N08",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N09",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N10",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N11",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N12",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N13",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N14",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N15",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N16",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N17",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N18",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N19",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-N20",
+          "item_type": "node",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E01",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E02",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E03",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E04",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E05",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E06",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E07",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E08",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E09",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E10",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E11",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E12",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E13",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E14",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E15",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E16",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E17",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        },
+        {
+          "sample_id": "docx-E18",
+          "item_type": "edge",
+          "review_A": "unsupported",
+          "review_B": "unsupported",
+          "consensus": "unsupported"
+        },
+        {
+          "sample_id": "docx-E19",
+          "item_type": "edge",
+          "review_A": "unsupported",
+          "review_B": "unsupported",
+          "consensus": "unsupported"
+        },
+        {
+          "sample_id": "docx-E20",
+          "item_type": "edge",
+          "review_A": "supported",
+          "review_B": "supported",
+          "consensus": "supported"
+        }
+      ]
+    }
+  }
+}

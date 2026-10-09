@@ -1,0 +1,20 @@
+{
+  "normalization": "Remove line-leading hyphen list markers and whitespace only; preserve math minus and comparisons",
+  "equivalent": true,
+  "files": [
+    {
+      "format": "txt",
+      "pages": 1,
+      "characters": 10343,
+      "parse_seconds": 0.001,
+      "normalized_sha256": "e9584c1689654cffd72b60601eca331c0d83722883ca79054f0cde961194cecb"
+    },
+    {
+      "format": "docx",
+      "pages": 1,
+      "characters": 10299,
+      "parse_seconds": 1.068,
+      "normalized_sha256": "e9584c1689654cffd72b60601eca331c0d83722883ca79054f0cde961194cecb"
+    }
+  ]
+}

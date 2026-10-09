@@ -1,0 +1,10 @@
+{
+  "source": "/Users/sleepy_gyn/Documents/数字马力杯/src/evaluation/2026-10-09-hello-tree/inputs/Hello算法_第7章树_正文.txt",
+  "output": "/Users/sleepy_gyn/Documents/数字马力杯/src/evaluation/2026-10-09-hello-tree/inputs/Hello算法_第7章树_正文.docx",
+  "source_sha256": "1ca398ef8e3aed3fa319a979220d19f550ff5e94d39b278ee3c37f81af1744f8",
+  "output_sha256": "2a74907d367eb829a98901fe55f5f6fba7a6e95cba8596815b36c7c310225ef5",
+  "source_nonempty_lines": 219,
+  "docx_nonempty_paragraphs": 219,
+  "exact_nonempty_line_equality": true,
+  "whitespace_normalized_equality": true
+}

@@ -1,0 +1,13 @@
+[
+  {
+    "started_ms": 1791548946241,
+    "uid": "a9ecf2ee-3235-4561-987a-d23b7143ca2b",
+    "ended_ms": 1791548971017,
+    "document": "Hello算法_第7章树_正文.docx",
+    "error": "内容补全未通过原文校验或模型请求失败，可重试；未覆盖已有内容",
+    "updated_ms": 1791548971017,
+    "status": "Failed",
+    "attempts": 1,
+    "course_id": "db537b35-95d8-4049-8bba-b630b85041e2"
+  }
+]
